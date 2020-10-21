@@ -1,0 +1,42 @@
+@import "../../../Styles/common.scss";
+
+.Nav {
+  @include flex-spaceBetween-center;
+  width: 100%;
+  height: 6.94vw;
+  position: fixed;
+  top: 0;
+  padding: 0 5vw;
+  img {
+    width: 10vw;
+  }
+
+  .NavCenter {
+    font-weight: bold;
+    font-size: 1.11vw;
+    line-height: 2.01vw;
+    display: flex;
+    p {
+      padding-right: 5px;
+    }
+  }
+
+  .NavRight {
+    font-weight: bold;
+    font-size: 0.83vw;
+    line-height: 2.32vw;
+    font-weight: bold;
+    display: flex;
+    p {
+      padding: 0 0.2vw;
+    }
+    div {
+      width: 2.5vw;
+      height: 2.5vw;
+      border: 2px solid $default-black;
+      border-radius: 50%;
+      background: $default-black;
+      margin: 0 3px;
+    }
+  }
+}
