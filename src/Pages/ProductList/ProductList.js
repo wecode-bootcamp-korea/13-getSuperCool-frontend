@@ -13,9 +13,7 @@ class ProductList extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3000/data/data.json", {
-      method: "GET",
-    })
+    fetch("http://localhost:3000/data/data.json",)
       .then((res) => res.json())
       .then((res) => {
         this.setState({
@@ -40,12 +38,16 @@ class ProductList extends React.Component {
             {products.map(
               ({
                 id,
+                modelImg,
+                iconImg,
                 name,
                 productImg,
                 price,
               }) => (
                 <Product 
                   key={id}
+                  modelImg={modelImg}
+                  iconImg={iconImg}
                   name={name}
                   productImg={productImg}
                   price={price}

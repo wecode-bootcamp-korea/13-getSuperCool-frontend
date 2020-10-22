@@ -3,51 +3,66 @@
 .Product {
   width: 21vw;
   height: 47vh;
-  background-color: rgb(247, 247, 247);
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
   margin-bottom: 5vh;
   margin-right: 4vw;
   position: relative;
   overflow: hidden;
+  background-color: rgb(247, 247, 247);
 
-  .modelPhoto {
+  .productThumbnail {
+    background-color: rgb(247, 247, 247);
+    margin: 0;
     width: 21vw;
     height: 47vh;
-    background-color: transparent;
-    img {
+    position: relative;
+    left: 460px;
+    transition: left 0.3s ease-out;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    img:first-child {
       width: 120%;
       height: 120%;
       position: absolute;
-      top: 0;
-      left: 21vw;
-      display: none;
-      transition: linear all 0.5s ease-in;
+      top: -20%;
+      left: -10%;
       transform: scale(1.3);
+      object-fit: cover;
+    }
+
+    .logoText {
+      background-color: transparent;
+      position: absolute;
+      top: 15%;
+      left: -10%;
+      width: 1000px;
+      transition: 3s ease-out;
+      background-repeat: repeat;
     }
   }
-  .modelPhoto:hover img {
-    left: 0;
-    display: block;
-  }
-  .modelPhoto:hover span {
-    color: $default-yellow;
-  }
+
   .logoIcon {
-    width: 80px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
+    background-color: transparent;
     position: absolute;
-    top: 100px;
+    top: 22%;
+    left: 36%;
+    transition: all 0.3s ease-in-out;
   }
-  img {
+
+  .productImg {
     width: 100%;
     background-color: transparent;
     width: 100px;
     height: 25vh;
     position: absolute;
-    top: 10%;
+    top: 12%;
+    left: 32%;
   }
 
   span {
@@ -67,6 +82,10 @@
       margin-right: 45px;
     }
   }
+
+  .animationContainer:hover .modelPhoto .logoText {
+    left: -500px;
+  }
   button {
     width: 18vw;
     height: 8vh;
@@ -75,4 +94,18 @@
     position: absolute;
     bottom: 20px;
   }
+}
+
+.Product:hover .productThumbnail {
+  left: -10%;
+  .logoText {
+    left: -460px;
+  }
+}
+
+.Product:hover .logoIcon {
+  width: 95px;
+  height: 95px;
+  top: 9%;
+  left: 20%;
 }
