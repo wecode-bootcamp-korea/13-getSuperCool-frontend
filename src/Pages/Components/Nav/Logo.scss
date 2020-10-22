@@ -1,5 +1,9 @@
 svg {
   width: 11vw;
+  height: 5vh;
+  &:hover{
+    cursor: pointer;
+  }
   g {
     fill: $default-black;
   }

@@ -4,20 +4,18 @@
   line-height: 2.32vw;
   font-weight: bold;
   display: flex;
+  select{
+    font-size: 0.9vw;
+  }
   p {
     padding: 0 0.5vw;
     cursor: pointer;
   }
-  .ulOn {
-    border: 1px solid black;
-    display: block;
-  }
-  .ulOff {
-    border: 1px solid black;
-    display: none;
-  }
   div {
     position: relative;
+    &:hover {
+      cursor: pointer;
+    }
     .circle {
       width: 2.3vw;
       height: 2.3vw;

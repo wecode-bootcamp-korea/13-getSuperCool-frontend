@@ -1,10 +1,20 @@
 import React, { Component } from "react";
 
 class NavRight extends Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
+
   render() {
     return (
       <div className="NavRight">
-        <p>EUROPE</p>
+        <select>
+          <option value="EUROPE" dir="rtl">EUROPE</option>
+          <option value="ITALY" dir="rtl">ITALY</option>
+          <option value="SPAIN" dir="rtl">SPAIN</option>
+          <option value="UNITED KINGDOM" dir="rtl">UNITED KINGDOM</option>
+        </select>
         <p>CART</p>
         <div>
           <div className="circle"></div>
