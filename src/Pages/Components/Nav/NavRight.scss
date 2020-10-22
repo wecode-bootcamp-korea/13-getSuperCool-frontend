@@ -1,0 +1,38 @@
+.NavRight {
+  font-weight: bold;
+  font-size: 0.9vw;
+  line-height: 2.32vw;
+  font-weight: bold;
+  display: flex;
+  p {
+    padding: 0 0.5vw;
+    cursor: pointer;
+  }
+  .ulOn {
+    border: 1px solid black;
+    display: block;
+  }
+  .ulOff {
+    border: 1px solid black;
+    display: none;
+  }
+  div {
+    position: relative;
+    .circle {
+      width: 2.3vw;
+      height: 2.3vw;
+      border-radius: 50%;
+      background: $default-black;
+      margin: 0 3px;
+    }
+    svg {
+      width: 0.8vw;
+      height: 0.8vw;
+      position: absolute;
+      top: 30%;
+      left: 35%;
+      background-color: transparent;
+      fill: white;
+    }
+  }
+}
