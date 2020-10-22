@@ -2,6 +2,10 @@ import React from "react";
 // import Logo from "../logo_text.png";
 import "./ProductDetails.scss";
 
+import LeftSlider from "./ComponentYH/LeftSlider";
+import RightSlider from "./ComponentYH/RightSlider";
+import ReviewList from "./ComponentYH/ReviewList";
+
 
 class ProductDetails extends React.Component {
   constructor() {
@@ -16,17 +20,17 @@ class ProductDetails extends React.Component {
       <div className="ProductDetails">
         <section className='Description'>
           <div className='LeftSlider'>
-            hahaha
+            <LeftSlider/>
           </div>
           <div className='RightSlider'>
-            hahahaha
+            <RightSlider/>
           </div>
         </section>
         <section className='YouMayAlsoLike'>
-          Product Recommendation
+          
         </section>
         <section className='ReviewList'>
-          jafjdjfkahf
+          <ReviewList />
         </section>
       </div>
     );

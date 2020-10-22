@@ -7,9 +7,16 @@ import ProductDetails from "./Pages/ProductDetails/ProductDetails"
 import "./index.css";
 import "./Styles/common.scss";
 import "./Styles/reset.scss";
+import LeftSlider from "./Pages/ProductDetails/ComponentYH/LeftSlider";
+import RightSlider from "./Pages/ProductDetails/ComponentYH/RightSlider";
+
 
 ReactDOM.render(
-  <ProductDetails/>,
+  // <LeftSlider/>,
+  <RightSlider/>,
+
+  // <ProductDetails/>,
+
   // <BrowserRouter>
   //   <Routes/>
   // </BrowserRouter>,
