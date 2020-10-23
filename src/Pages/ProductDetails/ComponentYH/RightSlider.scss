@@ -1,0 +1,171 @@
+.RightSlider {
+    padding: 8.33vw 12.5vw 0px;
+    width: 50vw;
+    height: 80vw;
+    
+    .ProductName {
+        h1{
+            text-transform: uppercase;
+            font-size: 3.13vw;
+            font-weight: bold;
+        }
+
+        span {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 1.74vw;
+        }
+    }
+
+    .Details {
+        
+        ul {
+            display: flex;
+            flex-direction: row;
+            align-content: space-around;
+            padding: 1.04vw 0px 0px;
+            width: 100%;
+            
+            li{
+                text-transform: uppercase;
+                font-size: 0.69vw;
+            }
+        }
+
+        p.description {
+            font-size: 0.69vw;
+        }
+
+        p.ingredients {
+            font-size: 0.69vw;
+        }
+
+        p.shipping {
+            font-size: 0.69vw;
+        }
+    }
+
+    .AddToCart {
+        .ColorSelection{
+            border: 2px solid black;
+            width: 18.06vw;
+            height: 4.24vw;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+
+            button {
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                background-color: red;
+                border:2px solid black;
+            }
+        }
+
+        div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            .Adding{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 4.24vw;
+                width: 4.8vw;
+                border: 2px solid black;
+            }
+
+            button.AddToCart {
+                width: 70%;
+                height: 4.24vw;
+                background-color: rgb(255, 232, 0);
+                span {
+                    background-color: inherit;
+                }
+            }
+        }
+
+        .Philosophy {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            div {
+                display: flex;
+                flex-direction: column;
+
+                img {
+                    height: 1.39vw;
+                }
+
+                p {
+                text-transform: uppercase;
+
+                }
+            }
+        }
+    }
+
+    .PairWith {
+        height: 21.67vw;
+        width: 100%;
+
+        h3 {
+            text-transform: uppercase;
+            font-size: 1.39vw;
+            font-weight: bold;
+        }
+
+        div {
+            display: flex;
+
+            .product {
+                background-color: rgb(247, 247, 247);
+                width : 12.43vw;
+                height: 17.08vw;
+                position: relative;
+                margin: 0 10px;
+
+                a{
+                    background-color: rgb(247, 247, 247);
+                    width : 12.43vw;
+                    height: 17.08vw;
+
+                    img {
+                        margin: auto;
+                        height: 100%;
+                        background-color: rgb(247, 247, 247);
+                    }
+        
+                    p{
+                        position: absolute;
+                        bottom: 3%;
+                        margin: auto;
+                        font-size: 0.83vw;
+                        font-weight: 700;
+                        color: black;
+                        text-transform: uppercase;
+                    }
+        
+                    div{
+                        position: absolute;
+                        bottom: 3%;
+                        right: 3%;
+                        background-color:  black;
+                        transform: rotate(-3.17deg);
+                        font-weight: bold;
+                        color: white;
+                        span {
+                        background-color:  black;
+                        color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

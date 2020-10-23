@@ -13,15 +13,13 @@ class RightSlider extends React.Component {
   //   this.setState({activeId:id});
   // }
   render(){
-    console.log(this.state.activeId);
-    // const{activeId} = this.state;
     return(
       <div className='RightSlider'>
         <div className='ProductName'>
           <h1>
             combo goals
-            <div>lip'n'cheek</div>
           </h1>
+          <span>lip'n'cheek</span>
         </div>
         <div className='Details'>
           <ul>
@@ -57,7 +55,7 @@ For more information, visit our FAQs.
         </div>
         <div className='AddToCart'>
           <div className='ColorSelection'>
-            <button></button>
+            <button ></button>
             <button></button>
             <button></button>
           </div>
@@ -67,7 +65,7 @@ For more information, visit our FAQs.
               <div>1</div>
               <button>+</button>
             </div>
-            <button>19.00<span>€-ADD TO CART</span></button>
+            <button className='AddToCart'>19.00<span>€-ADD TO CART</span></button>
           </div>
           <div className='Subscribe!'>
             <p>Awesome!!! Subscribe!!! To News Letter!!!</p>
@@ -88,11 +86,23 @@ For more information, visit our FAQs.
           </div>
         </div>
         <div className='PairWith'>
-          <a href='http://www.naver.com'>
-            <img alt='product' src='https://images.ctfassets.net/vnxry7jc7f2k/7EtX4lxmITWCGLCDU6X3Re/4eedd4a78a76f91c81f3bdc44a3c2250/03_SUPERFLUID_200421_0005_-_5-4.png?w=150&h=431&q=80&fm=webp'></img>
-            <p>ProductName|Hahahahaha</p>
-            <div>Price<span>€</span></div>
-          </a>
+          <h3>Pair With</h3>
+          <div>
+            <div class='product list1'>
+              <a href='http://www.naver.com'>
+                <img alt='product' src='https://images.ctfassets.net/vnxry7jc7f2k/7EtX4lxmITWCGLCDU6X3Re/4eedd4a78a76f91c81f3bdc44a3c2250/03_SUPERFLUID_200421_0005_-_5-4.png?w=150&h=431&q=80&fm=webp'></img>
+                <p>ProductName|Hahahahaha</p>
+                <div>Price<span>€</span></div>
+              </a>
+            </div>
+            <div class='product list2'>
+              <a href='http://www.naver.com'>
+                <img alt='product' src='https://images.ctfassets.net/vnxry7jc7f2k/7EtX4lxmITWCGLCDU6X3Re/4eedd4a78a76f91c81f3bdc44a3c2250/03_SUPERFLUID_200421_0005_-_5-4.png?w=150&h=431&q=80&fm=webp'></img>
+                <p>ProductName|Hahahahaha</p>
+                <div>Price<span>€</span></div>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     );

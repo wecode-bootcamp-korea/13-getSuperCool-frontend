@@ -15,14 +15,19 @@ class ProductDetails extends React.Component {
     };
   }
 
+  click = ()=>{
+    
+  }
+  
   render() {
     return (
       <div className="ProductDetails">
         <section className='Description'>
-          <div className='LeftSlider'>
+          <div className='Leftside'>
+            {/* { false ? <LeftSlider/> : <RightSlider/>} */}
             <LeftSlider/>
           </div>
-          <div className='RightSlider'>
+          <div className='Rightside'>
             <RightSlider/>
           </div>
         </section>

@@ -13,9 +13,9 @@ import RightSlider from "./Pages/ProductDetails/ComponentYH/RightSlider";
 
 ReactDOM.render(
   // <LeftSlider/>,
-  <RightSlider/>,
+  // <RightSlider/>,
 
-  // <ProductDetails/>,
+  <ProductDetails/>,
 
   // <BrowserRouter>
   //   <Routes/>
