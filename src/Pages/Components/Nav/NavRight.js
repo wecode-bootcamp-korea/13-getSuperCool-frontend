@@ -9,12 +9,14 @@ class NavRight extends Component {
   render() {
     return (
       <div className="NavRight">
-        <select>
-          <option value="EUROPE" dir="rtl">EUROPE</option>
-          <option value="ITALY" dir="rtl">ITALY</option>
-          <option value="SPAIN" dir="rtl">SPAIN</option>
-          <option value="UNITED KINGDOM" dir="rtl">UNITED KINGDOM</option>
+        <select dir="rtl" id="lang-select">
+          <option value="EUROPE">EUROPE</option>
+          <option value="ITALY">ITALY</option>
+          <option value="SPAIN">SPAIN</option>
+          <option value="UNITED KINGDOM">UNITED KINGDOM</option>
         </select>
+        <label for="lang-select" aria-label="select language"></label>
+        <svg viewBox="0 0 11 6" class="Icon__StyledSvg-sc-10qpb8y-0 dzeaZG"><path d="M10.568 2.89022L10.568 0.586218L5.576 3.22622L0.536 0.586218L0.536 2.89022L5.576 5.74622L10.568 2.89022Z"></path></svg>
         <p>CART</p>
         <div>
           <div className="circle"></div>
