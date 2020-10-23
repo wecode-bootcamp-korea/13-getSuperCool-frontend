@@ -1,0 +1,45 @@
+.image {
+  display: flex;
+  overflow: hidden;
+  #first,
+  #second,
+  #third {
+    width: 100vw;
+  }
+  #first {
+    left: 0;
+  }
+  #second {
+    left: 100%;
+  }
+  #third {
+    left: 200%;
+  }
+}
+.circle {
+  display: flex;
+  position: absolute;
+  bottom: 30px;
+  left: 45%;
+  background: transparent;
+  .firstBtn,
+  .secondBtn,
+  .thirdBtn {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    border: 2px solid $default-yellow;
+    z-index: 10;
+    margin-right: 5px;
+    background: transparent;
+  }
+  .firstBtnFull {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    border: 2px solid $default-yellow;
+    z-index: 10;
+    margin-right: 5px;
+    background: yellow;
+  }
+}
