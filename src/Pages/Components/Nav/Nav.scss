@@ -1,8 +1,5 @@
 @import "../../../Styles/common.scss";
 @import "./Logo.scss";
-@import "./NavCenter.scss";
-@import "./NavRight.scss";
-
 
 .Nav {
   @include flex-spaceBetween-center;
@@ -12,4 +9,97 @@
   top: 0;
   z-index: 2;
   padding: 0 5vw;
+
+  .NavCenter {
+    display: flex;
+    font-size: 1.2vw;
+    line-height: 2.01vw;
+  
+    span {
+      display: inline-block;
+      padding: 0 9px;
+      position: relative;
+      font-weight: bold;
+      z-index: 1;
+  
+      &:hover {
+        color: $default-yellow;
+        cursor: pointer;
+  
+        &::after {
+          width: 100%;
+        }
+      }
+      
+      &::after {
+        background-color: $default-black;
+        display: block;
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: 0.3s ease;
+      }
+    }
+  }
+
+  .NavRight {
+    font-weight: bold;
+    font-size: 0.9vw;
+    line-height: 2.32vw;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    select {
+      font-size: 0.9vw;
+      -webkit-appearance: none;
+      font-weight: bold;
+      
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  
+    svg {
+      width: 0.8vw;
+      height: 0.8vw;
+    }
+  
+    p {
+      padding: 0 0.5vw;
+      cursor: pointer;
+    }
+  
+    div {
+      position: relative;
+  
+      &:hover {
+        cursor: pointer;
+      }
+  
+      .circle {
+        width: 2.3vw;
+        height: 2.3vw;
+        border-radius: 50%;
+        background: $default-black;
+        margin: 0 3px;
+      }
+  
+      svg {
+        width: 0.8vw;
+        height: 0.8vw;
+        position: absolute;
+        top: 30%;
+        left: 35%;
+        background-color: transparent;
+        fill: white;
+      }
+    }
+  }
+  
 }

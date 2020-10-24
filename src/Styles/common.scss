@@ -32,9 +32,3 @@ $default-white: rgb(255, 255, 255);
     justify-content: space-between;
     align-items: center;
   }
-
-  @mixin NavBarIcon {
-    @include flex-spaceBetween-center;
-    background: transparent;
-    height: 5vh;
-  }
