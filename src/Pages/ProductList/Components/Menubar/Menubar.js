@@ -4,58 +4,37 @@ import "./Menubar.scss";
 class Menubar extends React.Component {
   constructor() {
     super();
-
     this.state = {
-      category1 : "visible",
-      category2 : "visible",
+      category1: true,
+      category2: true,
     }
   }
 
-  handleCategory1 = () => {
-    const { category1 } = this.state;
-
-    if(category1 === "visible") {
-      this.setState({
-        category1 : "invisible",
-      })
-    } else {
-      this.setState({
-        category1 : "visible",
-      })
-    }
-  }
-
-  handleCategory2 = () => {
-    const { category2 } = this.state;
-
-    if(category2 === "visible") {
-      this.setState({
-        category2 : "invisible",
-      })
-    } else {
-      this.setState({
-        category2 : "visible",
-      })
-    }
+  handleAccordionMenu = (category) => {
+    this.setState({
+      [category]: !this.state[category]
+    })
   }
 
   render () {
-    const { handleCategory1 , handleCategory2} = this;
-    const { category1, category2 } = this.state; 
+
+    const { category1, category2 } = this.state;
+    const listName1 = category1 ? "visible" : "invisible";
+    const listName2 = category2 ? "visible" : "invisible";
 
     return (
       <div className="Menubar">
-        <span className={category1} onClick={handleCategory1}>CATEGORY</span>
-        <ul>
-          <li className={category1}>COLOR</li>
-          <li className={category1}>CARE</li>
+        <span className={listName1} onClick={() => this.handleAccordionMenu("category1")}>CATEGORY</span>
+        <ul className={listName1}>
+          <li>COLOR</li>
+          <li>CARE</li>
         </ul>
 
-        <span className={category2} onClick={handleCategory2}>APPLY ON</span>
-        <ul>
-          <li className={category2}>LIPS</li>
-          <li className={category2}>EYES</li>
-          <li className={category2}>FACE</li>
+        <span className={listName2} onClick={() => this.handleAccordionMenu("category2")}>APPLY ON</span>
+        <ul  className={listName2}>
+          <li>LIPS</li>
+          <li>EYES</li>
+          <li>FACE</li>
         </ul>
         <div>
           <p> Vegan, clean and lighrweight formulas</p> 

@@ -27,7 +27,6 @@ class ProductList extends React.Component {
 
     return (
       <div className="ProductList">
-        {/* <Nav /> */}
         <section>
           <h1>SHOP</h1>
           <p>(18 PRODUCT)</p>

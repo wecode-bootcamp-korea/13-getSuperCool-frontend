@@ -21,10 +21,10 @@
     content: " +";
   }
 
-  ul {
+  ul.visible {
     display: flex;
     flex-direction: column;
-    li.visible {
+    li {
       width: 50px;
       margin: 5px 0;
       font-size: 1.2vw;
@@ -47,9 +47,10 @@
         height: 1px;
       }
     }
-    li.invisible {
-      display: none;
-    }
+  }
+
+  ul.invisible {
+    display: none;
   }
 
   // ul:first-child {
