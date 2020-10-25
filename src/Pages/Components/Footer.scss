@@ -50,13 +50,50 @@
         }
       }
     }
+    .email{
+      position: absolute;
+      top: 55%;
+      form {
+        margin: 0 40px;
+  
+        input,
+        button {
+          border-bottom: 1px solid black;
+        }
+      }
+    }
+    
+    .marquee {
+      height: 25px;
+      width: 220px;
+      margin: 0 40px;
+      overflow: hidden;
+      position: relative;
+      
+    }
 
-    form {
-      margin: -30px 40px;
+    .marquee div {
+      display: block;
+      width: 200%;
+      height: 30px;
+      position: absolute;
+      overflow: hidden;
 
-      input,
-      button {
-        border-bottom: 1px solid black;
+      animation: marquee 2s linear infinite;
+    }
+
+    .marquee span {
+      float: left;
+      width: 50%;
+      background: $default-yellow;
+    }
+
+    @keyframes marquee {
+      0% {
+        left: 0;
+      }
+      100% {
+        left: -100%;
       }
     }
   }

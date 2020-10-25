@@ -37,10 +37,18 @@ class Footer extends Component {
               </div>
             </div>
           </div>
-          <form>
-            <input type="text" placeholder="EMAIL"></input>
-            <button>OK</button>
-          </form>
+          <div className="email">
+            <form>
+              <input type="text" placeholder="EMAIL"></input>
+              <button>OK</button>
+            </form>
+          </div>
+          <div class="marquee">
+            <div>
+              <span>•FREE SHIPPING ON ORDERS OVER 34€ • 10% DISCOUNT IF YOU SUBSCRIBE TO THE NEWSLETTER</span>
+              <span>•FREE SHIPPING ON ORDERS OVER 34€ • 10% DISCOUNT IF YOU SUBSCRIBE TO THE NEWSLETTER</span>
+            </div>
+          </div>
         </div>
         <div className="section3">로고</div>
       </div>
