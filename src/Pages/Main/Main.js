@@ -35,6 +35,18 @@ class Main extends Component {
         <div className="shop">
           <p>SHOP NOW</p>
         </div>
+        <div class="marquee">
+          <div>
+            <span>
+              •FREE SHIPPING ON ORDERS OVER 34€ • 10% DISCOUNT IF YOU SUBSCRIBE
+              TO THE NEWSLETTER
+            </span>
+            <span>
+              •FREE SHIPPING ON ORDERS OVER 34€ • 10% DISCOUNT IF YOU SUBSCRIBE
+              TO THE NEWSLETTER
+            </span>
+          </div>
+        </div>
         <div className="Section2">
           <p>YOUR NEW</p>
           <p>EVERY DAY</p>

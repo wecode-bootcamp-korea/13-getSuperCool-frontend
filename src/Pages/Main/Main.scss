@@ -2,10 +2,13 @@
 
 .Main {
   overflow: hidden;
+
   .slick-slider {
+
     ul {
-      bottom: 70px;
+      bottom: 8%;
       background: transparent;
+
       li {
         background: transparent;
       }
@@ -13,14 +16,49 @@
   }
 
   .shop {
-    position: absolute;
-    bottom: 200px;
-    left: 43%;
     background: transparent;
+    position: absolute;
+    left: 44.5%;
+    top: 100%;
     p {
       background: transparent;
       color: $default-yellow;
       font-size: 1.5rem;
+    }
+  }
+
+  .marquee {
+    height: 25px;
+    width: 220px;
+    margin: 0 40px;
+    overflow: hidden;
+    position: absolute;
+    right: 1%;
+    top: 100%;
+  }
+
+  .marquee div {
+    display: block;
+    width: 200%;
+    height: 30px;
+    position: absolute;
+    overflow: hidden;
+
+    animation: marquee 2s linear infinite;
+  }
+
+  .marquee span {
+    float: left;
+    width: 50%;
+    background: $default-yellow;
+  }
+
+  @keyframes marquee {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -100%;
     }
   }
 
@@ -48,8 +86,9 @@
       align-items: center;
       font-size: 60px;
       font-weight: 800;
-      form{
-        input, button{
+      form {
+        input,
+        button {
           border-bottom: 1px solid black;
         }
       }
