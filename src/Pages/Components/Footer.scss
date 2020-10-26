@@ -28,48 +28,48 @@
   }
 
   .section2 {
-    .subscribe {
-      font-size: 1.3rem;
-    }
-
     .detail {
       margin: 40px;
       height: 50%;
       display: flex;
       justify-content: space-between;
       font-size: 0.6rem;
-      font-weight: bold;
       padding: 5px;
+
+      .subscribe {
+        font-size: 1.3rem;
+      }
 
       .help {
         display: flex;
         padding: 10px;
-
+        text-align: right;
         div {
           padding: 0 10px;
         }
       }
     }
-    .email{
+    
+    .email {
       position: absolute;
       top: 55%;
+
       form {
-        margin: 0 40px;
-  
+        margin-left: 40px;
+
         input,
         button {
           border-bottom: 1px solid black;
         }
       }
     }
-    
+
     .marquee {
       height: 25px;
       width: 220px;
       margin: 0 40px;
       overflow: hidden;
       position: relative;
-      
     }
 
     .marquee div {
