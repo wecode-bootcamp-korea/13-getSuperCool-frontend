@@ -1,55 +1,6 @@
-$default-yellow: rgb(255, 232, 0);
-$default-blue: rgb(9, 127, 255);
-$default-green: rgb(38, 218, 79);
-$default-grey-background: rgb(247, 247, 247);
-$default-grey-text: rgb(204, 204, 204);
-$default-black: rgb(0, 0, 0);
-$default-white: rgb(255, 255, 255);
-$default-red: rgb(196, 41, 60);
+@import "../../Styles/common.scss";
 
-$default-grey-meta: rgb(144, 144, 144);
-$default-border: 2px solid rgb(0, 0, 0);
-$button-meta-font: 500 0.83vw "Work Sans";
-
-* {
-  box-sizing: border-box;
-  text-decoration: none;
-  font-family: "Work Sans", sans-serif;
-  outline: none;
-  padding: 0;
-  margin: 0;
-  border: 0;
-  background-color: $default-white;
-}
-
-* {
-  letter-spacing: -0.04em;
-  text-transform: uppercase;
-}
-
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-@mixin flex-spaceBetween-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-@mixin flex-spaceBetween-center {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-@mixin flex-column {
-  display: flex;
-  flex-direction: column;
-}
-
-.loginRegister-BH {
+.LoginRegister-BH {
   .loginContainer {
     position: relative;
     height: 100vh;

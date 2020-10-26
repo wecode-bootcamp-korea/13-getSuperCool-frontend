@@ -1,0 +1,83 @@
+@import "../../Styles/common.scss";
+
+.Contact-BH {
+  height: 100vh;
+  width: 100vw;
+  main {
+    @include flex-column;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    top: 9.72vw;
+    border: $default-border;
+
+    .contactTitle {
+      display: block;
+      text-align: center;
+      font-size: 10.42vw;
+      font-weight: 600;
+      line-height: 8.82vw;
+    }
+
+    .contactContainer {
+      @include flex-center;
+      margin-top: 3.5vw;
+      border: $default-border;
+
+      .moreInformation {
+        // position: absolute;
+        // top: 19.1vw;
+
+        width: 35%;
+        padding: 8.33vw 0px;
+        margin-bottom: 19vw;
+        border: $default-border;
+        
+
+        span {
+        }
+
+        p {
+        }
+      }
+      .messageFormWrapper {
+        border: $default-border;
+        // position: relative;
+        width: 60%;
+        height: 100vh;
+        top: 19.1vw;
+
+        .messageForm {
+          .formInstructions {
+            p {
+            }
+            span {
+            }
+          }
+          .emailInput {
+          }
+
+          .nameInput {
+          }
+
+          .orderNumberInput {
+          }
+          .countrySelect {
+          }
+          .subjectSelect {
+          }
+          .messageContent {
+          }
+          .sendButton {
+          }
+          .acceptTermsInput {
+            input {
+            }
+            span {
+            }
+          }
+        }
+      }
+    }
+  }
+}

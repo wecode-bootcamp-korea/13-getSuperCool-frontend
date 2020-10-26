@@ -1,14 +1,18 @@
 import React, { Component } from "react";
-// import { Link } from "react-router-dom";
 import Register from "./Components/Register";
 import Login from "./Components/Login";
 import "./LoginRegister.scss";
+
+const MappingObj = {
+  0: <Login />,
+  1: <Register />
+};
 
 export default class LoginRegister extends Component {
   constructor() {
     super();
     this.state = {
-      activeTab: 0,
+      activeTab: 0
     };
   }
 
@@ -21,7 +25,7 @@ export default class LoginRegister extends Component {
 
   render() {
     return (
-      <div className="loginRegister-BH">
+      <div className="LoginRegister-BH">
         <main className="loginContainer">
           <img
             className="loginBackdropImage"
@@ -58,18 +62,3 @@ export default class LoginRegister extends Component {
     );
   }
 }
-
-const MappingObj = {
-  0: <Login />,
-  1: <Register />
-};
-
-// //  inside div!!!
-
-// const MAPPING_MENU = ["First", "Second"];
-
-// {
-//   MAPPING_MENU.map((menu, idx) => {
-//     <button onClick={this.openPage(idx + 1)}>{menu}</button>;
-//   });
-// }

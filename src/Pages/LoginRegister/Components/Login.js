@@ -1,10 +1,8 @@
 import React from "react";
-// import { Link } from "react-router-dom";
-import "./Login.scss";
-import LoginButtonReject from "./LoginButtonReject";
 import ForgotPw from "./ForgotPw";
+import "./Login.scss";
 
-const API = "http://10.58.0.174:8000/account/";
+const API = "http://10.58.4.225:8000/account/login";
 
 export default class Login extends React.Component {
   constructor() {
@@ -12,7 +10,7 @@ export default class Login extends React.Component {
     this.state = {
       emailValue: "",
       pwValue: "",
-      forgotTab: false
+      errorMessage: ""
     };
   }
 
@@ -21,22 +19,22 @@ export default class Login extends React.Component {
     this.setState({
       [name]: value
     });
+    this.setState({ errorMessage: "" });
   };
 
-  handleForgotPassword = e => {
-    this.setState({
-      forgotTab: true
-    });
+  handleValidate = () => {
+    const { emailValue, pwValue } = this.state;
+    if (!emailValue.includes("@")) {
+      this.setState({ errorMessage: "Please enter your full email" });
+    } else if (emailValue.length < 2 || pwValue.length < 2) {
+      this.setState({ errorMessage: "Wrong password or email" });
+    } else return this.setState({ errorMessage: "" });
   };
-
-  // handleErrorMessage = e => {
-  //     {(this.state.emailValue.length < 1 || this.state.pwValue.length < 1 ? (
-  //         <LoginButtonReject />
-  //       ) : null}
-  // }
 
   handleLoginButton = e => {
     const { emailValue, pwValue } = this.state;
+
+    this.handleValidate();
 
     fetch(API, {
       method: "POST",
@@ -46,23 +44,20 @@ export default class Login extends React.Component {
       })
     })
       .then(response => response.json())
-      .then(result => {
+      .then(response => {
         console.log("================================");
-        console.log("백앤드에서 오는 응답 메세지: ", result);
+        console.log("백앤드에서 오는 응답 메세지: ", response);
 
-        if (result.access_token) {
+        if (response.Authorization) {
           alert("로그인 성공");
+          localStorage.setItem("token", response.Authorization);
         }
       });
   };
 
   render() {
     return (
-      <div
-        className={
-          "loginForm-BH"
-        }
-      >
+      <div className="Login-BH">
         <input
           className="emailInput"
           onChange={this.handleInputValue}
@@ -79,7 +74,6 @@ export default class Login extends React.Component {
         ></input>
         <button
           onClick={this.handleLoginButton}
-          // onClick={this.handleErrorMessage}
           className={
             this.state.pwValue.length > 4 && this.state.emailValue.includes("@")
               ? "loginButtonActive"
@@ -89,7 +83,13 @@ export default class Login extends React.Component {
         >
           Login
         </button>
-        <div onClick={() => this.handleLoginButton}></div>
+
+        {this.state.errorMessage ? (
+          <div className="errorWrapper-BH">
+            <p className="loginErrorMessage">{this.state.errorMessage}</p>
+          </div>
+        ) : null}
+
         <div className="loginHelp">
           <button
             className="forgotPw"

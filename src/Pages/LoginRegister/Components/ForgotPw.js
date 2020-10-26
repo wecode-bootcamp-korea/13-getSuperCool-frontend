@@ -1,5 +1,4 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 import "./ForgotPw.scss";
 
 const API = "http://10.58.0.174:8000/account/";
@@ -19,7 +18,7 @@ export default class ForgotPw extends React.Component {
     });
   };
 
-  handleForgotPwButton = e => {
+  handleForgotPwButton = () => {
     const { emailValue } = this.state;
 
     fetch(API, {
@@ -41,7 +40,7 @@ export default class ForgotPw extends React.Component {
 
   render() {
     return (
-      <div className="forgotPwWrapper-BH">
+      <div className="ForgotPw-BH">
         <div className="forgotPwHeading">
           <p className="forgotPwTitle">Forgot Your Password?</p>
         </div>
@@ -70,4 +69,3 @@ export default class ForgotPw extends React.Component {
     );
   }
 }
-
