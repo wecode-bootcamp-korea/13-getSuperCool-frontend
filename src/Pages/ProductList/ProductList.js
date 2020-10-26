@@ -23,6 +23,7 @@ class ProductList extends React.Component {
   }
 
   render() {
+    console.log(this.state.products[0] && this.state.products[0].name)
     const { products } = this.state;
 
     return (
@@ -56,7 +57,6 @@ class ProductList extends React.Component {
           </div>
         </main>
         <div>포토박스</div>
-        {/* <Footer /> */}
       </div>
     )
   }

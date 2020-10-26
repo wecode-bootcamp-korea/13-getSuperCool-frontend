@@ -45,7 +45,7 @@
       width: 120%;
       height: 120%;
       position: absolute;
-      top: -20%;
+      top: -15%;
       left: -10%;
       transform: scale(1);
       object-fit: cover;
@@ -54,11 +54,11 @@
     .logoText {
       background-color: transparent;
       position: absolute;
-      top: 18%;
+      top: 12%;
       left: -10%;
       height: 300px;
       transition: 6s ease-out;
-      animation-iteration-count: infinite;
+      animation: infinite;
     }
   }
 
@@ -68,14 +68,14 @@
     background-color: transparent;
     position: absolute;
     top: 22%;
-    left: 36%;
+    left: 40%;
     transition: all 0.3s ease-in-out;
   }
 
   .productImg {
     width: 100%;
     background-color: transparent;
-    width: 100px;
+    width: 120px;
     height: 25vh;
     position: absolute;
     transform: rotate(0);

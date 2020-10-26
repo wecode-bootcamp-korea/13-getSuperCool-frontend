@@ -23,6 +23,7 @@ class Menubar extends React.Component {
     const listName2 = category2 ? "visible" : "invisible";
 
     return (
+
       <div className="Menubar">
         <span className={listName1} onClick={() => this.handleAccordionMenu("category1")}>CATEGORY</span>
         <ul className={listName1}>
@@ -42,8 +43,16 @@ class Menubar extends React.Component {
           <p> simple yet still have fun. Make them</p>
           <p>yours and show us your own unique</p>
           <p>routine!</p>    
-        </div>    
-      </div>
+        </div> 
+        <div className="marquee">
+          <div>
+            <span>FREE SHIPPING ON ORDERS OVER 34€   ·  10% DISCOUNT IF YOU SUBSCRIBE TO THE NEWSLETTER</span>
+            <span>THE NEWSLETTER  ·  FREE SHIPPING ON ORDERS OVER 34€   ·  10% DISCOUNT IF YOU SUBSCRIBE · </span>
+          </div>
+        </div> 
+      </div> 
+      
+
     )
   }
 }

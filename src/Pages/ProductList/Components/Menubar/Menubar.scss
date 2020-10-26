@@ -1,4 +1,12 @@
 @import "../../../../Styles/common.scss";
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -300%;
+  }
+}
 
 .Menubar {
   width: 28vw;
@@ -53,19 +61,40 @@
     display: none;
   }
 
-  // ul:first-child {
-  //   li.visible:first-child {
-  //     &:hover::before {
-  //       width: 7vw;
-  //     }
-  //   }
-  // }
-}
+  div {
+    margin: 20px 0;
+    p {
+      font-size: 0.8vw;
+      margin: 0 0 8px 0;
+    }
+  }
 
-div {
-  margin: 20px 0;
-  p {
-    font-size: 0.8vw;
-    margin: 0 0 8px 0;
+  .marquee {
+    height: 20px;
+    width: 100%;
+    position: relative;
+    background-color: $default-yellow;
+    overflow: hidden;
+    div {
+      width: 450%;
+      padding: 0;
+      height: 13px;
+      background-color: transparent;
+      position: absolute;
+      bottom: 0;
+      display: flex;
+
+      animation: marquee 9s linear infinite;
+
+      span {
+        font-size: 15px;
+        font-weight: 500;
+        display: block;
+        padding: 0;
+        float: left;
+        margin-right: 0;
+        padding-right: 0;
+      }
+    }
   }
 }
