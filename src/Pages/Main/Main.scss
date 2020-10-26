@@ -35,22 +35,22 @@
     position: absolute;
     right: 1%;
     top: 100%;
-  }
+    div {
+      display: block;
+      width: 1000%;
+      height: 30px;
+      position: absolute;
+      overflow: hidden;
+  
+      animation: marquee 2s linear infinite;
 
-  .marquee div {
-    display: block;
-    width: 200%;
-    height: 30px;
-    position: absolute;
-    overflow: hidden;
-
-    animation: marquee 2s linear infinite;
-  }
-
-  .marquee span {
-    float: left;
-    width: 50%;
-    background: $default-yellow;
+      span {
+        float: left;
+        width: 100%;
+        background: $default-yellow;
+      }
+    }
+  
   }
 
   @keyframes marquee {
