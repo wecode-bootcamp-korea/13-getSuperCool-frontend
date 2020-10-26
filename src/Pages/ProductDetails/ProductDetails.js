@@ -1,24 +1,25 @@
 import React from "react";
-// import Logo from "../logo_text.png";
 import "./ProductDetails.scss";
 
 import LeftSlider from "./ComponentYH/LeftSlider";
 import RightSlider from "./ComponentYH/RightSlider";
 import ReviewList from "./ComponentYH/ReviewList";
 
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+
+
 
 class ProductDetails extends React.Component {
   constructor() {
+    console.log("constructor1");
     super();
     this.state = {
       comment: "",
+      data:[],
     };
+    console.log("constructor2");
   }
 
-  click = ()=>{
-    
-  }
-  
   render() {
     return (
       <div className="ProductDetails">
@@ -28,11 +29,10 @@ class ProductDetails extends React.Component {
             <LeftSlider/>
           </div>
           <div className='Rightside'>
-            <RightSlider/>
+            <RightSlider />
           </div>
         </section>
         <section className='YouMayAlsoLike'>
-          
         </section>
         <section className='ReviewList'>
           <ReviewList />

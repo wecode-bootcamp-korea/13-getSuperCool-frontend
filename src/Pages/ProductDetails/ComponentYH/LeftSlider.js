@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/alt-text */
 import React, { createRef } from "react";
 import "./LeftSlider.scss"
 
@@ -7,22 +6,21 @@ class LeftSlider extends React.Component {
     super();
     this.back = React.createRef();
     this.state = {
-      hah:"fdf"
     };
   }
 
-
-  BackgroundScroll = (e) => {
-    if(e.target.clientHeight === window.outerHeight){
-      this.back.current.style.overflow = "scroll"
+  ScrollActive = () => {
+    if(window.scrollY>735){
+      this.setState()
     }
   }
+
 
   render(){
     const Back = this.back.current;
     return (
       <div className='Test'>
-        <div className='Background'  ref={this.back}>
+        <div className='Background' ref={this.back}>
           <img src='https://images.ctfassets.net/vnxry7jc7f2k/75KxXoiXG08POrUpCljSa9/da632f2b0bd10fdbbcf89d704e07a245/1.jpg?w=1440&h=1800&q=80&fm=webp'>
           </img>
           <img src='https://images.ctfassets.net/vnxry7jc7f2k/1NaxJV9Xc0Ve10F9I7qxdy/d8de24a3af839c8841c77dd2b54a27d6/superfluid_ott1693.jpg?w=1440&h=1800&q=80&fm=webp'></img>

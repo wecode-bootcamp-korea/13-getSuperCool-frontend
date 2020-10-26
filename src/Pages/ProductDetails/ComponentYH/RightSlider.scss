@@ -1,166 +1,362 @@
-.RightSlider {
+div.RightSlider {
     padding: 8.33vw 12.5vw 0px;
     width: 50vw;
     height: 80vw;
     
-    .ProductName {
+    div.ProductName {
+        margin-bottom: 1vw;
+
         h1{
             text-transform: uppercase;
             font-size: 3.13vw;
             font-weight: bold;
+            line-height: 3.19vw;
+           text-align: left;
+    
         }
 
         span {
             text-transform: uppercase;
             font-weight: bold;
             font-size: 1.74vw;
+            line-height: 1.39vw;
+            display: block;
+            text-align: left;
+            letter-spacing: -0.04em;
         }
     }
 
-    .Details {
-        
-        ul {
+    div.Details {
+        width: 22.22vw;
+        padding: 1.04vw 0px 0px;
+
+        ul.tabContainer {
+            text-transform: uppercase;
             display: flex;
             flex-direction: row;
             align-content: space-around;
-            padding: 1.04vw 0px 0px;
             width: 100%;
-            
-            li{
-                text-transform: uppercase;
-                font-size: 0.69vw;
+            padding: 1.04vw 0px 0px;
+
+            li.tabTitle {
+                margin-right: 0.6vw;
+                margin-left: 0.2vw;
+                font-size: 0.3vw;
+                letter-spacing: -0.05em;
+                line-height: 0.69vw;
+                cursor: pointer;
+
+                &:hover {
+                    border-bottom: 2px solid black;
+
+                    &::after {
+                        width: 100%;
+                      }
+                }
+
+                &::after {
+                    border-bottom: 1px solid black;
+                    content: "";
+                    width: 0;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                    transition: 1s ease;
+                  }
             }
         }
 
-        p.description {
-            font-size: 0.69vw;
-        }
-
-        p.ingredients {
-            font-size: 0.69vw;
-        }
-
-        p.shipping {
-            font-size: 0.69vw;
+        div.shippinReturns {
+            padding-bottom: 2.08vw;
+            padding: 1.39vw 0px;
+            
+            ul {
+                padding-left: 1.3vw;
+                line-height: 110%;
+                
+                li{
+                    font-size: 0.2vw;
+                    padding-bottom: 0.5vw;
+                    list-style-type: disc;
+                    // &::before {
+                    //     content:"· ";
+                    //     font-weight: bold;
+                    //     font-size: 0.8vw;
+                    //     vertical-align:middle;
+                    // }
+                    
+                    span{
+                        font-weight: bold;
+                    }
+                }
+            }
         }
     }
 
-    .AddToCart {
-        .ColorSelection{
-            border: 2px solid black;
-            width: 18.06vw;
+    div.AddToCart {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+        div.ColorSelection {
+            border: 1.5px solid black;
+            width: 22.2vw;
             height: 4.24vw;
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-around;
+            margin: 0px 0px 1.11vw;
+            padding: 0 4vw;
 
             button {
                 width: 16px;
                 height: 16px;
                 border-radius: 50%;
+                cursor: pointer;
+            }
+            
+            .red {
                 background-color: red;
-                border:2px solid black;
+                border:1px solid black;
+            }
+
+            .coral {
+                background-color: coral;
+            }
+
+            .pink {
+                background-color: rgb(228, 65, 92);
+            }
+
+            span{
+                position: relative;
+                font-weight: 500;
+                left: -1vw;
             }
         }
 
-        div {
+        div.Wrapper {
             display: flex;
             flex-direction: row;
             align-items: center;
-            justify-content: space-between;
+            justify-content: space-around;
+            margin: 0px 0px 1.5vw;
 
-            .Adding{
+            div.Adding {
                 display: flex;
-                justify-content: space-between;
+                justify-content: space-around;
                 align-items: center;
                 height: 4.24vw;
-                width: 4.8vw;
-                border: 2px solid black;
+                width: 4.5vw;
+                border: 1.5px solid black;
+                font-size: 0.83vw;
+                margin-right: 1vw;
+
+                button {
+                cursor: pointer;
+                }
             }
 
             button.AddToCart {
-                width: 70%;
+                width: 12.5vw;
                 height: 4.24vw;
                 background-color: rgb(255, 232, 0);
-                span {
+                font-weight: bold;
+                margin-right: 1vw;
+                font-size: 0.83vw;
+                cursor: pointer;
+
+                span{
                     background-color: inherit;
+                    font-size: 0.83vw;
                 }
+            }
+
+            div.Likes {
+                background-color: rgb(255, 232, 0);
+                border-radius: 50%;
+                height: 3.5vw;
+                width: 3.5vw;
+                padding-top: 1.3vw;
+                text-align: center;
+                font-size: large;
+                cursor: pointer;
             }
         }
 
-        .Philosophy {
+        div.Subscribe {
+            margin: 0px 0px 1.5vw;
+            width: 22.2vw;
+            background-color: rgb(255, 232, 0);
+            height: 0.83vw;
+            p{
+            background-color: rgb(255, 232, 0);
+            text-transform: uppercase;
+            font-weight: bold;
+            }
+        }
+
+        div.Philosophy {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
+            width: 22.2vw;
 
             div {
+                margin: 0 1.39vw;
                 display: flex;
                 flex-direction: column;
+                align-items: center;
 
-                img {
-                    height: 1.39vw;
+                img.Humane {
+                    height: 1.6vw;
+                    width: 1vw;
+                }
+
+                img.Vegan {
+                    height: 1.6vw;
+                    width: 1.8vw;
+                }
+
+                img.Inclusive {
+                    height: 1.6vw;
+                    width: 1.9vw;
                 }
 
                 p {
-                text-transform: uppercase;
-
+                    text-transform: uppercase;
+                    font-size: 10px;
                 }
             }
         }
     }
 
-    .PairWith {
+    div.PairWith {
+        width: 22.2vw;
         height: 21.67vw;
-        width: 100%;
+        padding-top: 2.78vw;
 
-        h3 {
+        h3{
             text-transform: uppercase;
             font-size: 1.39vw;
             font-weight: bold;
+            margin: 0px 0px 1.3vw;
         }
 
-        div {
+        div.ProductList {
             display: flex;
+            width: 22.2vw;
+            align-content: space-between;
 
-            .product {
+            div.product1 {
                 background-color: rgb(247, 247, 247);
-                width : 12.43vw;
+                width : 13.43vw;
                 height: 17.08vw;
                 position: relative;
-                margin: 0 10px;
+                margin-right: 1vw;
 
-                a{
+                a {
                     background-color: rgb(247, 247, 247);
                     width : 12.43vw;
                     height: 17.08vw;
 
                     img {
-                        margin: auto;
-                        height: 100%;
+                        position: absolute;
+                        top: 15%;
+                        left: 30%;
+                        height: 70%;
                         background-color: rgb(247, 247, 247);
                     }
-        
-                    p{
+
+                    p {
+                        position: absolute;
+                        width: 6vw;
+                        left: 10%;
+                        bottom: 4%;                        margin: auto;
+                        font-size: 0.83vw;
+                        font-weight: 700;
+                        color: black;
+                        text-transform: uppercase;
+                        overflow-wrap: break-word;
+                        background-color: rgb(247, 247, 247);
+                    }
+
+                    div {
+                        width: 3.5vw;
+                        height: 1.5vw;
                         position: absolute;
                         bottom: 3%;
+                        right: 3%;
+                        padding-top: 1.5%;
+                        padding-left: 1.5%;
+                        background-color:  black;
+                        transform: rotate(-3.17deg);
+                        font-weight: 600;
+                        color: white;
+                        span {
+                            position: absolute;
+                            right: 4%;
+                            top: 1%;
+                            font-size: 0.2vw;;
+                            background-color: transparent;
+                        color: white;
+                        }
+                    }
+                }
+            }
+
+            div.product2 {
+                background-color: rgb(247, 247, 247);
+                width : 13.43vw;
+                height: 17.08vw;
+                position: relative;
+
+                a {
+                    background-color: rgb(247, 247, 247);
+                    width : 12.43vw;
+                    height: 17.08vw;
+
+                    img {
+                        position: absolute;
+                        top: 15%;
+                        left: 30%;
+                        height: 70%;
+                        background-color: rgb(247, 247, 247);
+                    }
+
+                    p {
+                        position: absolute;
+                        width: 6vw;
+                        left: 10%;
+                        bottom: 4%;
                         margin: auto;
                         font-size: 0.83vw;
                         font-weight: 700;
                         color: black;
                         text-transform: uppercase;
+                        overflow-wrap: break-word;
+                        background-color: rgb(247, 247, 247);
                     }
-        
-                    div{
+
+                    div {
+                        width: 3.5vw;
+                        height: 1.5vw;
                         position: absolute;
                         bottom: 3%;
                         right: 3%;
+                        padding-top: 1.5%;
+                        padding-left: 1.5%;
                         background-color:  black;
                         transform: rotate(-3.17deg);
-                        font-weight: bold;
+                        font-weight: 600;
                         color: white;
                         span {
-                        background-color:  black;
+                            position: absolute;
+                            right: 4%;
+                            top: 1%;
+                            font-size: 0.2vw;;
+                            background-color: transparent;
                         color: white;
                         }
                     }

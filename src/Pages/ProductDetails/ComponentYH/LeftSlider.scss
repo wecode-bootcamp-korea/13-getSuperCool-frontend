@@ -5,13 +5,14 @@
         display: flex;
         flex-direction: column;
         position: absolute;
-        overflow: hidden;
         z-index: 10;
+        overflow: hidden;
         
         img{
             width: 100%;
             height: 100vh;
             object-fit: cover;
+            margin-bottom: 8vh;
         }
     }
 
@@ -34,6 +35,7 @@
             object-fit: cover;
             background-color: transparent;
             position: relative;
+            margin-bottom: 8vh;
 
             img {
                 top: -100px;
