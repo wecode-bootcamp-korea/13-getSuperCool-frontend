@@ -1,10 +1,37 @@
 import React, { Component } from "react";
+import Product from "../ProductList/Components/Product/Product";
 import Slider from "react-slick";
 import "./Main.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 class Main extends Component {
+  constructor() {
+    super();
+    this.state = {
+      products: [],
+      
+    };
+  }
+
+  next = () => {
+    this.slider.slickNext();
+  };
+
+  prev = () => {
+    this.slider.slickPrev();
+  };
+
+  componentDidMount() {
+    fetch("http://localhost:3000/data/data.json")
+      .then(res => res.json())
+      .then(res => {
+        this.setState({
+          products: res.products
+        });
+      });
+  }
+
   render() {
     const settings = {
       dots: true,
@@ -15,6 +42,10 @@ class Main extends Component {
       autoplay: true,
       autoplaySpeed: 1500,
       arrows: true
+    };
+    const itemSlick = {
+      slidesToShow: 4,
+      slidesToScroll: 1
     };
     return (
       <div className="Main">
@@ -51,7 +82,34 @@ class Main extends Component {
           <p>YOUR NEW</p>
           <p>EVERY DAY</p>
           <p>BASICS!</p>
-          <div className="ProductList"></div>
+          <div className="items">
+            <Slider ref={c => (this.slider = c)} {...itemSlick}>
+              {this.state.products.map(
+                ({ id, modelImg, iconImg, name, productImg, price }) => (
+                  <Product
+                    key={id}
+                    modelImg={modelImg}
+                    iconImg={iconImg}
+                    name={name}
+                    productImg={productImg}
+                    price={price}
+                  />
+                )
+              )}
+            </Slider>
+            <div className="arrow">
+              <img
+                className="arrowLeft"
+                onClick={this.prev}
+                src="https://i.ibb.co/BGL1sk3/arrow-left.png"
+              ></img>
+              <img
+                className="arrowRight"
+                onClick={this.next}
+                src="https://i.ibb.co/KXQm6Q2/arrow-right.png"
+              ></img>
+            </div>
+          </div>
         </div>
         <div className="Section3">
           <img src="https://images.ctfassets.net/vnxry7jc7f2k/3F6iB8kJUfwHHUeiFVMmVW/a7bdf792f2342d55ae093f4d033b66dc/per_sito-02.jpg?w=1600&h=1600&q=80&fm=webp" />
