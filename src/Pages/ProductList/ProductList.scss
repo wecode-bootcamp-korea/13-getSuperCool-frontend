@@ -1,0 +1,31 @@
+@import "../../Styles/common.scss";
+
+.ProductList {
+  width: 100vw;
+  section {
+    height: 170px;
+
+    h1,
+    p {
+      @include flex-center;
+    }
+    h1 {
+      margin-top: 15vh;
+      margin-bottom: 3vh;
+      font-size: 80px;
+      font-weight: 700;
+    }
+    p {
+      font-size: 13px;
+    }
+  }
+  main {
+    width: 100%;
+    display: flex;
+    .ProductsContainer {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+}
