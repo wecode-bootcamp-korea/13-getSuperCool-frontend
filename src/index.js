@@ -1,18 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {BrowserRouter} from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import Routes from "./Routes";
-import ProductDetails from "./Pages/ProductDetails/ProductDetails";
-import { ParallaxProvider } from "react-scroll-parallax";
-
+import Nav from "./Pages/Components/Nav/Nav";
 import "./index.css";
-import "./Styles/common.scss";
-import "./Styles/reset.scss";
+import "../src/Styles/common.scss";
+import "../src/Styles/reset.scss";
 
-
-ReactDOM.render(
-  <ParallaxProvider>
-    <ProductDetails/>
-  </ParallaxProvider>,
-  document.getElementById("root")
-);
+ReactDOM.render(<Nav />, document.getElementById("root"));
