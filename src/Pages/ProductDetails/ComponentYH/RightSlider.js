@@ -2,19 +2,46 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import "./RightSlider.scss";
 
-
-
 class RightSlider extends React.Component {
 
   constructor(){
     super();
     this.state = {
       data:[],
+      count: 1,
+      price: 19,
+      totPrice: 19,
+      likes: 0,
     };
+  }
+
+  handleIncrement = () => {
+    this.setState({
+      count : this.state.count + 1,
+      totPrice: (this.state.count+1)*(this.state.price),
+    })
+  }
+
+  handleDecrement = ()=> {
+    if(this.state.count>1){
+      this.setState({
+        count: this.state.count -1,
+        totPrice: (this.state.count-1)*(this.state.price),
+      })
+    } else {
+      return 
+    }
+  }
+
+  handleLikes = () => {
+    this.setState({
+      likes: this.state.likes + 1
+    })
   }
 
   render(){
     const {data} = this.props;
+    const {count, price, totPrice} = this.state;
     return(
       <div className='RightSlider'>
         <div onClick={this.handleClick} className='ProductName'>
@@ -49,11 +76,11 @@ class RightSlider extends React.Component {
           </div>
           <div className='Wrapper'>
             <div className='Adding'>
-              <button>-</button>
-              <div>1</div>
-              <button>+</button>
+              <button onClick={this.handleDecrement}>-</button>
+              <div>{count}</div>
+              <button onClick = {this.handleIncrement}>+</button>
             </div>
-            <button className='AddToCart'>19.00<span>€-ADD TO CART</span></button>
+            <button className='AddToCart'>{totPrice}<span>.00€-ADD TO CART</span></button>
             <div className='Likes'>&hearts;</div>
           </div>
           <div className='Subscribe'>

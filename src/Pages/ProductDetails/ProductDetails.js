@@ -1,11 +1,15 @@
 import React from "react";
 import "./ProductDetails.scss";
-
 import LeftSlider from "./ComponentYH/LeftSlider";
 import RightSlider from "./ComponentYH/RightSlider";
 import ReviewList from "./ComponentYH/ReviewList";
 
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import { Parallax, ParallaxProvider } from "react-scroll-parallax";
+ 
+
+
+
 
 
 
@@ -29,7 +33,9 @@ class ProductDetails extends React.Component {
             <LeftSlider/>
           </div>
           <div className='Rightside'>
-            <RightSlider />
+            <Parallax className="right" y={[-40, 70]} tagOuter="figure">
+              <RightSlider />
+            </Parallax>
           </div>
         </section>
         <section className='YouMayAlsoLike'>
