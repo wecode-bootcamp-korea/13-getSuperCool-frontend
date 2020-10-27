@@ -4,7 +4,7 @@
   width: 100%;
   section {
     height: 170px;
-
+    margin: 12% 0 3% 0;
     h1,
     p {
       @include flex-center;
@@ -22,6 +22,7 @@
   main {
     width: 100%;
     display: flex;
+    margin-bottom: 10%;
     .ProductsContainer {
       display: flex;
       width: 100%;

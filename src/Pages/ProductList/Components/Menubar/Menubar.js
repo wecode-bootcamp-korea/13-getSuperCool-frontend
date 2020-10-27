@@ -42,7 +42,7 @@ class Menubar extends React.Component {
 
     return (
       <div className="Menubar">
-        <SearchBox />
+        <SearchBox handleChange={this.props.handleChange} />
         <span className={category1 ? "visible" : "invisible"} onClick={() => this.handleAccordionMenu("category1")}>CATEGORY</span>
         <ul className={category1 ? "visible" : "invisible"}>
           <li onClick={() => this.handleClickCategory("COLOR")} className={this.state.COLOR ? "clicked" : ""}>COLOR</li>

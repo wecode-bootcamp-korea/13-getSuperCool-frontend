@@ -1,6 +1,7 @@
 import React from "react";
 import Menubar from "./Components/Menubar/Menubar";
 import Product from "./Components/Product/Product"
+import Nav from "../Components/Nav/Nav"
 import "./ProductList.scss";
 
 class ProductList extends React.Component {
@@ -8,6 +9,7 @@ class ProductList extends React.Component {
     super();
 
     this.state = {
+      searchInput : "",
       products: [],
       category_id: [],
       apply_on_id: [],
@@ -52,11 +54,21 @@ class ProductList extends React.Component {
       });
   }
 
-  render() {
-    const { products } = this.state;
+  handleChange = (e) => {
+    this.setState({
+      searchInput : e.target.value
+    })
+  }
 
+  render() {
+    const { products, searchInput } = this.state;
+
+    const filteredProducts = products.filter((product) => {
+      return product.name.toLowerCase().includes(searchInput.toLowerCase());
+    });
     return (
       <div className="ProductList">
+        <Nav />
         <section>
           <h1>SHOP</h1>
           <p>(18 PRODUCT)</p>
@@ -65,10 +77,11 @@ class ProductList extends React.Component {
           <Menubar
             getCategories = {this.getCategories}
             getApplies = {this.getApplies}
+            handleChange = {this.handleChange}
 
           />
           <div className="ProductsContainer">
-            {products.map(
+            {filteredProducts.map(
               ({
                 id,
                 modelImg,

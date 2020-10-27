@@ -12,6 +12,7 @@ class SearchBox extends Component {
           placeholder="SEARCH..."
           name={this.props.userInput}
           onChange={handleChange}
+          value={this.props.userInput}
         />
         <button><i class="fas fa-search"></i></button>
       </div>
