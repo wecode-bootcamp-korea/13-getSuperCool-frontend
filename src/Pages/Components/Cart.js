@@ -23,6 +23,9 @@ class Cart extends Component {
             <p>CART IS</p>
             <p>EMPTY</p>
           </div>
+          <div className="cartBtn">
+            <button>GO BACK TO SHOPPING</button>
+          </div>
         </div>
       </section>
     );
