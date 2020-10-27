@@ -1,0 +1,58 @@
+@import "../../Styles/common.scss";
+
+.Cart {
+  width: 100%;
+  height: 100vh;
+  background: gray;
+
+  .cartWrapper {
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    background: $default-yellow;
+
+    .cartHeader {
+      display: flex;
+      justify-content: space-between;
+      background: transparent;
+      padding: 50px;
+
+      p {
+        background: transparent;
+        font-size: 1.5rem;
+        font-weight: 1000;
+
+        span {
+          background: transparent;
+        }
+      }
+
+      button {
+        background: transparent;
+
+        img {
+          background: transparent;
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    .cartEmpty {
+      width: 80%;
+      height: 80%;
+      border-top: 5px solid $default-black;
+      background: transparent;
+      font-size: 4rem;
+      font-weight: 1000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      p {
+        background: transparent;
+      }
+    }
+  }
+}
