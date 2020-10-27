@@ -32,6 +32,10 @@ class Main extends Component {
       });
   }
 
+  coupon = () => {
+    
+  }
+
   render() {
     const settings = {
       dots: true,
