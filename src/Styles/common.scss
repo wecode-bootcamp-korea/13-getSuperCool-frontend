@@ -11,36 +11,36 @@ $default-border: 2px solid rgb(0, 0, 0);
 $button-meta-font: 500 0.83vw "Work Sans";
 
 * {
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: 'Work Sans', sans-serif;
-    outline: none;
-    padding: 0;
-    margin: 0;
-    border: 0;
-    background-color: $default-white;
-    letter-spacing: -0.04em;
-    text-transform: uppercase;
-  }
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Work Sans", sans-serif;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: $default-white;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
 
-  @mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  @mixin flex-spaceBetween-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
-  @mixin flex-spaceBetween-center {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-spaceBetween-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin flex-spaceBetween-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  @mixin flex-column {
-    display: flex;
-    flex-direction: column;
-  }
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}

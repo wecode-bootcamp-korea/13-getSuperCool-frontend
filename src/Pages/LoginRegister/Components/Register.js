@@ -74,9 +74,9 @@ class Register extends React.Component {
       .then(result => {
         console.log("================================");
         console.log("백앤드에서 오는 응답 메세지: ", result);
-        if (result.token) {
+        if (result.message === "SUCCESS") {
           alert("회원가입 성공");
-          localStorage.setItem("wtw-token", result.token);
+          localStorage.setItem("register", result.message);
         }
       });
   };
@@ -153,8 +153,8 @@ class Register extends React.Component {
             nameFirstValue.length > 2 &&
             nameLastValue.length > 2 &&
             dateValue.length > 1 &&
-            pwValue.length > 4 &&
-            pwConfirmValue.length > 4 &&
+            pwValue.length > 8 &&
+            pwConfirmValue.length > 8 &&
             emailValue.length > 3 &&
             emailValue.includes("@") &&
             pwValue.value === pwConfirmValue.value &&

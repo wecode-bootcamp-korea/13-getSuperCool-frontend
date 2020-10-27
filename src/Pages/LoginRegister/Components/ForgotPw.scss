@@ -1,59 +1,68 @@
 @import "../../../Styles/common.scss";
 
 .ForgotPw-BH {
-  @include flex-column;
-  position: fixed;
-  width: 29.17vw;
-  left: 8.33vw;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 8.33vw;
-  border: $default-border;
-
-  .forgotPwHeading {
-    padding: 2vw 4.2vw;
-
-    .forgotPwTitle {
-      font-weight: 400;
-      text-decoration: underline;
-      text-transform: capitalize;
-      font-size: 1.81vw;
-      line-height: 2vw;
-    }
-  }
-  .forgotPwForm {
+  .loginContainer {
     position: relative;
-    @include flex-column;
-    padding: 2.1vw 4.2vw;
-    border-top: $default-border;
+    height: 100vh;
+    width: 100vw;
 
-    .emailInput {
-      margin-bottom: 2vw;
-      border-bottom: $default-border;
-      line-height: 1.67vw;
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
-
-    .emailInput::placeholder {
-      color: $default-black;
-      font: $button-meta-font;
-    }
-
-    .forgotButton {
-      height: 4.51vw;
-      margin-bottom: 1.1vw;
+    .ForgotPw {
+      @include flex-column;
+      position: fixed;
+      width: 29.17vw;
+      left: 8.33vw;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 8.33vw;
       border: $default-border;
-      font: $button-meta-font;
-      line-height: 1.39vw;
-    }
 
-    .forgotButtonActive {
-      height: 4.51vw;
-      margin-bottom: 32px;
-      border: $default-border;
-      font: $button-meta-font;
-      color: $default-white;
-      background-color: $default-black;
-      line-height: 1.39vw;
+      .forgotPwHeading {
+        padding: 2vw 4.2vw;
+
+        .forgotPwTitle {
+          font-weight: 400;
+          text-decoration: underline;
+          text-transform: capitalize;
+          font-size: 1.81vw;
+          line-height: 2vw;
+        }
+      }
+      .forgotPwForm {
+        position: relative;
+        @include flex-column;
+        padding: 2.1vw 4.2vw;
+        border-top: $default-border;
+
+        .emailInput {
+          margin-bottom: 2vw;
+          border-bottom: $default-border;
+          line-height: 1.67vw;
+        }
+
+        .emailInput::placeholder {
+          color: $default-black;
+          font: $button-meta-font;
+        }
+
+        .forgotButton {
+          height: 4.51vw;
+          margin-bottom: 1.1vw;
+          border: $default-border;
+          font: $button-meta-font;
+          line-height: 1.39vw;
+        }
+
+        .active {
+          color: $default-white;
+          background-color: $default-black;
+        }
+      }
     }
   }
 }
