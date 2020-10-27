@@ -1,14 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import {BrowserRouter} from "react-router-dom";
+import Routes from "./Routes";
+import ProductDetails from "./Pages/ProductDetails/ProductDetails";
+import { ParallaxProvider } from "react-scroll-parallax";
+
 import "./index.css";
-import "./Styles/reset.scss";
 import "./Styles/common.scss";
-import ProductList from "./Pages/ProductList/ProductList";
+import "./Styles/reset.scss";
 
 
 ReactDOM.render(
-  <ProductList />,
+  <ParallaxProvider>
+    <ProductDetails/>
+  </ParallaxProvider>,
   document.getElementById("root")
 );
-
-
