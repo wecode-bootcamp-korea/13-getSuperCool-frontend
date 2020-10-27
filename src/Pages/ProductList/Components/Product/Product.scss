@@ -15,6 +15,46 @@
     left: 460px;
   }
 }
+@keyframes enterMouseSmile {
+  0% {
+    top: 22%;
+    left: 40%;
+  }
+  100% {
+    width: 6vw;
+    height: 6vw;
+    top: 5%;
+    left: 20%;
+  }
+}
+@keyframes leaveMouseSmile {
+  0% {
+    width: 6vw;
+    height: 6vw;
+    top: 5%;
+    left: 20%;
+  }
+  100% {
+    top: 22%;
+    left: 40%;
+  }
+}
+@keyframes enterDeg {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(12deg);
+  }
+}
+@keyframes leaveDeg {
+  0% {
+    transform: rotate(12deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
 
 .Product {
   width: 21vw;
@@ -54,7 +94,7 @@
     .logoText {
       background-color: transparent;
       position: absolute;
-      top: 12%;
+      top: 10%;
       left: -10%;
       height: 300px;
       transition: 6s ease-out;
@@ -69,7 +109,7 @@
     position: absolute;
     top: 22%;
     left: 40%;
-    transition: all 0.3s ease-in-out;
+    animation: leaveMouseSmile 1s ease-in-out;
   }
 
   .productImg {
@@ -79,13 +119,14 @@
     height: 25vh;
     position: absolute;
     transform: rotate(0);
-    transition: transform 0.2s ease-in;
+    animation: leaveDeg 0.4s ease-in;
     top: 12%;
     left: 33%;
   }
 
   span {
     display: flex;
+    width: 100%;
     justify-content: space-between;
     background-color: transparent;
     margin: 0 25px;
@@ -97,10 +138,22 @@
       background-color: transparent;
       font-size: 0.9vw;
       font-weight: 500;
-      margin: 0;
+      margin: 0 25px;
     }
-    div:first-child {
-      margin-right: 45px;
+    div:last-child {
+      background-color: $default-yellow;
+      line-height: 20px;
+      height: 20px;
+      width: 50px;
+      position: relative;
+      transform: rotate(-3.17deg);
+      padding-left: 5px;
+      span {
+        background-color: transparent;
+        font-size: 0.7vw;
+        top: -30%;
+        right: -140%;
+      }
     }
   }
 
@@ -129,17 +182,18 @@
   }
 
   .logoIcon {
-    width: 6vw;
-    height: 6vw;
-    top: 9%;
-    left: 20%;
+    animation: enterMouseSmile 0.3s ease-out;
+    animation-fill-mode: both;
   }
 
   .productImg {
-    transform: rotate(12deg);
+    animation: enterDeg 0.2s ease-in;
+    animation-fill-mode: both;
   }
 
   span {
-    color: $default-yellow;
+    div:first-child {
+      color: $default-yellow;
+    }
   }
 }

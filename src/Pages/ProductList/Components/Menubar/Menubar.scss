@@ -51,7 +51,14 @@
       }
 
       &:hover::before {
-        width: 4vw;
+        width: 3.8vw;
+        height: 1px;
+      }
+    }
+
+    li.clicked {
+      &::before {
+        width: 3.8vw;
         height: 1px;
       }
     }

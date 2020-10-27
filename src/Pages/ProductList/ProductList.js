@@ -9,7 +9,37 @@ class ProductList extends React.Component {
 
     this.state = {
       products: [],
+      category_id: [],
+      apply_on_id: [],
     }
+  }
+
+  test1 = (category) => {
+    const {category_id} = this.state;
+    const result = category_id.includes(category);
+    if (result) {
+      const returnArray = category_id.filter((cat) => cat !== category);
+      return returnArray;
+    }
+    return [...category_id, category];
+  }
+
+  test2 = (category) => {
+    const {apply_on_id} = this.state;
+    const result = apply_on_id.includes(category);
+    if (result) {
+      const returnArray = apply_on_id.filter((cat) => cat !== category);
+      return returnArray;
+    }
+    return [...apply_on_id, category];
+  }
+
+  getCategories = (category) => {
+    this.setState({category_id: this.test1(category)});
+  }
+
+  getApplies = (category) => {
+    this.setState({apply_on_id: this.test2(category)});
   }
 
   componentDidMount() {
@@ -23,7 +53,6 @@ class ProductList extends React.Component {
   }
 
   render() {
-    console.log(this.state.products[0] && this.state.products[0].name)
     const { products } = this.state;
 
     return (
@@ -33,7 +62,11 @@ class ProductList extends React.Component {
           <p>(18 PRODUCT)</p>
         </section>
         <main>
-          <Menubar />
+          <Menubar
+            getCategories = {this.getCategories}
+            getApplies = {this.getApplies}
+
+          />
           <div className="ProductsContainer">
             {products.map(
               ({
