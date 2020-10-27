@@ -13,6 +13,7 @@
     "react-scripts": "3.4.3",
     "react-slick": "^0.27.12",
     "slick-carousel": "^1.8.1"
+    "react-scroll-parallax": "^2.3.4"
   },
   "scripts": {
     "start": "react-scripts start",
