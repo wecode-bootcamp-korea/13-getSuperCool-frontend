@@ -5,6 +5,7 @@ import Main from "./Pages/Main/Main";
 import ProductList from "./Pages/ProductList/ProductList";
 import ProductDetails from "./Pages/ProductDetails/ProductDetails";
 import LoginResgister from "./Pages/LoginRegister/LoginRegister";
+import Nav from "./Pages/Components/Nav/Nav";
 
 // import './Routes.scss';
 
@@ -18,6 +19,7 @@ class Routes extends React.Component {
           <Route exact path='/ProductDetails' Component={ProductDetails}/>
           <Route exact path='/LoginResgister' Component={LoginResgister}/>
           <Route exact path='/ProductDetails/:id' Component={ProductDetails}/>
+          <Route exact path='/Nav' Component={Nav}/>
         </Switch>
       </>
     )

@@ -1,8 +1,21 @@
 import React, { Component } from "react";
 import Logo from "./Logo";
 import "./Nav.scss";
+import Cart from "../Cart";
 
 class Nav extends Component {
+  constructor() {
+    super();
+    this.state = {
+      visible: false
+    };
+  }
+  openCart = () => {
+    this.setState({
+      visible: !this.state.visible
+    });
+  };
+
   render() {
     return (
       <div className="Nav">
@@ -26,6 +39,7 @@ class Nav extends Component {
           <div>
             <div className="circle"></div>
             <svg
+              onClick={this.openCart}
               viewBox="0 0 307.772 354.263"
               class="Icon__StyledSvg-sc-10qpb8y-0 cWnymm bag"
             >
@@ -47,6 +61,7 @@ class Nav extends Component {
             </svg>
           </div>
         </div>
+        <Cart visible={this.state.visible} openCart={this.openCart}/>
       </div>
     );
   }

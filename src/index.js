@@ -9,5 +9,5 @@ import "./Styles/common.scss";
 // import ProductList from "./Pages/ProductList/ProductList";
 import Cart from "./Pages/Components/Cart";
 
-ReactDOM.render(<Cart />, document.getElementById("root"));
+ReactDOM.render(<Nav />, document.getElementById("root"));
 

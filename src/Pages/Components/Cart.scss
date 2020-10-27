@@ -1,9 +1,17 @@
 @import "../../Styles/common.scss";
 
 .Cart {
+  &.visible {
+    display: block;
+    position: absolute;
+    right: 0;
+    z-index: 999;
+  }
+  top: 0;
   width: 100%;
   height: 100vh;
-  background: gray;
+  background: transparent;
+  display: none;
 
   .cartWrapper {
     width: 50%;
@@ -16,7 +24,7 @@
       display: flex;
       justify-content: space-between;
       background: transparent;
-      padding: 50px;
+      padding: 30px 50px;
 
       p {
         background: transparent;
@@ -48,7 +56,7 @@
       align-items: center;
       height: 70%;
       margin: 0 50px;
-      
+
       p {
         background: transparent;
         font-size: 4rem;
@@ -61,7 +69,7 @@
       display: flex;
       justify-content: center;
       margin: 0 50px;
-      
+
       button {
         height: 4.51vw;
         width: 100%;
@@ -76,3 +84,81 @@
     }
   }
 }
+
+// .visible {
+//   width: 100%;
+//   height: 100vh;
+//   background: transparent;
+//   display: block;
+
+//   .cartWrapper {
+//     width: 50%;
+//     height: 100vh;
+//     position: absolute;
+//     right: 0;
+//     background: $default-yellow;
+
+//     .cartHeader {
+//       display: flex;
+//       justify-content: space-between;
+//       background: transparent;
+//       padding: 30px 50px;
+
+//       p {
+//         background: transparent;
+//         font-size: 1.5rem;
+//         font-weight: 1000;
+
+//         span {
+//           background: transparent;
+//         }
+//       }
+
+//       button {
+//         background: transparent;
+
+//         img {
+//           background: transparent;
+//           width: 20px;
+//           height: 20px;
+//         }
+//       }
+//     }
+
+//     .cartEmpty {
+//       border-top: 5px solid $default-black;
+//       background: transparent;
+//       display: flex;
+//       flex-direction: column;
+//       justify-content: center;
+//       align-items: center;
+//       height: 70%;
+//       margin: 0 50px;
+
+//       p {
+//         background: transparent;
+//         font-size: 4rem;
+//         font-weight: 1000;
+//       }
+//     }
+
+//     .cartBtn {
+//       background: transparent;
+//       display: flex;
+//       justify-content: center;
+//       margin: 0 50px;
+
+//       button {
+//         height: 4.51vw;
+//         width: 100%;
+//         background: $default-black;
+//         color: $default-white;
+//         font-weight: 1000;
+
+//         &:hover {
+//           cursor: pointer;
+//         }
+//       }
+//     }
+//   }
+// }
