@@ -1,0 +1,65 @@
+import React from "react";
+import Menubar from "./Components/Menubar/Menubar";
+import Product from "./Components/Product/Product"
+import "./ProductList.scss";
+
+class ProductList extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      products: [],
+    }
+  }
+
+  componentDidMount() {
+    fetch("http://localhost:3000/data/data.json",)
+      .then((res) => res.json())
+      .then((res) => {
+        this.setState({
+          products: res.products,
+        });
+      });
+  }
+
+  render() {
+    const { products } = this.state;
+
+    return (
+      <div className="ProductList">
+        <section>
+          <h1>SHOP</h1>
+          <p>(18 PRODUCT)</p>
+        </section>
+        <main>
+          <Menubar />
+          <div className="ProductsContainer">
+            {products.map(
+              ({
+                id,
+                modelImg,
+                iconImg,
+                name,
+                productImg,
+                price,
+              }) => (
+                <Product 
+                  key={id}
+                  modelImg={modelImg}
+                  iconImg={iconImg}
+                  name={name}
+                  productImg={productImg}
+                  price={price}
+                />
+              )
+            )}
+          </div>
+        </main>
+        <div>포토박스</div>
+        {/* <Footer /> */}
+      </div>
+    )
+  }
+}
+
+export default ProductList;
