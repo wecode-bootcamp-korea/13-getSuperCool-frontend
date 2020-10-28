@@ -3,8 +3,9 @@ import "./Cart.scss";
 
 class Cart extends Component {
   render() {
+    console.log("Cart", this.props.visible);
     return (
-      <section className={`Cart ${this.props.visible ? "visible" : ""}`}>
+      <section className={this.props.visible ? "Cart visible" : "Cart"}>
         <div className="cartWrapper">
           <div className="cartHeader">
             <p>

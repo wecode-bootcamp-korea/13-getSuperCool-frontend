@@ -11,12 +11,14 @@ class Nav extends Component {
     };
   }
   openCart = () => {
+    console.log("clicked");
     this.setState({
       visible: !this.state.visible
     });
   };
 
   render() {
+    console.log("Nav", this.state.visible);
     return (
       <div className="Nav">
         <Logo />
@@ -37,7 +39,7 @@ class Nav extends Component {
           </svg>
           <p>CART</p>
           <div>
-            <div className="circle"></div>
+            <div onClick={this.openCart} className="circle"></div>
             <svg
               onClick={this.openCart}
               viewBox="0 0 307.772 354.263"
@@ -61,7 +63,7 @@ class Nav extends Component {
             </svg>
           </div>
         </div>
-        <Cart visible={this.state.visible} openCart={this.openCart}/>
+        <Cart visible={this.state.visible} openCart={this.openCart} />
       </div>
     );
   }
