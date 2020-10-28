@@ -51,12 +51,14 @@
     line-height: 1.15;
     text-align: center;
 
-    .forgotPw {
-      color: $default-black;
-      font-weight: 400;
-      text-decoration: underline;
-      text-transform: none;
-      font-size: 0.95vw;
+    a {
+      .forgotPw {
+        color: $default-black;
+        font-weight: 400;
+        text-decoration: underline;
+        text-transform: none;
+        font-size: 0.95vw;
+      }
     }
   }
 }

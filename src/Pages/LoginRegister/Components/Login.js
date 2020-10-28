@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import ForgotPw from "./ForgotPw";
 import "./Login.scss";
 
@@ -91,12 +92,14 @@ export default class Login extends React.Component {
         ) : null}
 
         <div className="loginHelp">
-          <button
-            className="forgotPw"
-            onClick={() => this.handleForgotPassword}
-          >
-            Forgot your password?
-          </button>
+          <a>
+            <button
+              className="forgotPw"
+              onClick={() => this.handleForgotPassword}
+            >
+              Forgot your password?
+            </button>
+          </a>
         </div>
       </div>
     );
