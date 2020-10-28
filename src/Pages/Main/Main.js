@@ -52,17 +52,17 @@ class Main extends Component {
       <div className="Main">
         <Slider {...settings}>
           <img
-            id="first"
+            id="firstImg"
             src="https://images.ctfassets.net/vnxry7jc7f2k/3SBQaVgfnCvM6ALvpyYt2h/6dba0f1d03de947b436b8aa57c7ead30/slider-01.jpg?w=1800&h=1013&q=80&fm=webp"
             alt="first"
           />
           <img
-            id="second"
+            id="secondImg"
             src="https://images.ctfassets.net/vnxry7jc7f2k/1rJNXGIpDwniKyhAlBnRVM/9cfc8df2da07ebf13cb3229842820ab8/slider_applicazione.jpg?w=1920&h=1080&q=80&fm=webp"
             alt="second"
           />
           <img
-            id="third"
+            id="thirdImg"
             src="https://images.ctfassets.net/vnxry7jc7f2k/5RpJJJgujK6rFOlN0ljzi7/06352b48f4acafa52500299cb6475299/leggera_SLIDER_MOOD.jpg?w=1920&h=1080&q=80&fm=webp"
             alt="third"
           />
@@ -82,7 +82,7 @@ class Main extends Component {
             </span>
           </div>
         </div>
-        <div className="Section2">
+        <div className="productSection">
           <p>YOUR NEW</p>
           <p>EVERY DAY</p>
           <p>BASICS!</p>
@@ -117,7 +117,7 @@ class Main extends Component {
             </div>
           </div>
         </div>
-        <div className="Section3">
+        <div className="NewsletterSection">
           <img src="https://images.ctfassets.net/vnxry7jc7f2k/3F6iB8kJUfwHHUeiFVMmVW/a7bdf792f2342d55ae093f4d033b66dc/per_sito-02.jpg?w=1600&h=1600&q=80&fm=webp" alt="" />
           <div>
             <p>SUBSCRIBE</p>

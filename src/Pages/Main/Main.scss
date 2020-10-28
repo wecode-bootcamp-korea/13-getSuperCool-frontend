@@ -37,12 +37,10 @@
     top: 100%;
 
     div {
-      display: block;
       width: 200%;
       height: 30px;
       position: absolute;
       overflow: hidden;
-
       animation: marquee 2s linear infinite;
 
       span {
@@ -62,7 +60,7 @@
     }
   }
 
-  .Section2 {
+  .productSection {
     width: 100%;
     height: 120vh;
     border: 1px solid black;
@@ -74,9 +72,11 @@
     .items {
       position: relative;
     }
+
     .slick-slider {
       margin-left: 50px;
     }
+
     .arrow {
       background-color: transparent;
       display: flex;
@@ -102,7 +102,7 @@
     }
   }
 
-  .Section3 {
+  .NewsletterSection {
     display: flex;
 
     img {
