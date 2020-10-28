@@ -92,14 +92,14 @@ export default class Login extends React.Component {
         ) : null}
 
         <div className="loginHelp">
-          <a>
+          <Link to="/ForgotPw">
             <button
               className="forgotPw"
               onClick={() => this.handleForgotPassword}
             >
               Forgot your password?
             </button>
-          </a>
+          </Link>
         </div>
       </div>
     );
