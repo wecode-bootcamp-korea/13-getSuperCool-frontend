@@ -9,21 +9,10 @@
   }
 }
 
-.errorWrapper-BH {
-  padding: 0.4vw 0.69vw 1vw;
-  .loginErrorMessage {
-    color: $default-red;
-    text-align: center;
-    line-height: 1.15;
-    font-weight: 400;
-    text-transform: none;
-    font-size: 0.95vw;
-  }
-}
-
-.Contact-BH {
+.Contact {
   height: 100vh;
   width: 100vw;
+
   main {
     @include flex-column;
     position: relative;
@@ -142,7 +131,7 @@
             line-height: 1.67vw;
           }
 
-          .error {
+          .requiredInputError {
             margin-bottom: 2.5vw;
             border-bottom: $default-border;
             border-color: $default-red;
@@ -150,7 +139,7 @@
             line-height: 1.67vw;
           }
 
-          .error select {
+          .requiredInputError select {
             color: $default-red;
             margin-bottom: 0.4vw;
             line-height: 1.67vw;
@@ -158,7 +147,7 @@
             font: $button-meta-font;
           }
 
-          .error::placeholder {
+          .requiredInputError::placeholder {
             font: $button-meta-font;
             padding-left: 4px;
             color: $default-red;

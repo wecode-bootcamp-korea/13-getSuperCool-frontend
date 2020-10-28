@@ -15,9 +15,9 @@ export default class ForgotPw extends React.Component {
   handleEmailValue = e => {
     const { value } = e.target;
     this.setState({
-      emailValue: value
+      emailValue: value,
+      errorMessage: ""
     });
-    this.setState({ errorMessage: "" });
   };
 
   handleValidate = () => {
