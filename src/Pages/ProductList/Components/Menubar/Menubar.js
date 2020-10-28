@@ -1,5 +1,5 @@
 import React from "react";
-import "./Menubar.scss";
+// import "./Menubar.scss";
 
 class Menubar extends React.Component {
   constructor() {

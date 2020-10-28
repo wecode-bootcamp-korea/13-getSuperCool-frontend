@@ -2,11 +2,8 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
   Link,
-  useParams
 } from "react-router-dom";
-import ForgotPw from "./ForgotPw";
 import "./Login.scss";
 
 const API = "http://10.58.4.225:8000/account/login";
@@ -101,7 +98,7 @@ export default class Login extends React.Component {
             ) : null}
 
             <div className="loginHelp">
-              <Link to="./ForgotPw">
+              <Link to="/ForgotPw">
                 <button
                   className="forgotPw"
                   onClick={() => this.handleForgotPassword}
