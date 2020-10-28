@@ -1,6 +1,92 @@
 import React, { Component } from "react";
 import "./Contact.scss";
 
+const countryOptions = [
+  {
+    id: 1,
+    value: "Afghanistan"
+  },
+  {
+    id: 2,
+    value: "Albania"
+  },
+  {
+    id: 3,
+    value: "Argentina"
+  },
+  {
+    id: 4,
+    value: "Armenia"
+  },
+  {
+    id: 5,
+    value: "Australia"
+  },
+  {
+    id: 6,
+    value: "El Salvador"
+  },
+  {
+    id: 7,
+    value: "Estonia"
+  },
+  {
+    id: 8,
+    value: "Finland"
+  },
+  {
+    id: 9,
+    value: "France"
+  }
+];
+
+const subjectOptions = [
+  {
+    id: 1,
+    value: "Account/Newsletter"
+  },
+  {
+    id: 2,
+    value: "I want to know more about a product"
+  },
+  {
+    id: 3,
+    value: "AI got a problem with my orderrgentina"
+  },
+  {
+    id: 4,
+    value: "I got a problem with a product"
+  },
+  {
+    id: 5,
+    value: "Order Status"
+  },
+  {
+    id: 6,
+    value: "Payment Inquiries"
+  },
+  {
+    id: 7,
+    value: "PR Inquiries"
+  },
+  {
+    id: 8,
+    value: "Refund Status"
+  },
+  {
+    id: 9,
+    value: "Returning an Order"
+  },
+  {
+    id: 10,
+    value: "Technical Support"
+  },
+  {
+    id: 11,
+    value: "Other Subject"
+  }
+];
+
 export default class Contact extends Component {
   constructor() {
     super();
@@ -11,19 +97,15 @@ export default class Contact extends Component {
       countryValue: "",
       subjectValue: "",
       messageValue: "",
-      errorColor: false
+      requiredInput: false
     };
   }
   handleInputValue = e => {
     const { value, name } = e.target;
     this.setState({
-      [name]: value
+      [name]: value,
+      requiredInput: false
     });
-
-    this.setState({
-      errorColor: false
-    });
-    console.log(name, value);
   };
 
   handleValidate = () => {
@@ -37,9 +119,9 @@ export default class Contact extends Component {
       !subjectValue
     ) {
       this.setState({
-        errorColor: true
+        requiredInput: true
       });
-    } else return this.setState({ errorColor: false });
+    } else return this.setState({ requiredInput: false });
   };
 
   handleRegisterButton = e => {
@@ -77,9 +159,17 @@ export default class Contact extends Component {
 
   render() {
     const { emailValue, nameValue, subjectValue, messageValue } = this.state;
+
+    let validBtn =
+      emailValue.length > 2 &&
+      nameValue.length > 2 &&
+      messageValue.length > 3 &&
+      emailValue.includes("@") &&
+      subjectValue;
+
     console.log(emailValue, nameValue.length, messageValue.length);
     return (
-      <div className="Contact-BH">
+      <div className="Contact">
         <main>
           <p className="contactTitle">CONTACT</p>
           <div className="contactContainer">
@@ -122,14 +212,22 @@ export default class Contact extends Component {
                 </div>
                 <input
                   onChange={this.handleInputValue}
-                  className={this.state.errorColor ? "error" : "emailInput"}
+                  className={
+                    this.state.requiredInput
+                      ? "requiredInputError"
+                      : "emailInput"
+                  }
                   type="text"
                   name="emailValue"
                   placeholder="Email *"
                 />
                 <input
                   onChange={this.handleInputValue}
-                  className={this.state.errorColor ? "error" : "nameInput"}
+                  className={
+                    this.state.requiredInput
+                      ? "requiredInputError"
+                      : "nameInput"
+                  }
                   type="text"
                   name="nameValue"
                   placeholder="Name *"
@@ -148,45 +246,33 @@ export default class Contact extends Component {
                     name="countryValue"
                   >
                     <option selected="selected">Country</option>
-                    <option>Afghanistan</option>
-                    <option>Albania</option>
-                    <option>Argentina</option>
-                    <option>Armenia</option>
-                    <option>Australia</option>
-                    <option>El Salvador</option>
-                    <option>Estonia</option>
-                    <option>Finland</option>
-                    <option>France</option>
+                    {countryOptions.map(country => (
+                      <option id={country.id}>{country.value}</option>
+                    ))}
                   </select>
                 </label>
                 <label
-                  className={this.state.errorColor ? "error" : "subjectSelect"}
+                  className={
+                    this.state.requiredInput
+                      ? "requiredInputError"
+                      : "subjectSelect"
+                  }
                 >
                   <select
                     onChange={this.handleInputValue}
                     value={this.state.value}
                     name="subjectValue"
                   >
-                    <option>Subject *</option>
-                    <option value="1">Account/Newsletter</option>
-                    <option value="2">
-                      I want to know more about a product
-                    </option>
-                    <option value="3">I got a problem with my order</option>
-                    <option value="4">I got a problem with a product</option>
-                    <option value="5">Order Status</option>
-                    <option value="6">Payment Inquiries</option>
-                    <option value="7">PR Inquiries</option>
-                    <option value="8">Refund Status</option>
-                    <option value="9">Returning an Order</option>
-                    <option value="10">Technical Support</option>
-                    <option value="11">Other Subject</option>
+                    <option selected="selected">Subject *</option>
+                    {subjectOptions.map(subject => (
+                      <option id={subject.id}>{subject.value}</option>
+                    ))}
                   </select>
                 </label>
                 <textarea
                   onChange={this.handleInputValue}
                   className={
-                    this.state.errorColor
+                    this.state.requiredInput
                       ? "messageContent textareaError"
                       : "messageContent"
                   }
@@ -195,15 +281,7 @@ export default class Contact extends Component {
                 ></textarea>
                 <button
                   onClick={this.handleRegisterButton}
-                  className={
-                    emailValue.length > 2 &&
-                    nameValue.length > 2 &&
-                    messageValue.length > 3 &&
-                    emailValue.includes("@") &&
-                    subjectValue
-                      ? "sendButton active"
-                      : "sendButton"
-                  }
+                  className={validBtn ? "sendButton active" : "sendButton"}
                 >
                   OK
                 </button>
