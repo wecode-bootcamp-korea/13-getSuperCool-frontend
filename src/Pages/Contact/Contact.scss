@@ -1,0 +1,216 @@
+@import "../../Styles/common.scss";
+
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -300%;
+  }
+}
+
+.Contact {
+  height: 100vh;
+  width: 100vw;
+
+  main {
+    @include flex-column;
+    position: relative;
+    width: 100vw;
+    top: 9vw;
+
+    .contactTitle {
+      display: block;
+      text-align: center;
+      font-size: 10.42vw;
+      font-weight: 600;
+      line-height: 8.82vw;
+    }
+
+    .contactContainer {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      margin-top: 3.5vw;
+      background: transparent;
+
+      .moreInfoWrapper {
+        width: 35%;
+
+        .moreInformation {
+          padding-top: 7vw;
+          padding-right: 12vw;
+          padding-left: 3vw;
+          line-height: 1.35vw;
+
+          .marquee {
+            height: 1.7vw;
+            width: 18vw;
+            position: relative;
+            margin: 0px 2.78vw 1.39vw 0px;
+            background-color: $default-yellow;
+            overflow: hidden;
+            div {
+              width: 450%;
+              padding: 0;
+              height: 1vw;
+              background-color: transparent;
+              position: absolute;
+              bottom: 0;
+              display: flex;
+              animation: marquee 9s linear infinite;
+              span {
+                background-color: transparent;
+                font: $button-meta-font;
+                line-height: 0.6vw;
+                display: block;
+                padding: 0;
+                float: left;
+                margin-right: 0;
+                padding-right: 0;
+              }
+            }
+          }
+
+          .infoTitle {
+            display: block;
+            font: $button-meta-font;
+
+            line-height: 1.4vw;
+          }
+
+          span {
+            display: inline-block;
+            font: $button-meta-font;
+            font-weight: 400;
+            line-height: 1.4vw;
+          }
+        }
+      }
+      .messageFormWrapper {
+        position: relative;
+
+        width: 50%;
+        padding-right: 3vw;
+
+        .messageForm {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          background: $default-yellow;
+          width: 100%;
+          padding: 4.17vw;
+
+          * {
+            background: $default-yellow;
+          }
+
+          .formInstructions {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin: 1.39vw 0vw;
+
+            p {
+              font-size: 1.11vw;
+              line-height: 1.81vw;
+              text-transform: none;
+            }
+            span {
+              font-size: 0.69vw;
+              line-height: 0.56vw;
+            }
+          }
+          .emailInput,
+          .nameInput,
+          .orderNumberInput,
+          .countrySelect,
+          .subjectSelect {
+            margin-bottom: 2.5vw;
+            border-bottom: $default-border;
+            line-height: 1.67vw;
+          }
+
+          .requiredInputError {
+            margin-bottom: 2.5vw;
+            border-bottom: $default-border;
+            border-color: $default-red;
+            color: $default-red;
+            line-height: 1.67vw;
+          }
+
+          .requiredInputError select {
+            color: $default-red;
+            margin-bottom: 0.4vw;
+            line-height: 1.67vw;
+            width: 100%;
+            font: $button-meta-font;
+          }
+
+          .requiredInputError::placeholder {
+            font: $button-meta-font;
+            padding-left: 4px;
+            color: $default-red;
+          }
+
+          .countrySelect select,
+          .subjectSelect select {
+            margin-bottom: 0.4vw;
+            line-height: 1.67vw;
+            width: 100%;
+            font: $button-meta-font;
+            color: $default-black;
+          }
+
+          .emailInput::placeholder,
+          .nameInput::placeholder,
+          .orderNumberInput::placeholder {
+            font: $button-meta-font;
+            color: $default-black;
+            padding-left: 4px;
+          }
+
+          .messageContent {
+            border: $default-border;
+            height: 11.53vw;
+            margin-bottom: 2.29vw;
+            line-height: 1.2vw;
+            padding: 0.83vw;
+            resize: none;
+            overflow: auto;
+          }
+
+          .messageContent::placeholder {
+            line-height: 1.67vw;
+            font: $button-meta-font;
+            color: $default-black;
+          }
+
+          .textareaError {
+            border: $default-border;
+            border-color: $default-red;
+          }
+
+          .textareaError::placeholder {
+            color: $default-red;
+          }
+
+          .sendButton {
+            height: 4.51vw;
+            margin-bottom: 1.2vw;
+            border: $default-border;
+            color: $default-black;
+            background-color: $default-yellow;
+            font: $button-meta-font;
+            line-height: 1.39vw;
+            height: 4.51vw;
+          }
+          .active {
+            color: $default-white;
+            background-color: $default-black;
+          }
+        }
+      }
+    }
+  }
+}

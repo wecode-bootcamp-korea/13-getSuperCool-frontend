@@ -54,14 +54,17 @@ class Main extends Component {
           <img
             id="first"
             src="https://images.ctfassets.net/vnxry7jc7f2k/3SBQaVgfnCvM6ALvpyYt2h/6dba0f1d03de947b436b8aa57c7ead30/slider-01.jpg?w=1800&h=1013&q=80&fm=webp"
+            alt="first"
           />
           <img
             id="second"
             src="https://images.ctfassets.net/vnxry7jc7f2k/1rJNXGIpDwniKyhAlBnRVM/9cfc8df2da07ebf13cb3229842820ab8/slider_applicazione.jpg?w=1920&h=1080&q=80&fm=webp"
+            alt="second"
           />
           <img
             id="third"
             src="https://images.ctfassets.net/vnxry7jc7f2k/5RpJJJgujK6rFOlN0ljzi7/06352b48f4acafa52500299cb6475299/leggera_SLIDER_MOOD.jpg?w=1920&h=1080&q=80&fm=webp"
+            alt="third"
           />
         </Slider>
         <div className="shop">
@@ -103,17 +106,19 @@ class Main extends Component {
                 className="arrowLeft"
                 onClick={this.prev}
                 src="https://i.ibb.co/BGL1sk3/arrow-left.png"
-              ></img>
+                alt=""
+              />
               <img
                 className="arrowRight"
                 onClick={this.next}
                 src="https://i.ibb.co/KXQm6Q2/arrow-right.png"
-              ></img>
+                alt=""
+              />
             </div>
           </div>
         </div>
         <div className="Section3">
-          <img src="https://images.ctfassets.net/vnxry7jc7f2k/3F6iB8kJUfwHHUeiFVMmVW/a7bdf792f2342d55ae093f4d033b66dc/per_sito-02.jpg?w=1600&h=1600&q=80&fm=webp" />
+          <img src="https://images.ctfassets.net/vnxry7jc7f2k/3F6iB8kJUfwHHUeiFVMmVW/a7bdf792f2342d55ae093f4d033b66dc/per_sito-02.jpg?w=1600&h=1600&q=80&fm=webp" alt="" />
           <div>
             <p>SUBSCRIBE</p>
             <p>TO THE</p>
