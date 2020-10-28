@@ -6,8 +6,8 @@ import Nav from "./Pages/Components/Nav/Nav";
 import "./index.css";
 import "./Styles/reset.scss";
 import "./Styles/common.scss";
-// import ProductList from "./Pages/ProductList/ProductList";
+import ProductList from "./Pages/ProductList/ProductList";
 import Cart from "./Pages/Components/Cart";
 
-ReactDOM.render(<Nav />, document.getElementById("root"));
+ReactDOM.render(<ProductList />, document.getElementById("root"));
 
