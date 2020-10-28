@@ -1,0 +1,64 @@
+@import "../../../Styles/common.scss";
+
+.Login-BH {
+  position: relative;
+  @include flex-column;
+  padding: 2.1vw 4.2vw;
+  border-top: $default-border;
+
+  .emailInput,
+  .pwInput {
+    margin-bottom: 2.29vw;
+    border-bottom: $default-border;
+    line-height: 1.67vw;
+  }
+
+  .emailInput::placeholder,
+  .pwInput::placeholder {
+    color: $default-black;
+    font: $button-meta-font;
+  }
+
+  .loginButton {
+    height: 4.51vw;
+    margin-bottom: 1.2vw;
+    border: $default-border;
+    font: $button-meta-font;
+    line-height: 1.39vw;
+  }
+  .loginButtonActive {
+    height: 4.51vw;
+    margin-bottom: 1.2vw;
+    border: $default-border;
+    font: $button-meta-font;
+    color: $default-white;
+    background-color: $default-black;
+    line-height: 1.39vw;
+  }
+  .errorWrapper-BH {
+    padding: 0.4vw 0px 0.69vw;
+    .loginErrorMessage {
+      color: $default-red;
+      text-align: center;
+      line-height: 1.15;
+      font-weight: 400;
+      text-transform: none;
+      font-size: 0.95vw;
+    }
+  }
+  .loginHelp {
+    padding: 0.69vw 0px 2.08vw;
+    line-height: 1.15;
+    text-align: center;
+
+    a {
+      .forgotPw {
+        color: $default-black;
+        font-weight: 400;
+        text-decoration: underline;
+        text-transform: none;
+        font-size: 0.95vw;
+      }
+    }
+  }
+}
