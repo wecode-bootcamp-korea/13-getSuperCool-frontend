@@ -1,0 +1,14 @@
+@import "../../../Styles/common.scss";
+
+svg {
+  width: 90vw;
+  height: 100%;
+  
+  &:hover {
+    cursor: pointer;
+  }
+
+  g {
+    fill: $default-black;
+  }
+}

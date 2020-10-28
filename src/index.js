@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Footer from "./Pages/Components/Footer"
+import Footer from "./Pages/Components/Footer/Footer"
 import "./index.css";
 import "../src/Styles/common.scss";
 import "../src/Styles/reset.scss";
