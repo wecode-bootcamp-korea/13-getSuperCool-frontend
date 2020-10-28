@@ -1,0 +1,99 @@
+@import "../../../Styles/common.scss";
+
+.errorWrapper-BH {
+  padding: 0.4vw 0.69vw 1vw;
+  .loginErrorMessage {
+    color: $default-red;
+    text-align: center;
+    line-height: 1.15;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 0.95vw;
+  }
+}
+
+.Register-BH {
+  position: relative;
+  @include flex-column;
+  padding: 2.1vw 4.2vw;
+  border-top: $default-border;
+
+  .nameFirstInput,
+  .nameLastInput,
+  .dateInput,
+  .emailInput,
+  .pwInput {
+    margin-bottom: 2vw;
+    border-bottom: $default-border;
+    line-height: 1.67vw;
+  }
+
+  .pwInput,
+  .pwConfirmInput {
+    margin-bottom: 1.1vw;
+    border-bottom: $default-border;
+    line-height: 1.67vw;
+  }
+
+  .dateInput {
+    font: $button-meta-font;
+    line-height: 1.67vw;
+  }
+
+  .inputDescription {
+    font-size: 0.83vw;
+    line-height: 0.83vw;
+    margin-bottom: 2vw;
+    color: $default-grey-meta;
+    font-weight: 350;
+    text-transform: none;
+  }
+
+  .nameFirstInput::placeholder,
+  .nameLastInput::placeholder,
+  .emailInput::placeholder,
+  .pwInput::placeholder,
+  .pwConfirmInput::placeholder {
+    color: $default-black;
+    font: $button-meta-font;
+  }
+
+  .registerButton {
+    height: 4.51vw;
+    margin-bottom: 1.2vw;
+    border: $default-border;
+    font: $button-meta-font;
+    line-height: 1.39vw;
+  }
+
+  .active {
+    color: $default-white;
+    background-color: $default-black;
+  }
+
+  .registerAccept {
+    border: $default-yellow;
+
+    label {
+      display: flex;
+      color: $default-black;
+      font-weight: 400;
+      font-size: 0.69vw;
+      line-height: 0.9vw;
+      text-align: left;
+
+      span {
+        display: inline-block;
+        position: relative;
+        padding-left: 0.4vw;
+        padding-right: 0.2vw;
+        text-decoration: none;
+        transition: linear 0.4s;
+      }
+    }
+
+    label:hover span {
+      text-decoration: underline;
+    }
+  }
+}
