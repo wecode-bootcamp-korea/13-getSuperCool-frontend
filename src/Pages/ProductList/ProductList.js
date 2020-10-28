@@ -2,6 +2,7 @@ import React from "react";
 import Nav from "../Components/Nav/Nav";
 import Menubar from "./Components/Menubar/Menubar";
 import Product from "./Components/Product/Product";
+import Cart from "../Components/Cart";
 import "./ProductList.scss";
 
 class ProductList extends React.Component {
@@ -9,7 +10,8 @@ class ProductList extends React.Component {
     super();
 
     this.state = {
-      products: []
+      products: [],
+      visible: false
     };
   }
 
@@ -23,8 +25,15 @@ class ProductList extends React.Component {
       });
   }
 
+  handleCart = () => {
+    console.log("clicked");
+    this.setState({
+      visible: !this.state.visible
+    });
+  };
+
   render() {
-    const { products } = this.state;
+    const { products, visible } = this.state;
 
     return (
       <>
@@ -52,6 +61,7 @@ class ProductList extends React.Component {
             </div>
           </main>
           <div>포토박스</div>
+          {visible && <Cart handleCart={this.handleCart} />}
           {/* <Footer /> */}
         </div>
       </>

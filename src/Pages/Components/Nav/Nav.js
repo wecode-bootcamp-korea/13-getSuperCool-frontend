@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Logo from "./Logo";
-import "./Nav.scss";
 import Cart from "../Cart";
+import "./Nav.scss";
 
 class Nav extends Component {
   constructor() {
@@ -10,7 +10,8 @@ class Nav extends Component {
       visible: false
     };
   }
-  openCart = () => {
+
+  handleCart = () => {
     console.log("clicked");
     this.setState({
       visible: !this.state.visible
@@ -18,7 +19,8 @@ class Nav extends Component {
   };
 
   render() {
-    console.log("Nav", this.state.visible);
+    // console.log("Nav", this.state.visible);
+    const { visible } = this.state;
     return (
       <div className="Nav">
         <Logo />
@@ -39,9 +41,9 @@ class Nav extends Component {
           </svg>
           <p>CART</p>
           <div>
-            <div onClick={this.openCart} className="circle"></div>
+            <div onClick={this.handleCart} className="circle"></div>
             <svg
-              onClick={this.openCart}
+              onClick={this.handleCart}
               viewBox="0 0 307.772 354.263"
               class="Icon__StyledSvg-sc-10qpb8y-0 cWnymm bag"
             >
@@ -63,7 +65,7 @@ class Nav extends Component {
             </svg>
           </div>
         </div>
-        <Cart visible={this.state.visible} openCart={this.openCart} />
+        {visible && <Cart handleCart={this.handleCart} />}
       </div>
     );
   }

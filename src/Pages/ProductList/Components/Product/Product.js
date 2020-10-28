@@ -1,10 +1,19 @@
 import React from "react";
-import "./Product.scss";
 import logoImg from "./logoText.svg";
+import "./Product.scss";
 
 class Product extends React.Component {
   render() {
-    const { id, modelImg, iconImg, name, productImg, price } = this.props;
+    // console.log(this.props.visible);
+    const {
+      id,
+      modelImg,
+      iconImg,
+      name,
+      productImg,
+      price,
+      handleCart
+    } = this.props;
 
     return (
       <div id={id} className="Product">
@@ -14,18 +23,11 @@ class Product extends React.Component {
         </div>
         <img className="logoIcon" src={iconImg} alt="logoImg" />
         <img className="productImg" src={productImg} alt={name} />
-
         <span>
           <div>{name}</div>
           <div>{price}</div>
         </span>
-        <button
-          onClick={() => {
-            console.log("123");
-          }}
-        >
-          ADD TO CART
-        </button>
+        <button onClick={handleCart}>ADD TO CART</button>
       </div>
     );
   }

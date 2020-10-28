@@ -3,16 +3,16 @@ import "./Cart.scss";
 
 class Cart extends Component {
   render() {
-    console.log("Cart", this.props.visible);
+    // console.log("Cart", this.props.visible);
     return (
-      <section className={this.props.visible ? "Cart visible" : "Cart"}>
+      <section className="Cart visible">
         <div className="cartWrapper">
           <div className="cartHeader">
             <p>
               Your Cart<span> (0) </span>
             </p>
-            <button onClick={this.props.openCart}>
-              <img src="https://i.ibb.co/C7Zh1zK/close.png"></img>
+            <button onClick={this.props.handleCart}>
+              <img alt="close" src="https://i.ibb.co/C7Zh1zK/close.png"></img>
             </button>
           </div>
           <div className="cartEmpty">
