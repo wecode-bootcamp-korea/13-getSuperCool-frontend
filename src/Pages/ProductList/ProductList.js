@@ -26,9 +26,17 @@ class ProductList extends React.Component {
   }
 
   handleCart = () => {
-    console.log("clicked");
+
     this.setState({
-      visible: !this.state.visible
+      visible: !this.state.visible,
+      products: [{
+        "id" : 1,
+        "modelImg":"https://files.slack.com/files-pri/TH0U6FBTN-F01D8T4F77U/gettyimages-1272476716.jpg",
+        "iconImg" : "https://i.ibb.co/wS6dvTj/icontrans.png",
+        "name" : "COMBO GOALS LIP 'N' CHEEK",
+        "productImg" : "https://images.ctfassets.net/vnxry7jc7f2k/3GJLJl7dD0yzNt0pzFgqzp/904036e327b01591e5b22ca8485c42dc/04_SUPERFLUID_EYEGEL.png?w=300&h=784&q=80&fm=webp",
+        "price" : "16.00$"
+      }]
     });
   };
 
@@ -55,13 +63,14 @@ class ProductList extends React.Component {
                     name={name}
                     productImg={productImg}
                     price={price}
+                    handleCart={this.handleCart}
                   />
                 )
               )}
             </div>
           </main>
           <div>포토박스</div>
-          {visible && <Cart handleCart={this.handleCart} />}
+          {visible && <Cart handleCart={this.handleCart} products={products} />}
           {/* <Footer /> */}
         </div>
       </>

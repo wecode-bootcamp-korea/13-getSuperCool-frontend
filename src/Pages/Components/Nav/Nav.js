@@ -12,15 +12,14 @@ class Nav extends Component {
   }
 
   handleCart = () => {
-    console.log("clicked");
     this.setState({
       visible: !this.state.visible
     });
   };
 
   render() {
-    // console.log("Nav", this.state.visible);
     const { visible } = this.state;
+    
     return (
       <div className="Nav">
         <Logo />
