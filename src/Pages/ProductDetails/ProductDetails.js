@@ -26,7 +26,6 @@ class ProductDetails extends React.Component {
     })
       .then(res => res.json())
       .then(res => {
-        console.log(res, "hahah");
         this.setState({
           pairData: res.pair_with,
           alsoLike: res.you_may_also_like,
@@ -39,12 +38,9 @@ class ProductDetails extends React.Component {
 
   componentDidUpdate(preProps) {
     if(preProps.match.params.id !== this.props.match.params.id){
-      fetch("/data/data.json", {
-        method: "GET"
-      })
+      fetch("/data/data.json")
         .then(res => res.json())
         .then(res => {
-          console.log(res, "hahah");
           this.setState({
             pairData: res.pair_with,
             alsoLike: res.you_may_also_like,
@@ -71,14 +67,17 @@ class ProductDetails extends React.Component {
         <section className='Description'>
           <div className='Leftside'>
             {/* { false ? <LeftSlider/> : <RightSlider/>} */}
+            {colorData&&
             <LeftSlider
-              bg1={colorData&&colorData.detail1_image} 
-              bg2={colorData&&colorData.detail2_image} 
-              bg3={colorData&&colorData.model_image} 
-              product={colorData&&colorData.product_image} 
-            />
+              bg1={colorData.detail1_image} 
+              bg2={colorData.detail2_image} 
+              bg3={colorData.model_image} 
+              product={colorData.product_image} 
+            />}
           </div>
           <div className='Rightside'>
+
+            {productData&&
             <RightSlider
               handleLeft={(e) =>
                 this.props.history.push(
@@ -86,15 +85,15 @@ class ProductDetails extends React.Component {
                 )
               }
               productData={productData}
-              contains={productData&&productData.contains}
-              description={productData&&productData.description}
-              goodToKnow={productData&&productData.good_to_know}
-              name={productData&&productData.name}
-              price={productData&&productData.price}
-              size={productData&&productData.size}
-              superTip={productData&&productData.super_tip}
+              contains={productData.contains}
+              description={productData.description}
+              goodToKnow={productData.good_to_know}
+              name={productData.name}
+              price={productData.price}
+              size={productData.size}
+              superTip={productData.super_tip}
               colorsData={colorsData}  pairData={pairData}
-            />
+            />}
           </div>
         </section>
         <section className='YouMayAlsoLike'>

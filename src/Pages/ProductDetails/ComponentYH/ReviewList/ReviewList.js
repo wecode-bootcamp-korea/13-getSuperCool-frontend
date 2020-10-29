@@ -1,6 +1,6 @@
-// import { render } from "node-sass";
 import React from "react";
 import review from "./reviewMock.json";
+
 class ReviewList extends React.Component {
   render(){
     return(
@@ -10,28 +10,16 @@ class ReviewList extends React.Component {
         </div>
         <div className='Reviews'>
           <ul>
-            {review.map(idx => {
-              return (
-                <>
-                  <div className="review">
-                    <p>{idx.id}  {idx.date}</p>
-                    <p>{idx.review}</p>
-                    <p>Skin Type: {idx.skin}</p>
-                    <p>Age Range: {idx["age range"]}</p>
-                  </div>
-                </>
-              );
-            })}
-
-            {/* {arr.map((str, idx) => {
-              return (
-                <li key={str} onClick={() => this.handleClick(idx + 1)}>
-                  {str}
+            {review.map(idx => 
+              <>
+                <li className="review">
+                  <p>{idx.title}  <span>{idx.name}  {idx.date}</span></p>
+                  <p>{idx.review}</p>
+                  <p>{idx.skin}</p>
+                  <p>{idx.age}</p>
                 </li>
-              );
-            })} */}
-
-            <li></li>
+              </>
+            )}
           </ul>
         </div>
       </div>

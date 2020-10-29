@@ -1,45 +1,182 @@
-[{
-    id: "LIZETH",
-    date: "2020-10-14",
-    review: "I love the way it’s very intense yet it’s easy to blend and make it look soft, amazing product",
-    skin: "Oily",
-    age range: "<18",
-},{
-    id: "ALICE",
-    date: "2020-08-24",
-    review: "Hi, I discover this makeup line by chance on instagram and I tried some products....I really like the COMBO-goals coral, it fits perfect with my skin color and I"m super happy because it last a lot! I will try different colors in the future...and i like a lot the idea to have one product for cheeks and lips. I also like a lot the mascara, wow! Have a nice day Alice",
-    skin: "Normal",
-    age range: "25-34",
-},{id: "FEDERICA",
-    date: "2020-08-03",
-    review: "I din"t use to wear blush, I never felt confident with them, then I discovered Superfluid and took COMBO GOALS in the coral shade. Now I have to share it with my mum! No matter if my skin is medium and her is porcelain, if I"m dark and she"s blonde, if I"ve got black eyes and she"s got green, this blush pops making every look eye-catching. Try it before shooting for an Instagram post and see how many likes it gets! I"m 100% in love I"m ordering other ones right now... one for me, one for mum.",
-    skin: "Dry",
-    age range: "25-34",
-    },{
-        id: "NICOLE M.
-        ",
-    date: "2020-07-16
-    ",
-    review: "great products!",
-    skin: "Sensitive",
-    age range: "18-24",
-    },{
-        id: "KELLY",
-    date: "2020-07-10",
-    review: "Love the smell, texture and color of the Combo Goals in Mauve. Perfect for a lovely soft color on the lips and cheeks",
-    skin: "Normal",
-    age range: "18-24",
-    },{
-        id: "JOANNA B.
-        ",
-    date: "2020-09-07",
-    review: "This is a really good colour but was hoping it was more like a brown mauve than pink, but once blended it looks natural. The smell is quite minty and pleasant. Not so thrilled about the packaging which is entirely plastic and doesn"t seem reusable.",
-    skin: "Sensitive",
-    age range: "25-34",
-    },{
-        id: "CLAUDIA",
-    date: "2020-08-14",
-    review: "Very pretty and comfortable! Since it"s matte it stays a while, it is a bit drying but just a bit. Love the smell!",
-    skin: "Sensitive",
-    age range: "25-34",
-    }]
+[
+  {
+    "id": 1,
+    "title": "I LOVE THE WAY IT’S",
+    "name": "LIZETH",
+    "date": "2020-10-14",
+    "review": "I love the way it’s very intense yet it’s easy to blend and make it look soft, amazing product 🤩",
+    "skin": "Skin type: Oily",
+    "age": "Age range: <18"
+  },
+  {
+    "id": 2,
+    "title": "OMG AMAZIIING",
+    "name": "ALICE",
+    "date": "2020-08-24",
+    "review": "Hi, I discover this makeup line by chance on instagram and I tried some products....I really like the COMBO-goals coral, it fits perfect with my skin color and I'm super happy because it last a lot! I will try different colors in the future...and i like a lot the idea to have one product for cheeks and lips. I also like a lot the mascara, wow! Have a nice day Alice",
+    "skin": "Skin type: Normal",
+    "age": "Age range: 25-34"
+  },
+  {
+    "id": 3,
+    "title": "AN ABSOLUTE ENCHANTING COMBO!",
+    "name": "FEDERICA",
+    "date": "2020-08-03",
+    "review": "I din't use to wear blush, I never felt confident with them, then I discovered Superfluid and took COMBO GOALS in the coral shade. Now I have to share it with my mum! No matter if my skin is medium and her is porcelain, if I'm dark and she's blonde, if I've got black eyes and she's got green, this blush pops making every look eye-catching. Try it before shooting for an Instagram post and see how many likes it gets! I'm 100% in love I'm ordering other ones right now... one for me, one for mum.",
+    "skin": "Skin type: Dry",
+    "age": "Age range: 25-34"
+  },
+  {
+    "id": 4,
+    "title": "FANTASTICO!",
+    "name": "NICOLE M.",
+    "date": "2020-07-16",
+    "review": "great products!",
+    "skin": "Skin type: Sensitive",
+    "age": "Age range: 18-24"
+  },
+  {
+    "id": 5,
+    "title": "LOVE IT!",
+    "name": "KELLY",
+    "date": "2020-07-10",
+    "review": "Love the smell, texture and color of the Combo Goals in Mauve. Perfect for a lovely soft color on the lips and cheeks",
+    "skin": "Skin type: Normal",
+    "age": "Age range: 18-24"
+  },
+  {
+    "id": 6,
+    "title": "VEGAN BUT NOT SUSTAINABLE",
+    "name": "JOANNA B.",
+    "date": "2020-09-07",
+    "review": "This is a really good colour but was hoping it was more like a brown mauve than pink, but once blended it looks natural. The smell is quite minty and pleasant. Not so thrilled about the packaging which is entirely plastic and doesn't seem reusable.",
+    "skin": "Skin type: Sensitive",
+    "age": "Age range: 25-34"
+  },
+  {
+    "id": 7,
+    "title": "SUPER COOL",
+    "name": "CLAUDIA",
+    "date": "2020-08-14",
+    "review": "Very pretty and comfortable! Since it's matte it stays a while, it is a bit drying but just a bit. Love the smell!",
+    "skin": "Skin type: Sensitive",
+    "age": "Age range: 25-34"
+  },
+  {
+    "id": 8,
+    "title": "MASCARA BLACK",
+    "name": "LUDOVICA",
+    "date": "2020-08-03",
+    "review": "Ottimo prodotto, sia per allungare che per volumi zare le ciglia, buon rapporto qualità prezzo!",
+    "skin": "Skin type: Sensitive",
+    "age": "Age range: 25-34"
+  },
+  {
+    "id": 9,
+    "title": "PRODOTTO OTTIMO! MI È PIACIUTO",
+    "name": "MARINA",
+    "date": "2020-07-15",
+    "review": "Prodotto ottimo! Mi è piaciuto molto, facile applicarlo veloce e da un effetto molto bello!!",
+    "skin": "Skin type: Normal",
+    "age": "Age range: 35-49"
+  },
+  {
+    "id": 10,
+    "title": "PERFECT",
+    "name": "FLAMINIA",
+    "date": "2020-07-13",
+    "review": "beautiful",
+    "skin": "Skin type: Normal",
+    "age": "Age range: 35-49"
+  },
+  {
+    "id": 11,
+    "title": "GREAT MASCARA",
+    "name": "MARTIN",
+    "date": "2020-07-13",
+    "review": "I love the look it gives to my eyelashes!",
+    "skin": "Skin type: Normal",
+    "age": "Age range: 25-34"
+  },
+  {
+    "id": 12,
+    "title": "DEFINED ULTRA BLACK LASHES",
+    "name": "EVE",
+    "date": "2020-07-11",
+    "review": "First, I love the wand. You can really build up volume. It applies easily and evenly separates my lashes giving a nice length.",
+    "skin": "Skin type: Normal",
+    "age": "Age range: 25-34"
+  },
+  {
+    "id": 13,
+    "title": "BUON MASCARA COLORE ABBASTANZA INTENSO",
+    "name": "RICCARDO",
+    "date": "2020-07-27",
+    "review": "Buon mascara colore abbastanza intenso vale il prezzo soprattutto perché è vegano",
+    "skin": "Skin type: Sensitive",
+    "age": "Age range: 50+"
+  },
+  {
+    "id": 14,
+    "title": "MY NEW YELLOW EYES",
+    "name": "PALOMA",
+    "date": "2020-07-10",
+    "review": "Me ha gustado mucho, lo refuerzo con una sombra amarilla para sumar intensidad. Si tengo una crítica, es cuestionar por qué se utiliza como ingrediente el ácido sulfúrico.",
+    "skin": "Skin type: Oily",
+    "age": "Age range: 25-34"
+  },
+  {
+    "id": 15,
+    "title": "NEXT LEVEL OUTLINER, LOVE THE COLOUR.",
+    "name": "MARTIJN",
+    "date": "2020-07-09",
+    "review": "The colour is so bright, enjoy it every day! Delivery was very quick.",
+    "skin": "Skin type: Sensitive",
+    "age": "Age range: 25-34"
+  },
+  {
+    "id": 16,
+    "title": "BELLISSIMA! IL BIANCO È BELLO",
+    "name": "JOYCE",
+    "date": "2020-10-26",
+    "review": "bellissima! il bianco è bello coprente e la punta a marker lo rende molto facile da usare. promossa a pieni voti!",
+    "skin": "Skin type: Sensitive",
+    "age": "Age range: 35-49"
+  },
+  {
+    "id": 17,
+    "title": "BUENA COMPRA",
+    "name": "ANNA",
+    "date": "2020-07-10",
+    "review": "Tengo la piel grasa y normalmente tengo problemas para que no se me difumine el eyeliner pasadas unas horas. Este se mantiene bien y a la vez es facil de quitar. Creo que es un color que resalta mucho en pieles morenas.",
+    "skin": "Skin type: Oily",
+    "age": "Age range: 25-34"
+  },
+  {
+    "id": 18,
+    "title": "EXTREMELY YELLOW, I LOVE IT ✨",
+    "name": "MARGHERITA",
+    "date": "2020-07-31",
+    "review": "Eye-liner molto bello con un giallo molto acceso! L’unica cosa che critico un po’ è che va via molto facilmente se viene bagnato quindi bisogna fare attenzione. Però molto happy dell’acquisto",
+    "skin": "Skin type: Normal",
+    "age": "Age range: 18-24"
+  },
+  {
+    "id": 19,
+    "title": "ALL AROUND GOOD SERVICE",
+    "name": "ELLY",
+    "date": "2020-07-10",
+    "review": "Delivery was prompt, good packaging, and nice product. The liner is a little thin so needs more than one coat, but I think I'll still use it.",
+    "skin": "Skin type: Dry",
+    "age": "Age range: 25-34"
+  },
+  {
+    "id": 20,
+    "title": "APPLICAZIONE NON TROPPO FLUIDA. MI",
+    "name": "LUCREZIA",
+    "date": "2020-09-12",
+    "review": "applicazione non troppo fluida. mi sarebbe piaciuto un colore più acceso.",
+    "skin": "Skin type: Normal",
+    "age": "Age range: 35-49"
+  }
+]

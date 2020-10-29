@@ -74,8 +74,7 @@ class LeftSlider extends React.Component {
     return (
       <div className='LeftSlider'>
         <div className='Background'>
-          <img src={bg1}>
-          </img>
+          <img src={bg1}></img>
           <img src={bg2}></img>
           <img src={bg3}></img>
         </div>

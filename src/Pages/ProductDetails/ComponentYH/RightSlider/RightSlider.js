@@ -18,24 +18,33 @@ class RightSlider extends React.Component {
       totPrice: 0,
       likes: 0,
       selected:"",
+      show:false,
     };
   }
 
   handleColor = (e) => {
+    this.props.handleLeft(e)
+    // this.setState({show:!this.state.show})
   }
 
   handleIncrement = () => {
+    const { count } = this.state;
+    const { price } = this.props;
+
     this.setState({
-      count : this.state.count + 1,
-      totPrice: (this.state.count+1)*(this.props.price),
+      count : count + 1,
+      totPrice: (count+1)*(price),
     })
   }
 
   handleDecrement = ()=> {
-    if(this.state.count>1){
+    const { count } = this.state;
+    const { price } = this.props;
+
+    if(count>1){
       this.setState({
-        count: this.state.count -1,
-        totPrice: (this.state.count-1)*(this.props.price),
+        count: count -1,
+        totPrice: (count-1)*(price),
       })
     } else {
       return 
@@ -54,10 +63,8 @@ class RightSlider extends React.Component {
   };
 
   render(){
-    const {count, totPrice} = this.state;
-    const {
-      name, description, size, goodToKnow, contains, colorsData, price, pairData
-    } = this.props;
+    const { count, totPrice, activeTab } = this.state;
+    const { name, description, size, goodToKnow, contains, colorsData, price, pairData } = this.props;
     const content = {
       1: <Description description={description} />,
       2: <Ingredients size={size} goodToKnow={goodToKnow} contains={contains} />,
@@ -77,7 +84,7 @@ class RightSlider extends React.Component {
             <li onClick={()=>this.handleClick(3)} className="tabTitle">shipping&returns</li>
           </ul>
           <div className='contents'>
-            {content[this.state.activeTab]}
+            {content[activeTab]}
           </div>
         </div>
         <div className='AddToCart'>
@@ -86,16 +93,15 @@ class RightSlider extends React.Component {
               return (
                 <>
                   <button
-                    onClick={
-                      e=>this.props.handleLeft(e)
-                    }
+                    onClick={this.handleColor}
                     className={color.color_name}
                   >
                     {color.color_id}
                   </button>
-                  <span>
-                    {color.color_name}
-                  </span>
+                  {/* {
+                    this.state.show? <span>{color.color_name}</span> : null
+                  } */}
+                  <span>{color.color_name}</span>
                 </>
               );
             })}
@@ -151,25 +157,3 @@ class RightSlider extends React.Component {
 }
 
 export default RightSlider;
-
-const MAPPING_OBJ = {
-  // 1: <First/>,
-  // 2: <Second/>,
-  // 3: <Third/>,
-}
-
-const MAPPING_MENU = ["First", "Second", "Third"];
-
-
-{/* <div className='wrapper'>
-  <ul className='tabs'>
-    {MAPPING_MENU.map(
-      (menu, idx) => (
-        <li onClick={()=> this.OpenPage(idx+1)}>{menu}</li>
-      )
-    )}
-  </ul>
-  <div className='Contents'>
-    {MAPPING_OBJ[activeId]}
-  </div>
-</div> */}

@@ -36,6 +36,12 @@ div.RightSlider {
             align-content: space-around;
             width: 100%;
             padding: 1.04vw 0px 0px;
+            margin: 150px auto 0; 
+                    padding: 0; 
+                    list-style: none; 
+                    display: table;
+                    width: 600px;
+                    text-align: center;
 
             li.tabTitle {
                 margin-right: 0.6vw;
@@ -45,23 +51,50 @@ div.RightSlider {
                 line-height: 0.69vw;
                 cursor: pointer;
 
-                &:hover {
-                    border-bottom: 2px solid black;
+                
+                //   li { 
+                //     display: table-cell; 
+                //     position: relative; 
+                //     padding: 15px 0;
+                //   }
+                //   a {
+                //     color: #fff;
+                //     text-transform: uppercase;
+                //     text-decoration: none;
+                //     letter-spacing: 0.15em;
+                    
+                //     display: inline-block;
+                //     padding: 15px 20px;
+                //     position: relative;
+                //   }
+                //   a:after {    
+                //     background: none repeat scroll 0 0 transparent;
+                //     bottom: 0;
+                //     content: "";
+                //     display: block;
+                //     height: 2px;
+                //     left: 0%;
+                //     position: absolute;
+                //     background: yellow;
+                //     transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                //     width: 0;
+                //   }
+                //   a:hover:after { 
+                //     width: 100%; 
+                //     left: 0; 
+                //   }
+                  
+                // }
 
-                    &::after {
-                        width: 100%;
-                      }
-                }
-
-                &::after {
-                    border-bottom: 1px solid black;
-                    content: "";
-                    width: 0;
-                    top: 0;
-                    left: 0;
-                    z-index: -1;
-                    transition: 1s ease;
-                  }
+                // &::after {
+                //     border-bottom: 1px solid black;
+                //     content: "";
+                //     width: 0;
+                //     top: 0;
+                //     left: 0;
+                //     z-index: -1;
+                //     transition: 1s ease;
+                //   }
             }
         }
 
@@ -74,6 +107,8 @@ div.RightSlider {
                 div {
                     padding: 0.5vw 0px;
                     font-size: 0.2vw;
+                line-height: 1.5vw;
+
                 }
     
             }
@@ -82,13 +117,29 @@ div.RightSlider {
                 div {
                     padding: 0.5vw 0px;
                     font-size: 0.2vw;
+                line-height: 1.5vw;
                 }
+                div.size{
+                    font-weight: bold;
+                }
+                div.goodToKnow{
+                    span{
+                        font-weight: bold;
+                    }
+                }
+                div.contains {
+                    span{
+                        font-weight: bold;
+                    }
+                }
+
     
             }
     
             div.shippinReturns {
                 padding-bottom: 2.08vw;
                 padding: 1.39vw 0px;
+                line-height: 1.5vw;
                 
                 ul {
                     padding-left: 1.3vw;
