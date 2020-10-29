@@ -10,6 +10,7 @@
   height: 100%;
   display: none;
   @include flex-center;
+
   .colorOption {
     @include flex-center;
     margin-bottom: 15%;
@@ -36,12 +37,14 @@
           background-color: orange;
         }
       }
+
       .circle {
         margin: 0;
         width: 70px;
         height: 70px;
         background-color: green;
       }
+
       p {
         margin-top: 5px;
         background-color: transparent;

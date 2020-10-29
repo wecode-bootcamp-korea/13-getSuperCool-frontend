@@ -14,6 +14,7 @@
   padding: 0 4vw;
   position: sticky;
   top: 10%;
+
   span {
     display: block;
     font-size: 0.8vw;
@@ -32,6 +33,7 @@
   ul.visible {
     display: flex;
     flex-direction: column;
+
     li {
       width: 50px;
       margin: 5px 0;
@@ -90,7 +92,6 @@
       position: absolute;
       bottom: 0;
       display: flex;
-
       animation: marquee 9s linear infinite;
 
       span {

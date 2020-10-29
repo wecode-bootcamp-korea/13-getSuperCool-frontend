@@ -53,30 +53,6 @@ class ProductList extends React.Component {
       })
     }
 
-    // () => {
-    //   const {categoryOption, applyOnOption, products} = this.state;
-    //   this.setState({
-    //     filterdApplies : categoryOption.length > 0 ? products.filter((product) => {
-    //       return categoryOption.includes(product.category) 
-    //     }) : products
-    //   })
-    // }
-
-    // () => {
-    //   const {applyOnOption, filteredProducts} = this.state;
-    //   console.log("hello",filteredProducts);
-    //   this.setState({
-    //     filterdApplies : applyOnOption.length > 0 ? filteredProducts.filter((product) => {   
-    //       for (let el of product.apply_on) {
-    //         if (applyOnOption.includes(el)) return true;
-    //       }        
-    //     }) : filteredProducts.filter((product) => {
-    //       return categoryOption.includes(product.category) 
-    //     })
-    //   })
-    // }
-
-
   }
 
     getCategories = (name) => {
