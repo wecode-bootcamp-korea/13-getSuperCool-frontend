@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Nav from "../Components/Nav/Nav";
 import Register from "./Components/Register";
 import Login from "./Components/Login";
+import Footer from "../Components/Footer/Footer"
 import "./LoginRegister.scss";
 
 const MappingObj = {
@@ -59,6 +60,7 @@ export default class LoginRegister extends Component {
             {MappingObj[this.state.activeTab]}
           </div>
         </main>
+        <Footer />
       </div>
     );
   }

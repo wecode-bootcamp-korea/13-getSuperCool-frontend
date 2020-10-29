@@ -3,6 +3,7 @@ import Nav from "../Components/Nav/Nav";
 import Menubar from "./Components/Menubar/Menubar";
 import Product from "./Components/Product/Product";
 import Cart from "../Components/Cart";
+import Footer from "../Components/Footer/Footer"
 import "./ProductList.scss";
 
 class ProductList extends React.Component {
@@ -192,7 +193,6 @@ class ProductList extends React.Component {
             )}
           </div>
         </main>
-        <div>포토박스</div>
         {visible && (
           <Cart
             product={this.state.product}
@@ -202,6 +202,10 @@ class ProductList extends React.Component {
             cartItems={cartItems}
           />
         )}
+        <div className="photoBox">
+          <img src="https://i.ibb.co/MPpGLC0/slick-1.jpg"/>
+        </div>
+        <Footer />
       </div>
     );
   }

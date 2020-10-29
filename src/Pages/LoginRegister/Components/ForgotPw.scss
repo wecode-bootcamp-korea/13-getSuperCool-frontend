@@ -14,7 +14,7 @@
     }
     .ForgotPw {
       @include flex-column;
-      position: fixed;
+      position: absolute;
       left: 8.33vw;
       top: 50%;
       width: 29.17vw;

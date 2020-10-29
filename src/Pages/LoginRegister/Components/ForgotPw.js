@@ -1,5 +1,7 @@
 import React from "react";
 import "./ForgotPw.scss";
+import Footer from "../../Components/Footer/Footer"
+import Nav from "../../Components/Nav/Nav"
 
 const API = "http://10.58.7.186:8000/account/forgot-password";
 
@@ -57,6 +59,7 @@ export default class ForgotPw extends React.Component {
   render() {
     return (
       <div className="ForgotPw-BH">
+        <Nav />
         <main className="loginContainer">
           <img
             className="loginBackdropImage"
@@ -95,6 +98,7 @@ export default class ForgotPw extends React.Component {
             </div>
           </div>
         </main>
+        <Footer/>
       </div>
     );
   }
