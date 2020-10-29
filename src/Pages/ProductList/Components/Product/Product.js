@@ -6,7 +6,6 @@ import "./Product.scss";
 
 class Product extends React.Component {
   render() {
-    console.log(this.props)
     const {
       id,
       modelImg,

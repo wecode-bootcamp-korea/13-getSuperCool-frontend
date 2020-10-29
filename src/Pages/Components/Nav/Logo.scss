@@ -1,8 +1,17 @@
-svg {
-  width: 11vw;
-  margin-top: 0;
+@keyframes logo {
+  0% {
+    width: 90vw;
+  }
+  100% {
+    width: 11vw;
+  }
+}
+svg.bigLogo {
   background-color: transparent;
-
+  width: 90vw;
+  margin-top: 10%;
+  animation: logo 3s;
+  animation-fill-mode: both;
   &:hover {
     cursor: pointer;
   }
@@ -12,7 +21,6 @@ svg {
   }
 }
 
-svg.bigLogo {
-  width: 90vw;
-  margin-top: 10%;
+svg.bigLogo:hover {
+  width: 11vw;
 }

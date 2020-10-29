@@ -47,7 +47,7 @@ export default class ForgotPw extends React.Component {
         console.log("백앤드에서 오는 응답 메세지: ", response);
 
         if (response.new_pw) {
-          alert("성공", response.new_pw);
+          alert(`성공! 임시 비번: ${response.new_pw}`);
         } else {
           alert("아 슬프다");
         }

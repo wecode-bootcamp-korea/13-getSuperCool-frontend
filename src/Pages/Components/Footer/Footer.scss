@@ -1,4 +1,12 @@
 @import "../../../Styles/common.scss";
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -300%;
+  }
+}
 
 .Footer {
   width: 100%;
@@ -6,15 +14,18 @@
 
   .footerTop {
     height: 37vh;
-    border: 1px solid black;
     display: flex;
+    border-bottom: 2px solid black;
+    border-top: 3px solid;
 
     div {
       width: 50%;
-      border: 1px solid black;
       font-weight: 800;
       font-size: 2.5vw;
       @include flex-center;
+      &:last-child {
+        border-left: 2px solid black;
+      }
 
       &:hover {
         cursor: pointer;
@@ -62,8 +73,9 @@
     }
 
     .email {
+      margin-left: 40px;
+      margin-bottom: 2vw;
       form {
-        margin-left: 40px;
         color: black;
 
         input {
@@ -86,66 +98,32 @@
       }
     }
 
-    // .marquee {
-    //   height: 2.8vh;
-    //   width: 220px;
-    //   margin: 20px 40px 0 40px;
-    //   position: relative;
-    //   overflow: hidden;
-    // }
-
     .marquee {
-      margin-left: 4%;
-      height: 25px;
-      width: 22%;
+      height: 1.7vw;
+      width: 18vw;
       position: relative;
-      margin: 20px 40px 0 5s0px;
+      margin: 0px 2.78vw 1.39vw 40px;
       background-color: $default-yellow;
       overflow: hidden;
       div {
         width: 450%;
         padding: 0;
-        height: 13px;
+        height: 1vw;
         background-color: transparent;
         position: absolute;
-        bottom: 5px;
+        bottom: 0;
         display: flex;
-        animation: marquee 4s linear infinite;
+        animation: marquee 9s linear infinite;
         span {
-          font-size: 15px;
-          font-weight: 500;
-          color: $default-black;
           background-color: transparent;
+          font: $button-meta-font;
+          line-height: 0.6vw;
           display: block;
           padding: 0;
           float: left;
           margin-right: 0;
           padding-right: 0;
         }
-      }
-    }
-    // .marquee {
-    //   div {
-    //     width: 200%;
-    //     height: 4.8vh;
-    //     display: block;
-    //     position: absolute;
-    //     overflow: hidden;
-    //     animation: marquee 3s linear infinite;
-
-    //     span {
-    //       width: 50%;
-    //       float: left;
-    //       background: $default-yellow;
-    //     }
-    //   }
-    // }
-    @keyframes marquee {
-      0% {
-        left: 0;
-      }
-      100% {
-        left: -300%;
       }
     }
   }
@@ -159,8 +137,6 @@
   span {
     position: absolute;
     background-color: transparent;
-    right: 2%;
-    bottom: -318%;
     margin-left: 15%;
   }
 }

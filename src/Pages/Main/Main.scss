@@ -1,8 +1,15 @@
 @import "../../Styles/common.scss";
+@keyframes marquee {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
+}
 
 .Main {
   overflow: hidden;
-
   .slick-slider {
     ul {
       bottom: 8%;
@@ -17,8 +24,14 @@
   .shop {
     background: transparent;
     position: absolute;
-    left: 44.5%;
-    top: 100%;
+    left: 47%;
+    top: 57vw;
+
+    .link {
+      background-color: transparent;
+      color: $default-yellow;
+      font-weight: 500;
+    }
 
     p {
       background: transparent;
@@ -27,38 +40,33 @@
     }
   }
 
-  .marquee {
-    height: 25px;
-    width: 220px;
-    margin: 0 40px;
-    overflow: hidden;
-    position: absolute;
-    right: 1%;
-    top: 100%;
+  // .marquee {
+  //   height: 25px;
+  //   width: 100%;
+  //   position: relative;
+  //   background-color: $default-yellow;
+  //   overflow: hidden;
+  //   div {
+  //     width: 450%;
+  //     padding: 0;
+  //     height: 13px;
+  //     background-color: transparent;
+  //     position: absolute;
+  //     bottom: 0;
+  //     display: flex;
+  //     animation: marquee 9s linear infinite;
 
-    div {
-      width: 200%;
-      height: 30px;
-      position: absolute;
-      overflow: hidden;
-      animation: marquee 2s linear infinite;
-
-      span {
-        float: left;
-        width: 100%;
-        background: $default-yellow;
-      }
-    }
-  }
-
-  @keyframes marquee {
-    0% {
-      left: 0;
-    }
-    100% {
-      left: -100%;
-    }
-  }
+  //     span {
+  //       font-size: 15px;
+  //       font-weight: 500;
+  //       display: block;
+  //       padding: 0;
+  //       float: left;
+  //       margin-right: 0;
+  //       padding-right: 0;
+  //     }
+  //   }
+  // }
 
   .productSection {
     width: 100%;
@@ -83,7 +91,7 @@
     .shopNow {
       font-size: 3vw;
       font-weight: 500;
-      margin-top: 3vw;
+      margin-top: 2.2vw 0;
 
       .link {
         color: $default-black;
