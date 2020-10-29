@@ -17,7 +17,6 @@ export default class LoginRegister extends Component {
   }
 
   handleActiveTab = tab => {
-    console.log(tab);
     this.setState({
       activeTab: tab
     });
