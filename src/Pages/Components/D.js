@@ -4,70 +4,47 @@ class Cart extends Component {
   constructor() {
     super();
     this.state = {
-      count: 0,
-      newList: []
+      count: 0
     };
   }
-
-  componentDidMount = () => {
-    this.setState({ newList: this.props.cartItems });
-  };
-
-  deleteItem = id => {
-    console.log("product id", id);
-    console.log("list", this.state.newList);
-    let filteredItems = this.state.newList.filter(item => item.id !== id);
-    console.log("filter", filteredItems);
-    this.setState({ newList: filteredItems });
-  };
-
   render() {
     const { count } = this.state;
-    const { cartItems } = this.props;
-
-    console.log("cartItems >>> ", this.state.newList);
-
+    const { products } = this.props;
+    console.log("prd", products);
     return (
       <section className="Cart visible">
         <div className="cartContainer">
           <section className="cartHeader">
             <p>Your Cart ({count})</p>
-            <button onClick={this.props.hideCart}>
-              <img alt="close" src="https://i.ibb.co/C7Zh1zK/close.png" />
+            <button onClick={this.props.handleCart}>
+              <img alt="close" src="https://i.ibb.co/C7Zh1zK/close.png"></img>
             </button>
           </section>
           <div className="cartBodyWrapper">
             <section className="cartListContainer">
-              {this.state.newList.length !== 0 && (
-                <ul className="cartList">
-                  {this.state.newList.map(product => (
-                    <li className="itemContainer">
-                      <div className="itemDetailsWrapper">
-                        <div className="imageContainer">
-                          <img src={product.productImg} alt={product.name} />
-                        </div>
-                        <div className="itemDetails">
-                          <span>{product.name}</span>
-                          <div className="itemCounter">
-                            <button>-</button>
-                            <div>{count}</div>
-                            <button>+</button>
-                          </div>
-                          <div className="price">
-                            <span>{product.price}</span>
-                          </div>
-                          <button
-                            className="deleteBtn"
-                            onClick={() => this.deleteItem(product.id)}
-                          >
-                            DELETE
-                          </button>
-                        </div>
+              <ul className="cartList">
+                {products.map(product => (
+                  <li className="itemContainer">
+                    <div className="itemDetailsWrapper">
+                      <div className="imageContainer">
+                        <img src={product.productImg} alt={product.name} />
                       </div>
-                    </li>
-                  ))}
-                </ul>
-              )}
+                      <div className="itemDetails">
+                        <span>{product.name}</span>
+                        <div className="itemCounter">
+                          <button>-</button>
+                          <div>1</div>
+                          <button>+</button>
+                        </div>
+                        <div className="price">
+                          <span>{product.price}</span>
+                        </div>
+                        <button className="deleteBtn">DELETE</button>
+                      </div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </section>
             <section className="upsellProductsContainer">
               <p>

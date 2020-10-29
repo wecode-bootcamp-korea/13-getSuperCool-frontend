@@ -1,5 +1,8 @@
 @import "../../Styles/common.scss";
-
+* {
+  background-color: transparent;
+  font: $cart-body-font;
+}
 .Cart {
   position: absolute;
   top: 0;
@@ -9,7 +12,6 @@
   background: transparent;
   z-index: 1;
   transition: all 0.4s ease-out;
-  
   &.visible {
     display: block;
     position: absolute;
@@ -17,10 +19,8 @@
     right: 0;
     z-index: 999;
   }
-
   .cartContainer {
-    border: 1px solid red;
-    position: fixed;
+    position: absolute;
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -28,7 +28,6 @@
     right: 0;
     background: $default-yellow;
     padding: 2.78vw 4.17vw;
-
     .cartHeader {
       display: flex;
       justify-content: space-between;
@@ -36,24 +35,19 @@
       padding-bottom: 2vw;
       border-bottom: $default-border;
       border-bottom-width: 3.5px;
-      
       p {
         padding: 0.6vw 0px;
         background: transparent;
-
         font: $button-meta-font;
         font-size: 2.78vw;
         line-height: 2.36vw;
         text-transform: none;
-
         span {
           background: transparent;
         }
       }
-
       button {
         background: transparent;
-
         img {
           background: transparent;
           width: 1.3vw;
@@ -66,18 +60,15 @@
       flex-direction: column;
       justify-content: space-between;
       height: calc(100% - 8.33vw);
-      background: $default-yellow;
-
+      background-color: transparent;
       .cartListContainer {
-        background: $default-yellow;
+        background: transparent;
         display: flex;
         flex-direction: column;
-
         * {
           background: transparent;
           font: $cart-body-font;
         }
-
         .cartList {
           .itemContainer {
             .itemDetailsWrapper {
@@ -87,13 +78,11 @@
               padding: 0.76vw 0vw;
               border-bottom: $default-border;
               border-bottom-width: 1px;
-
               .imageContainer {
                 display: relative;
                 width: 4.17vw;
                 height: 5.76vw;
                 background-color: $default-white;
-
                 img {
                   padding: 1.04vw 0px;
                   position: relative;
@@ -109,21 +98,17 @@
                 font-size: 1.11vw;
                 line-height: 1.18vw;
                 padding-left: 1.39vw;
-
                 span {
                   max-width: 11vw;
                   line-height: 1.18vw;
                 }
-
                 .itemCounter {
                   display: flex;
                   justify-content: space-around;
                   width: 8vw;
-
                   button {
                     cursor: pointer;
                   }
-
                   div {
                     display: flex;
                     align-items: center;
@@ -138,17 +123,14 @@
                 .price {
                   max-width: 50vw;
                   display: block;
-
                   span {
                     font: $button-meta-font;
                     line-height: 1.04vw;
                     text-align: center;
                   }
                 }
-
                 .deleteBtn {
                   display: block;
-
                   font: $button-meta-font;
                   line-height: 1.04vw;
                   text-align: center;
@@ -158,7 +140,6 @@
           }
         }
       }
-
       .upsellProductsContainer {
         position: relative;
         display: flex;
@@ -166,17 +147,14 @@
         height: 15.56vw;
         border-bottom: $default-border;
         background-color: $default-yellow;
-
         * {
           background-color: transparent;
           font: $cart-body-font;
         }
-
         p {
           height: 12.64vw;
           padding-top: 9.5%;
           flex-wrap: wrap;
-
           span {
             text-decoration: underline;
             text-transform: none;
@@ -185,7 +163,6 @@
             font-weight: 400;
           }
         }
-
         .upsellProducts {
           display: flex;
           position: relative;
@@ -193,16 +170,13 @@
           top: 0px;
           justify-content: flex-end;
           width: 100%;
-
           .productCard {
             display: flex;
             flex-direction: column;
-
             .upsellPhotoWrapper {
               position: relative;
               width: 7.78vw;
               height: 9.69vw;
-
               a {
                 img {
                   object-fit: cover;
@@ -211,7 +185,6 @@
                 }
               }
             }
-
             p {
               font-size: 0.69vw;
               line-height: 0.69vw;
@@ -229,14 +202,12 @@
         justify-content: flex-end;
         height: 13.19vw;
         background-color: $default-yellow;
-
         .totalPrice {
           display: flex;
           justify-content: space-between;
           font: $cart-body-font;
           padding: 1.39vw 0vw;
           background-color: $default-yellow;
-
           p {
             background-color: $default-yellow;
             padding-bottom: 0.69vw;
@@ -246,7 +217,6 @@
           background: transparent;
           display: flex;
           justify-content: center;
-
           button {
             font: $button-meta-font;
             font-size: 0.9vw;
@@ -255,7 +225,6 @@
             width: 100%;
             background: $default-black;
             color: $default-white;
-            
             &:hover {
               cursor: pointer;
             }

@@ -4,29 +4,25 @@ import "./Product.scss";
 
 class Product extends React.Component {
   render() {
-    const {
-      id,
-      modelImg,
-      iconImg,
-      name,
-      productImg,
-      price,
-      handleCart
-    } = this.props;
-
+    
+    const { showCart, product, addCartProduct } = this.props;
     return (
-      <div id={id} className="Product">
+      <div id={product.id} className="Product">
         <div className="productThumbnail">
-          <img src={modelImg} alt={modelImg} />
+          <img src={product.modelImg} alt={product.modelImg} />
           <img className="logoText" src={logoImg} alt="logoImg" />
         </div>
-        <img className="logoIcon" src={iconImg} alt="logoImg" />
-        <img className="productImg" src={productImg} alt={name} />
+        <img className="logoIcon" src={product.iconImg} alt="logoImg" />
+        <img
+          className="productImg"
+          src={product.productImg}
+          alt={product.name}
+        />
         <span>
-          <div>{name}</div>
-          <div>{price}</div>
+          <div>{product.name}</div>
+          <div>{product.price}</div>
         </span>
-        <button onClick={handleCart}>ADD TO CART</button>
+        <button onClick={() => showCart(product)}>ADD TO CART</button>
       </div>
     );
   }
