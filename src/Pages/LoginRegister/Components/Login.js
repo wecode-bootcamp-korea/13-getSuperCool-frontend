@@ -18,9 +18,9 @@ export default class Login extends React.Component {
   handleInputValue = e => {
     const { value, name } = e.target;
     this.setState({
-      [name]: value
+      [name]: value,
+      errorMessage: ""
     });
-    this.setState({ errorMessage: "" });
   };
 
   handleValidate = () => {

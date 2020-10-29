@@ -74,9 +74,10 @@ class Register extends React.Component {
       .then(result => {
         console.log("================================");
         console.log("백앤드에서 오는 응답 메세지: ", result);
-        if (result.token) {
+        if (result.message === "SUCCESS") {
           alert("회원가입 성공");
-          localStorage.setItem("wtw-token", result.token);
+        } else {
+          alert("다시 시도해주세용! ;P");
         }
       });
   };

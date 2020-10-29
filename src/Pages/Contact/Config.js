@@ -1,5 +1,3 @@
-
-
 export const subjectOptions = [
   {
     id: 1,
@@ -11,7 +9,7 @@ export const subjectOptions = [
   },
   {
     id: 3,
-    value: "AI got a problem with my orderrgentina"
+    value: "I got a problem with my order"
   },
   {
     id: 4,

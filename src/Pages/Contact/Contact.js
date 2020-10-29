@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./Contact.scss";
 import { countryOptions, subjectOptions } from "./Config";
 
+const API = "http://10.58.4.225:8000/account/inquirie";
+
 export default class Contact extends Component {
   constructor() {
     super();
@@ -17,10 +19,14 @@ export default class Contact extends Component {
   }
   handleInputValue = e => {
     const { value, name } = e.target;
-    this.setState({
-      [name]: value,
-      requiredInput: false
-    });
+
+    this.setState(
+      {
+        [name]: value,
+        requiredInput: false
+      },
+      () => console.log(this.state.subjectValue)
+    );
   };
 
   handleValidate = () => {
@@ -41,38 +47,42 @@ export default class Contact extends Component {
 
   handleRegisterButton = e => {
     e.preventDefault();
-    //     const {
-    //       emailValue,
-    //       pwValue,
-    //       nameFirstValue,
-    //       nameLastValue,
-    //       dateValue
-    //     } = this.state;
+    const {
+      nameValue,
+      emailValue,
+      orderNumberValue,
+      countryValue,
+      subjectValue,
+      messageValue
+    } = this.state;
 
     this.handleValidate();
 
-    //   fetch(API, {
-    //     method: "POST",
-    //     body: JSON.stringify({
-    //       first_name: nameFirstValue,
-    //       last_name: nameLastValue,
-    //       email: emailValue,
-    //       birth_date: dateValue,
-    //       password: pwValue
-    //     })
-    //   })
-    //     .then(response => response.json())
-    //     .then(result => {
-    //       console.log("================================");
-    //       console.log("백앤드에서 오는 응답 메세지: ", result);
-    //       if (result.message === "SUCCESS") {
-    //         alert("회원가입 성공");
-    //         localStorage.setItem("register", result.message);
-    //       }
-    //     });
+    fetch(API, {
+      method: "POST",
+      body: JSON.stringify({
+        name: nameValue,
+        email: emailValue,
+        order: orderNumberValue,
+        country: countryValue,
+        subject: subjectValue,
+        message: messageValue
+      })
+    })
+      .then(response => response.json())
+      .then(result => {
+        console.log("================================");
+        console.log("백앤드에서 오는 응답 메세지: ", result);
+        if (result.message === "SUCCESS") {
+          alert("메세지 보내기 완료");
+        } else {
+          alert("메세지 보내기 실패 :(");
+        }
+      });
   };
 
   render() {
+    console.log(this.state.subjectValue, this.state.countryValue);
     const { emailValue, nameValue, subjectValue, messageValue } = this.state;
 
     let validBtn =
@@ -180,7 +190,7 @@ export default class Contact extends Component {
                   >
                     <option selected="selected">Subject *</option>
                     {subjectOptions.map(subject => (
-                      <option id={subject.id}>{subject.value}</option>
+                      <option value={subject.id}>{subject.value}</option>
                     ))}
                   </select>
                 </label>
