@@ -20,20 +20,6 @@ class ProductList extends React.Component {
     };
   }
 
-  componentDidMount() {
-    fetch("/data/data.json", {
-      method: "GET"
-    })
-      .then(res => res.json())
-      .then(res => {
-        this.setState({
-          products: res.product_list,
-          filteredProducts: res.product_list,
-          filterdApplies: res.product_list
-        });
-      });
-  }
-
   showCart = product => {
     this.setState(
       {
@@ -125,15 +111,6 @@ class ProductList extends React.Component {
     });
   };
 
-  handleSearchBox = () => {
-    const { products, searchInput } = this.state;
-    this.setState({
-      filteredProducts: products.filter(product => {
-        return product.name.toLowerCase().includes(searchInput.toLowerCase());
-      })
-    });
-  };
-
   handleDefaultSearch = () => {
     this.setState({
       searchInput: ""
@@ -148,6 +125,20 @@ class ProductList extends React.Component {
       this.handleSearchBox
     );
   };
+
+  componentDidMount() {
+    fetch("/data/data.json", {
+      method: "GET"
+    })
+      .then(res => res.json())
+      .then(res => {
+        this.setState({
+          products: res.product_list,
+          filteredProducts: res.product_list,
+          filterdApplies: res.product_list
+        });
+      });
+  }
 
   render() {
     const {
