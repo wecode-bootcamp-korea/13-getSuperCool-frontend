@@ -113,17 +113,14 @@ class ProductList extends React.Component {
     }, this.handleSearchBox)
   }
 
-  render() {
-    const { filterdApplies, searchInput } = this.state;
+  // render() {
+  //   const { filterdApplies, searchInput } = this.state;
     
-      })
-      });
-  }
-  handleChange = (e) => {
-    this.setState({
-      searchInput : e.target.value
-    }, ()=> this.handleSearchBox())
-  }
+  // handleChange = (e) => {
+  //   this.setState({
+  //     searchInput : e.target.value
+  //   }, ()=> this.handleSearchBox())
+  // }
   render() {
     const { filteredProducts , searchInput } = this.state;
 
@@ -144,7 +141,7 @@ class ProductList extends React.Component {
             handleSearchBox = {this.handleSearchBox}
           />
           <div className="ProductsContainer">
-
+            {/* 
             {filterdApplies.map(
               ({
                 category,
@@ -166,7 +163,7 @@ class ProductList extends React.Component {
                   price={price}
                 />
               )
-            )}
+            )} */}
           </div>
         </main>
         <div>포토박스</div>
