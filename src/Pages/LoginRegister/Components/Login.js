@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ForgotPw from "./ForgotPw";
 import "./Login.scss";
 
 const API = "http://10.58.4.225:8000/account/login";
@@ -18,9 +17,9 @@ export default class Login extends React.Component {
   handleInputValue = e => {
     const { value, name } = e.target;
     this.setState({
-      [name]: value
+      [name]: value,
+      errorMessage: ""
     });
-    this.setState({ errorMessage: "" });
   };
 
   handleValidate = () => {

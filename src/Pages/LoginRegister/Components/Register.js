@@ -74,9 +74,10 @@ class Register extends React.Component {
       .then(result => {
         console.log("================================");
         console.log("백앤드에서 오는 응답 메세지: ", result);
-        if (result.token) {
+        if (result.message === "SUCCESS") {
           alert("회원가입 성공");
-          localStorage.setItem("wtw-token", result.token);
+        } else {
+          alert("다시 시도해주세용! ;P");
         }
       });
   };
@@ -99,6 +100,17 @@ class Register extends React.Component {
       pwConfirmValue,
       isChecked
     } = this.state;
+
+    let validBtn =
+      nameFirstValue.length > 2 &&
+      nameLastValue.length > 2 &&
+      dateValue.length > 1 &&
+      pwValue.length > 4 &&
+      pwConfirmValue.length > 4 &&
+      emailValue.length > 3 &&
+      emailValue.includes("@") &&
+      pwValue.value === pwConfirmValue.value &&
+      isChecked;
 
     return (
       <div className="Register-BH">
@@ -149,19 +161,7 @@ class Register extends React.Component {
         />
         <button
           onClick={this.handleRegisterButton}
-          className={
-            nameFirstValue.length > 2 &&
-            nameLastValue.length > 2 &&
-            dateValue.length > 1 &&
-            pwValue.length > 4 &&
-            pwConfirmValue.length > 4 &&
-            emailValue.length > 3 &&
-            emailValue.includes("@") &&
-            pwValue.value === pwConfirmValue.value &&
-            isChecked
-              ? "registerButton active"
-              : "registerButton"
-          }
+          className={validBtn ? "registerButton active" : "registerButton"}
         >
           OK
         </button>
