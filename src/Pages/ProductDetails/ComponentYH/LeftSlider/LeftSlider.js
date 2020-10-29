@@ -69,20 +69,22 @@ class LeftSlider extends React.Component {
   // }
 
   render(){
+
+    const {bg1, bg2, bg3, product}=this.props;
     return (
       <div className='LeftSlider'>
         <div className='Background'>
-          <img src='https://images.ctfassets.net/vnxry7jc7f2k/75KxXoiXG08POrUpCljSa9/da632f2b0bd10fdbbcf89d704e07a245/1.jpg?w=1440&h=1800&q=80&fm=webp'>
+          <img src={bg1}>
           </img>
-          <img src='https://images.ctfassets.net/vnxry7jc7f2k/1NaxJV9Xc0Ve10F9I7qxdy/d8de24a3af839c8841c77dd2b54a27d6/superfluid_ott1693.jpg?w=1440&h=1800&q=80&fm=webp'></img>
-          <img src='https://images.ctfassets.net/vnxry7jc7f2k/6WYylPT5lY1WCC9dDi51xK/bfcd283d6d647370a9754b38aa71b25d/resize-09.jpg?w=1440&h=1800&q=80&fm=webp'></img>
+          <img src={bg2}></img>
+          <img src={bg3}></img>
         </div>
         <div className='Foreground'>
           <div className='Fore Icon1'>
             <img className='Icon1' src='https://i.ibb.co/wS6dvTj/icontrans.png'></img>
           </div>
           <div className='Fore Product'>
-            <img className='Product'src='https://images.ctfassets.net/vnxry7jc7f2k/7jlZKvTNGxa1ubfV9nT4GU/2065bdd2cf494fe2bc31587849253e04/04_superfluid_200421_0036_mauve_copy.png?w=150&h=582&q=80&fm=webp'></img>
+            <img className='Product'src={product}></img>
           </div>
           <div className='Fore Icon2'>
             <img className='Icon2' src='https://i.ibb.co/XSqfNDt/icon-Black.png'></img>

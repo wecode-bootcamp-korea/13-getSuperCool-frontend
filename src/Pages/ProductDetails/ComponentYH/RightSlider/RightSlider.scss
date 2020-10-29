@@ -12,7 +12,6 @@ div.RightSlider {
             font-weight: bold;
             line-height: 3.19vw;
            text-align: left;
-    
         }
 
         span {
@@ -66,40 +65,54 @@ div.RightSlider {
             }
         }
 
-        div.description {
-
-        }
-
-        div.ingredients{
-
-
-        }
-
-        div.shippinReturns {
-            padding-bottom: 2.08vw;
+        div.contents{
+            padding-bottom: 0;
             padding: 1.39vw 0px;
-            
-            ul {
-                padding-left: 1.3vw;
-                line-height: 110%;
-                
-                li{
+            margin-left: 0.4vw;
+
+            div.description {
+                div {
+                    padding: 0.5vw 0px;
                     font-size: 0.2vw;
-                    padding-bottom: 0.5vw;
-                    list-style-type: disc;
-                    // &::before {
-                    //     content:"· ";
-                    //     font-weight: bold;
-                    //     font-size: 0.8vw;
-                    //     vertical-align:middle;
-                    // }
+                }
+    
+            }
+    
+            div.ingredients{
+                div {
+                    padding: 0.5vw 0px;
+                    font-size: 0.2vw;
+                }
+    
+            }
+    
+            div.shippinReturns {
+                padding-bottom: 2.08vw;
+                padding: 1.39vw 0px;
+                
+                ul {
+                    padding-left: 1.3vw;
+                    line-height: 110%;
                     
-                    span{
-                        font-weight: bold;
+                    li{
+                        font-size: 0.2vw;
+                        padding-bottom: 0.5vw;
+                        list-style-type: disc;
+                        // &::before {
+                        //     content:"· ";
+                        //     font-weight: bold;
+                        //     font-size: 0.8vw;
+                        //     vertical-align:middle;
+                        // }
+                        
+                        span{
+                            font-weight: bold;
+                        }
                     }
                 }
             }
         }
+
     }
 
     div.AddToCart {
@@ -123,9 +136,10 @@ div.RightSlider {
                 height: 16px;
                 border-radius: 50%;
                 cursor: pointer;
+                font-size: 0%;
             }
             
-            .red {
+            .RED {
                 background-color: red;
                 border:1px solid black;
             }
@@ -143,6 +157,10 @@ div.RightSlider {
                 font-weight: 500;
                 left: -1vw;
             }
+        }
+
+        div.None{
+            display: none;
         }
 
         div.Wrapper {
@@ -262,7 +280,7 @@ div.RightSlider {
             width: 22.2vw;
             align-content: space-between;
 
-            div.product1 {
+            div {
                 background-color: rgb(247, 247, 247);
                 width : 13.43vw;
                 height: 17.08vw;
@@ -288,64 +306,6 @@ div.RightSlider {
                         width: 6vw;
                         left: 10%;
                         bottom: 4%;                        margin: auto;
-                        font-size: 0.83vw;
-                        font-weight: 700;
-                        color: black;
-                        text-transform: uppercase;
-                        overflow-wrap: break-word;
-                        background-color: rgb(247, 247, 247);
-                    }
-
-                    div {
-                        width: 3.5vw;
-                        height: 1.5vw;
-                        position: absolute;
-                        bottom: 3%;
-                        right: 3%;
-                        padding-top: 1.5%;
-                        padding-left: 1.5%;
-                        background-color:  black;
-                        transform: rotate(-3.17deg);
-                        font-weight: 600;
-                        color: white;
-                        span {
-                            position: absolute;
-                            right: 4%;
-                            top: 1%;
-                            font-size: 0.2vw;;
-                            background-color: transparent;
-                        color: white;
-                        }
-                    }
-                }
-            }
-
-            div.product2 {
-                background-color: rgb(247, 247, 247);
-                width : 13.43vw;
-                height: 17.08vw;
-                position: relative;
-                cursor: pointer;
-
-                a {
-                    background-color: rgb(247, 247, 247);
-                    width : 12.43vw;
-                    height: 17.08vw;
-
-                    img {
-                        position: absolute;
-                        top: 15%;
-                        left: 30%;
-                        height: 70%;
-                        background-color: rgb(247, 247, 247);
-                    }
-
-                    p {
-                        position: absolute;
-                        width: 6vw;
-                        left: 10%;
-                        bottom: 4%;
-                        margin: auto;
                         font-size: 0.83vw;
                         font-weight: 700;
                         color: black;

@@ -1,5 +1,6 @@
 // import { render } from "node-sass";
 import React from "react";
+import reviewMock from "./reviewMock."
 
 class ReviewList extends React.Component {
   render(){

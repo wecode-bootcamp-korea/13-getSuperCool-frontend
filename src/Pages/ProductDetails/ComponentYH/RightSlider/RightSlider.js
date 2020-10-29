@@ -4,31 +4,30 @@ import "./RightSlider.scss";
 import Shipping from "./Shipping";
 import Description from "./Description";
 import Ingredients from "./Ingredients";
-import ProductList from "../../../ProductList/ProductList";
 
-const content = {
-  1: <Description />,
-  2: <Ingredients />,
-  3: <Shipping />,
-};
+
 
 class RightSlider extends React.Component {
 
   constructor(){
     super();
     this.state = {
+      activeTab: 2,
       data:[],
       count: 1,
-      price: 19,
-      totPrice: 19,
+      totPrice: 0,
       likes: 0,
+      selected:"",
     };
+  }
+
+  handleColor = (e) => {
   }
 
   handleIncrement = () => {
     this.setState({
       count : this.state.count + 1,
-      totPrice: (this.state.count+1)*(this.state.price),
+      totPrice: (this.state.count+1)*(this.props.price),
     })
   }
 
@@ -36,7 +35,7 @@ class RightSlider extends React.Component {
     if(this.state.count>1){
       this.setState({
         count: this.state.count -1,
-        totPrice: (this.state.count-1)*(this.state.price),
+        totPrice: (this.state.count-1)*(this.props.price),
       })
     } else {
       return 
@@ -48,42 +47,28 @@ class RightSlider extends React.Component {
 
     this.setState({
       likes: this.state.likes + 1
-    })
-
-    // fetch(API, {
-    //   method: “POST”,
-    //   body: JSON.stringify({
-    // likes: this.state.likes + 1
-    //   })
-    // })
-    //   .then(response => response.json())
-    //   .then(result => {
-    //     console.log(“================================“);
-    //     console.log(“백앤드에서 오는 응답 메세지: “, result);
-    //     if (result.message === “SUCCESS”) {
-    //       alert(“회원가입 성공“);
-    //       localStorage.setItem(“register”, result.message);
-    //     }
-    //   });
-  }
+    })}
 
   handleClick = (id) => {
     this.setState({ activeTab: id });
   };
 
   render(){
-    const {data} = this.props;
     const {count, totPrice} = this.state;
     const {
-      name, type, description, colorData, price, pairData
+      name, description, size, goodToKnow, contains, colorsData, price, pairData
     } = this.props;
+    const content = {
+      1: <Description description={description} />,
+      2: <Ingredients size={size} goodToKnow={goodToKnow} contains={contains} />,
+      3: <Shipping />,
+    };
     return(
       <div className='RightSlider'>
         <div onClick={this.handleClick} className='ProductName'>
           <h1>
-          ALL(B)RIGHT
+            {name}
           </h1>
-          <span>HIGHLIGHTER</span>
         </div>
         <div className='Details'>
           <ul className="tabContainer">
@@ -96,11 +81,24 @@ class RightSlider extends React.Component {
           </div>
         </div>
         <div className='AddToCart'>
-          <div className='ColorSelection'>
-            <button className='red'></button>
-            <span>RED</span>
-            <button className='pink'></button>
-            <button className='coral'></button>
+          <div className={colorsData[0]&&colorsData[0].color_name?"ColorSelection":"None"}>
+            {colorsData.map(color => {
+              return (
+                <>
+                  <button
+                    onClick={
+                      e=>this.props.handleLeft(e)
+                    }
+                    className={color.color_name}
+                  >
+                    {color.color_id}
+                  </button>
+                  <span>
+                    {color.color_name}
+                  </span>
+                </>
+              );
+            })}
           </div>
           <div className='Wrapper'>
             <div className='Adding'>
@@ -108,7 +106,7 @@ class RightSlider extends React.Component {
               <div>{count}</div>
               <button onClick = {this.handleIncrement}>+</button>
             </div>
-            <button className='AddToCart'>{totPrice}<span>.00€-ADD TO CART</span></button>
+            <button className='AddToCart'>{totPrice===0?price:totPrice}<span>.00€-ADD TO CART</span></button>
             <div className='Likes'>&hearts;</div>
           </div>
           <div className='Subscribe'>
@@ -132,26 +130,27 @@ class RightSlider extends React.Component {
         <div className='PairWith'>
           <h3>Pair With</h3>
           <div className='ProductList'>
-            <div className='product1'>
-              <a href='http://www.naver.com'>
-                <img alt='product' src='https://images.ctfassets.net/vnxry7jc7f2k/7EtX4lxmITWCGLCDU6X3Re/4eedd4a78a76f91c81f3bdc44a3c2250/03_SUPERFLUID_200421_0005_-_5-4.png?w=150&h=431&q=80&fm=webp'></img>
-                <p>superbalm| lip balm</p>
-                <div>14.00<span>€</span></div>
-              </a>
-            </div>
-            <div className='product2'>
-              <a href='http://www.naver.com'>
-                <img alt='product' src='https://images.ctfassets.net/vnxry7jc7f2k/7jlZKvTNGxa1ubfV9nT4GU/2065bdd2cf494fe2bc31587849253e04/04_superfluid_200421_0036_mauve_copy.png?w=150&h=582&q=80&fm=webp'></img>
-                <p>combo goals|lip'n' cheek</p>
-                <div>19.00<span>€</span></div>
-              </a>
-            </div>
+            {pairData.map(product=>{
+              return(
+                <>
+                  <div className={product.product_id}>
+                    <a href='http://www.naver.com'>
+                      <img alt='product' src={product.product_image}></img>
+                      <p>{product.name}</p>
+                      <div>{product.price}.00<span>€</span></div>
+                    </a>
+                  </div>
+                </>
+              )
+            })}
           </div>
         </div>
       </div>
     );
   }
 }
+
+export default RightSlider;
 
 const MAPPING_OBJ = {
   // 1: <First/>,
@@ -160,8 +159,6 @@ const MAPPING_OBJ = {
 }
 
 const MAPPING_MENU = ["First", "Second", "Third"];
-
-export default RightSlider;
 
 
 {/* <div className='wrapper'>
