@@ -1,0 +1,25 @@
+@import "../../../../Styles/common.scss";
+
+.SearchBox {
+  border-bottom: black 1px solid;
+  height: 6vh;
+  width: 100%;
+
+  input,
+  button {
+    font-size: 20px;
+    line-height: 6vh;
+    font-weight: 500;
+    background-color: transparent;
+  }
+
+  input {
+    margin-left: 5px;
+    width: 80%;
+  }
+  button {
+    margin-left: 10px;
+    position: absolute;
+    top: 6%;
+  }
+}
