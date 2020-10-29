@@ -5,16 +5,16 @@
   height: 120vh;
 
   .footerTop {
-    border: 1px solid black;
     height: 43vh;
+    border: 1px solid black;
     display: flex;
 
     div {
-      border: 1px solid black;
-      @include flex-center;
       width: 50%;
+      border: 1px solid black;
       font-weight: 800;
       font-size: 1.5rem;
+      @include flex-center;
 
       &:hover {
         cursor: pointer;
@@ -24,35 +24,35 @@
 
   .footerNewletter {
     .detail {
-      margin: 50px 40px 0 40px;
       height: 60%;
+      padding: 5px;
+      margin: 50px 40px 0 40px;
       display: flex;
       justify-content: space-between;
       font-size: 0.6rem;
-      padding: 5px;
 
       .subscribe {
+        padding-top: 25px;
         font-size: 1.6rem;
         font-weight: 700;
-        padding-top: 25px;
       }
 
       .help {
-        display: flex;
         padding: 10px;
+        display: flex;
         text-align: right;
 
         div {
           padding: 0 20px;
 
           p {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            
             &:first-child {
               font-weight: 600;
             }
-
-            font-size: 0.9rem;
-            font-weight: 500;
-            margin-bottom: 0.5rem;
           }
         }
       }
@@ -64,9 +64,9 @@
         color: black;
 
         input {
-          border-bottom: 1px solid black;
           width: 20vw;
-
+          border-bottom: 1px solid black;
+          
           &::placeholder {
             color: black;
           }
@@ -87,22 +87,22 @@
       height: 2.8vh;
       width: 220px;
       margin: 20px 40px 0 40px;
-      overflow: hidden;
       position: relative;
+      overflow: hidden;
     }
 
     .marquee div {
-      display: block;
       width: 200%;
       height: 4.8vh;
+      display: block;
       position: absolute;
       overflow: hidden;
       animation: marquee 2s linear infinite;
     }
 
     .marquee span {
-      float: left;
       width: 50%;
+      float: left;
       background: $default-yellow;
     }
 
