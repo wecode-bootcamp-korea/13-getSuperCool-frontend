@@ -6,3 +6,4 @@ import "./Styles/reset.scss";
 import "./Styles/common.scss";
 
 ReactDOM.render(<ProductList />, document.getElementById("root"));
+

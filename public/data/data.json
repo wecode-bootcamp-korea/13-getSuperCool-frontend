@@ -1,100 +1,202 @@
 {
-  "products" : [
-    {
-      "id" : 1,
-      "modelImg":"https://files.slack.com/files-pri/TH0U6FBTN-F01D8T4F77U/gettyimages-1272476716.jpg",
-      "iconImg" : "https://i.ibb.co/wS6dvTj/icontrans.png",
-      "name" : "COMBO GOALS LIP 'N' CHEEK",
-      "productImg" : "https://images.ctfassets.net/vnxry7jc7f2k/3GJLJl7dD0yzNt0pzFgqzp/904036e327b01591e5b22ca8485c42dc/04_SUPERFLUID_EYEGEL.png?w=300&h=784&q=80&fm=webp",
-      "price" : "16.00$"
-    },
-    {
-      "id" : 2,
-      "modelImg":"https://images.unsplash.com/photo-1601887896917-bdf1a925a7a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80",
-      "iconImg" : "https://i.ibb.co/wS6dvTj/icontrans.png",
-      "name" : "COMBO GOALS LIP 'N' CHEEK",
-      "productImg" :"https://i.ibb.co/C0BkFCt/Lip-removebg-preview.png",
-      "price" : "16.00$"
-    },
-    {
-      "id" : 3,
-      "modelImg":"https://images.unsplash.com/flagged/photo-1577999499479-00daf8b85ac9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-      "iconImg" : "https://i.ibb.co/wS6dvTj/icontrans.png",
-      "name" : "COMBO GOALS LIP 'N' CHEEK",
-      "productImg" :"https://i.ibb.co/ZLBZftF/mascara-removebg-preview.png",
-      "price" : "16.00$"
-    },
-    {
-      "id" : 4,
-      "modelImg":"https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F929bcc70-3fec-4767-9282-7323c25b2a97%2Fjimmy-fermin-bqe0J0b26RQ-unsplash.jpg?table=block&id=04b1f3ba-8a47-4d3a-a20d-c0654462588a&width=600&userId=c030fbf1-244b-4e7b-97ea-68378c6fd86a&cache=v2",
-      "iconImg" : "https://i.ibb.co/wS6dvTj/icontrans.png",
-      "name" : "COMBO GOALS LIP 'N' CHEEK",
-      "productImg" :"https://i.ibb.co/XZdnYpc/eye-liner-removebg-preview.png",
-      "price" : "16.00$"
-    },
-    {
-      "id" : 5,
-      "modelImg":"https://fruitofmay.files.wordpress.com/2019/05/img_6208.jpg?w=1596",
-      "iconImg" : "https://i.ibb.co/wS6dvTj/icontrans.png",
-      "name" : "COMBO GOALS LIP 'N' CHEEK",
-      "productImg" :"https://images.ctfassets.net/vnxry7jc7f2k/3GJLJl7dD0yzNt0pzFgqzp/904036e327b01591e5b22ca8485c42dc/04_SUPERFLUID_EYEGEL.png?w=300&h=784&q=80&fm=webp",
-      "price" : "16.00$"
-    },
-    {
-      "id" : 6,
-      "modelImg":"https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80",
-      "iconImg" : "https://i.ibb.co/wS6dvTj/icontrans.png",
-      "name" : "COMBO GOALS LIP 'N' CHEEK",
-      "productImg" :"https://images.ctfassets.net/vnxry7jc7f2k/3GJLJl7dD0yzNt0pzFgqzp/904036e327b01591e5b22ca8485c42dc/04_SUPERFLUID_EYEGEL.png?w=300&h=784&q=80&fm=webp",
-      "price" : "16.00$"
-    },
-    {
-      "id" : 7,
-      "modelImg":"https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80",
-      "iconImg" : "https://i.ibb.co/wS6dvTj/icontrans.png",
-      "name" : "COMBO GOALS LIP 'N' CHEEK",
-      "productImg" : "https://images.ctfassets.net/vnxry7jc7f2k/3GJLJl7dD0yzNt0pzFgqzp/904036e327b01591e5b22ca8485c42dc/04_SUPERFLUID_EYEGEL.png?w=300&h=784&q=80&fm=webp",
-      "price" : "16.00$"
-    },
-    {
-      "id" : 8,
-      "modelImg":"https://images.unsplash.com/photo-1595516007576-3832e048c30c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80",
-      "iconImg" : "https://i.ibb.co/wS6dvTj/icontrans.png",
-      "name" : "COMBO GOALS LIP 'N' CHEEK",
-      "productImg" :"https://images.ctfassets.net/vnxry7jc7f2k/3GJLJl7dD0yzNt0pzFgqzp/904036e327b01591e5b22ca8485c42dc/04_SUPERFLUID_EYEGEL.png?w=300&h=784&q=80&fm=webp",
-      "price" : "16.00$"
-    },
-    {
-      "id" : 9,
-      "modelImg":"https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80",
-      "iconImg" : "https://i.ibb.co/wS6dvTj/icontrans.png",
-      "name" : "COMBO GOALS LIP 'N' CHEEK",
-      "productImg" :"https://images.ctfassets.net/vnxry7jc7f2k/3GJLJl7dD0yzNt0pzFgqzp/904036e327b01591e5b22ca8485c42dc/04_SUPERFLUID_EYEGEL.png?w=300&h=784&q=80&fm=webp",
-      "price" : "16.00$"
-    },
-    {
-      "id" : 10,
-      "modelImg":"https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80",
-      "iconImg" : "https://i.ibb.co/wS6dvTj/icontrans.png",
-      "name" : "COMBO GOALS LIP 'N' CHEEK",
-      "productImg" :"https://images.ctfassets.net/vnxry7jc7f2k/3GJLJl7dD0yzNt0pzFgqzp/904036e327b01591e5b22ca8485c42dc/04_SUPERFLUID_EYEGEL.png?w=300&h=784&q=80&fm=webp",
-      "price" : "16.00$"
-    },
-    {
-      "id" : 11,
-      "modelImg":"https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80",
-      "iconImg" : "https://i.ibb.co/wS6dvTj/icontrans.png",
-      "name" : "COMBO GOALS LIP 'N' CHEEK",
-      "productImg" :"https://images.ctfassets.net/vnxry7jc7f2k/3GJLJl7dD0yzNt0pzFgqzp/904036e327b01591e5b22ca8485c42dc/04_SUPERFLUID_EYEGEL.png?w=300&h=784&q=80&fm=webp",
-      "price" : "16.00$"
-    },
-    {
-      "id" : 12,
-      "modelImg":"https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80",
-      "iconImg" : "https://i.ibb.co/wS6dvTj/icontrans.png",
-      "name" : "COMBO GOALS LIP 'N' CHEEK",
-      "productImg" :"https://images.ctfassets.net/vnxry7jc7f2k/3GJLJl7dD0yzNt0pzFgqzp/904036e327b01591e5b22ca8485c42dc/04_SUPERFLUID_EYEGEL.png?w=300&h=784&q=80&fm=webp",
-      "price" : "16.00$"
-    }
+  "product_list": [
+      {
+          "apply_on": [
+              "LIPS"
+          ],
+          "category": "COLOR",
+          "colors": [
+              {
+                  "color_id": 1,
+                  "color_name": "RED"
+              },
+              {
+                  "color_id": 2,
+                  "color_name": "PINK"
+              },
+              {
+                  "color_id": 3,
+                  "color_name": "HOTPINK"
+              }
+          ],
+          "model_image": "https://i.ibb.co/BjzbZXF/2020-10-26-9-56-50.png",
+          "name": "(S)LIP LIP FLUID",
+          "price": 18,
+          "product_id": 1,
+          "product_image": "https://i.ibb.co/XyM0DfF/Output-2.png"
+      },
+      {
+          "apply_on": [
+              "EYES"
+          ],
+          "category": "COLOR",
+          "colors": [
+              {
+                  "color_id": 4,
+                  "color_name": "BLACK"
+              },
+              {
+                  "color_id": 5,
+                  "color_name": "GREEN"
+              },
+              {
+                  "color_id": 6,
+                  "color_name": "PURPLE"
+              }
+          ],
+          "model_image": "https://i.ibb.co/F4JkQ9P/2020-10-26-10-04-08.png",
+          "name": "OUTLI(N)ER LINER MARKER",
+          "price": 14,
+          "product_id": 2,
+          "product_image": "https://i.ibb.co/XZdnYpc/eye-liner-removebg-preview.png"
+      },
+      {
+          "apply_on": [
+              "EYES"
+          ],
+          "category": "COLOR",
+          "colors": [
+              {
+                  "color_id": null,
+                  "color_name": ""
+              }
+          ],
+          "model_image": "https://i.ibb.co/2j95XZL/2020-10-26-9-55-47.png",
+          "name": "UNLASH ME MASCARA NERO",
+          "price": 19,
+          "product_id": 3,
+          "product_image": "https://i.ibb.co/ZLBZftF/mascara-removebg-preview.png"
+      },
+      {
+          "apply_on": [
+              "LIPS",
+              "FACE"
+          ],
+          "category": "COLOR",
+          "colors": [
+              {
+                  "color_id": 2,
+                  "color_name": "PINK"
+              }
+          ],
+          "model_image": "https://i.ibb.co/8mjhcr3/2020-10-27-5-55-47.png",
+          "name": "COMBO GOALS LIP’N’CHEEK",
+          "price": 19,
+          "product_id": 10,
+          "product_image": "https://i.ibb.co/C0BkFCt/Lip-removebg-preview.png"
+      },
+      {
+          "apply_on": [
+              "FACE"
+          ],
+          "category": "CARE",
+          "colors": [
+              {
+                  "color_id": null,
+                  "color_name": ""
+              }
+          ],
+          "model_image": "https://i.ibb.co/0D0xdxH/2020-10-26-9-42-47.png",
+          "name": "B.L.U.R. PRIMER BLUR MOISTURIZER",
+          "price": 26,
+          "product_id": 4,
+          "product_image": "https://i.ibb.co/2PmkX6j/perfume.png"
+      },
+      {
+          "apply_on": [
+              "FACE"
+          ],
+          "category": "CARE",
+          "colors": [
+              {
+                  "color_id": null,
+                  "color_name": ""
+              }
+          ],
+          "model_image": "https://i.ibb.co/h7rFXWh/photo-1555894755-b3d9b12236dd.jpg",
+          "name": "SOCOOLPINK PURFUME MIST",
+          "price": 24,
+          "product_id": 5,
+          "product_image": "https://i.ibb.co/jJ5TBVr/Output-1.png"
+      },
+      {
+          "apply_on": [
+              "EYES",
+              "FACE"
+          ],
+          "category": "CARE",
+          "colors": [
+              {
+                  "color_id": null,
+                  "color_name": ""
+              }
+          ],
+          "model_image": "https://i.ibb.co/k6ktznw/2020-10-27-6-04-24.png",
+          "name": "MOISTURE EYE OIL",
+          "price": 16,
+          "product_id": 6,
+          "product_image": "https://i.ibb.co/G5Xw4KJ/2020-10-27-1-51-00-removebg-preview.png"
+      },
+      {
+          "apply_on": [
+              "LIPS",
+              "FACE"
+          ],
+          "category": "CARE",
+          "colors": [
+              {
+                  "color_id": null,
+                  "color_name": ""
+              }
+          ],
+          "model_image": "https://i.ibb.co/hDfcg14/photo-1519699047748-de8e457a634e.jpg",
+          "name": "REAL FRESH LIP SCRUB",
+          "price": 14,
+          "product_id": 7,
+          "product_image": "https://i.ibb.co/m93CCKv/body-oil.png"
+      },
+      {
+          "apply_on": [
+              "EYES",
+              "FACE"
+          ],
+          "category": "CARE",
+          "colors": [
+              {
+                  "color_id": null,
+                  "color_name": ""
+              }
+          ],
+          "model_image": "https://i.ibb.co/vPMSDXC/2020-10-26-9-39-44.png",
+          "name": "COOLER EYE GEL",
+          "price": 16,
+          "product_id": 8,
+          "product_image": "https://i.ibb.co/5WvC4k2/2020-10-26-6-21-28-removebg-preview.png"
+      },
+      {
+          "apply_on": [
+              "LIPS"
+          ],
+          "category": "CARE",
+          "colors": [
+              {
+                  "color_id": 5,
+                  "color_name": "GREEN"
+              },
+              {
+                  "color_id": 2,
+                  "color_name": "PINK"
+              },
+              {
+                  "color_id": 7,
+                  "color_name": "YELLOW"
+              }
+          ],
+          "model_image": "https://i.ibb.co/ZG6FQg7/jimmy-fermin-bqe0-J0b26-RQ-unsplash.jpg",
+          "name": "SUPERBALM LIP BALM",
+          "price": 14,
+          "product_id": 9,
+          "product_image": "https://i.ibb.co/t3dCQWV/Output-4.png"
+      }
   ]
 }

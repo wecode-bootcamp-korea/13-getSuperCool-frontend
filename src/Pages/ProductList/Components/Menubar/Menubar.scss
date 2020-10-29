@@ -1,11 +1,20 @@
 @import "../../../../Styles/common.scss";
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -300%;
+  }
+}
 
 .Menubar {
   width: 28vw;
   height: 450px;
-  padding: 2vw 4vw;
+  padding: 0 4vw;
   position: sticky;
-  top: 0;
+  top: 10%;
+
   span {
     display: block;
     font-size: 0.8vw;
@@ -24,6 +33,7 @@
   ul.visible {
     display: flex;
     flex-direction: column;
+
     li {
       width: 50px;
       margin: 5px 0;
@@ -43,7 +53,14 @@
       }
 
       &:hover::before {
-        width: 4vw;
+        width: 3.8vw;
+        height: 1px;
+      }
+    }
+
+    li.clicked {
+      &::before {
+        width: 3.8vw;
         height: 1px;
       }
     }
@@ -53,19 +70,39 @@
     display: none;
   }
 
-  // ul:first-child {
-  //   li.visible:first-child {
-  //     &:hover::before {
-  //       width: 7vw;
-  //     }
-  //   }
-  // }
-}
+  div {
+    margin: 20px 0;
+    p {
+      font-size: 0.8vw;
+      margin: 0 0 8px 0;
+    }
+  }
 
-div {
-  margin: 20px 0;
-  p {
-    font-size: 0.8vw;
-    margin: 0 0 8px 0;
+  .marquee {
+    height: 20px;
+    width: 100%;
+    position: relative;
+    background-color: $default-yellow;
+    overflow: hidden;
+    div {
+      width: 450%;
+      padding: 0;
+      height: 13px;
+      background-color: transparent;
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      animation: marquee 9s linear infinite;
+
+      span {
+        font-size: 15px;
+        font-weight: 500;
+        display: block;
+        padding: 0;
+        float: left;
+        margin-right: 0;
+        padding-right: 0;
+      }
+    }
   }
 }
