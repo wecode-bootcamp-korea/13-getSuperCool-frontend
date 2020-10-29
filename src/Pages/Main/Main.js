@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "./Main.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Nav from "../Components/Nav/Nav";
 
 class Main extends Component {
   constructor() {
@@ -50,6 +51,7 @@ class Main extends Component {
     };
     return (
       <div className="Main">
+        <Nav />
         <Slider {...settings}>
           <img
             id="firstImg"

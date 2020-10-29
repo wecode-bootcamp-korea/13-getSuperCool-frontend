@@ -1,10 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import "./Login.scss";
 
-const API = "http://10.58.4.225:8000/account/login";
 
-export default class Login extends React.Component {
+
+const API = "http://10.58.7.186:8000/account/login";
+
+class Login extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -48,10 +50,10 @@ export default class Login extends React.Component {
         console.log("================================");
         console.log("백앤드에서 오는 응답 메세지: ", response);
 
-        if (response.Authorization) {
-          alert("로그인 성공");
-          localStorage.setItem("token", response.Authorization);
-        }
+        if (response.AUTHORIZATION) {
+          this.props.history.push("/");
+          localStorage.setItem("token", response.AUTHORIZATION);
+        } else alert("로그인 실패");
       });
   };
 
@@ -104,3 +106,5 @@ export default class Login extends React.Component {
     );
   }
 }
+
+export default withRouter(Login);

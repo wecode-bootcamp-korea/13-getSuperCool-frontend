@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Nav from "../Components/Nav/Nav";
 import Register from "./Components/Register";
 import Login from "./Components/Login";
 import "./LoginRegister.scss";
@@ -25,6 +26,7 @@ export default class LoginRegister extends Component {
   render() {
     return (
       <div className="LoginRegister-BH">
+        <Nav />
         <main className="loginContainer">
           <img
             className="loginBackdropImage"

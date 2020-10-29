@@ -1,12 +1,13 @@
 svg {
   width: 11vw;
   height: 5vh;
+  background-color: transparent;
 
   &:hover {
     cursor: pointer;
   }
 
   g {
-    fill: $default-black;
+    fill: $default-yellow;
   }
 }

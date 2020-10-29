@@ -1,7 +1,7 @@
 import React from "react";
 import "./ForgotPw.scss";
 
-const API = "http://10.58.4.225:8000/account/forgot-password";
+const API = "http://10.58.7.186:8000/account/forgot-password";
 
 export default class ForgotPw extends React.Component {
   constructor() {
