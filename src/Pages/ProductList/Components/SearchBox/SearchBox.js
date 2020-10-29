@@ -3,16 +3,17 @@ import "./SearchBox.scss"
 
 class SearchBox extends Component {
   render() {
-    const { handleChange } = this.props;
+    const { handleChange, searchInput, handleDefaultCategory } = this.props;
     return (
       <div className="SearchBox">
         <input
           className="search"
           type="search"
           placeholder="SEARCH..."
-          name={this.props.userInput}
+          name={searchInput}
           onChange={handleChange}
-          value={this.props.userInput}
+          onMouseDown={handleDefaultCategory}
+          value={searchInput}
         />
         <button><i class="fas fa-search"></i></button>
       </div>

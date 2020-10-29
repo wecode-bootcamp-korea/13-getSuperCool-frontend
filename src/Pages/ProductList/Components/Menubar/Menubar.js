@@ -6,7 +6,6 @@ class Menubar extends React.Component {
   constructor() {
     super();
     this.state = {
-      listClassStyle : "",
       category1: true,
       category2: true,
       COLOR : false,
@@ -19,15 +18,27 @@ class Menubar extends React.Component {
 
   handleClickCategory = (name) => {
     this.props.getCategories(name);
+    this.props.handleDefaultSearch();
     this.setState({
-      [name] : !this.state[name]
+      [name] : !this.state[name],
     })
   }
 
   handleClickApplies = (name) => {
     this.props.getApplies(name);
+    this.props.handleDefaultSearch();
     this.setState({
-      [name] : !this.state[name]
+      [name] : !this.state[name],
+    })
+  }
+
+  handleDefaultCategory = () => {
+    this.setState({
+      COLOR : false,
+      CARE : false,
+      LIPS : false,
+      EYES : false,
+      FACE : false,
     })
   }
 
@@ -42,7 +53,7 @@ class Menubar extends React.Component {
 
     return (
       <div className="Menubar">
-        <SearchBox handleChange={this.props.handleChange} />
+        <SearchBox handleChange={this.props.handleChange} handleDefaultCategory={this.handleDefaultCategory} searchInput={this.props.searchInput} />
         <span className={category1 ? "visible" : "invisible"} onClick={() => this.handleAccordionMenu("category1")}>CATEGORY</span>
         <ul className={category1 ? "visible" : "invisible"}>
           <li onClick={() => this.handleClickCategory("COLOR")} className={this.state.COLOR ? "clicked" : ""}>COLOR</li>
