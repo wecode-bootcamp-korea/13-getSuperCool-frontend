@@ -1,11 +1,11 @@
 @import "../../Styles/common.scss";
 
 .Cart {
+  width: 100%;
+  height: 100vh;
   position: absolute;
   top: 0;
   right: -650px;
-  width: 100%;
-  height: 100vh;
   background: transparent;
   z-index: 1;
   transition: all 0.4s ease-out;
@@ -19,12 +19,12 @@
   }
 
   .cartContainer {
+    width: 50%;
+    height: 100%;
     border: 1px solid red;
     position: fixed;
     display: flex;
     flex-direction: column;
-    width: 50%;
-    height: 100%;
     right: 0;
     background: $default-yellow;
     padding: 2.78vw 4.17vw;
@@ -62,10 +62,10 @@
       }
     }
     .cartBodyWrapper {
+      height: calc(100% - 8.33vw);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: calc(100% - 8.33vw);
       background: $default-yellow;
 
       .cartListContainer {
@@ -95,17 +95,17 @@
                 background-color: $default-white;
 
                 img {
-                  padding: 1.04vw 0px;
-                  position: relative;
                   width: 100%;
                   height: 100%;
+                  padding: 1.04vw 0px;
+                  position: relative;
                 }
               }
               .itemDetails {
+                width: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                width: 100%;
                 font-size: 1.11vw;
                 line-height: 1.18vw;
                 padding-left: 1.39vw;
@@ -116,20 +116,20 @@
                 }
 
                 .itemCounter {
+                  width: 8vw;
                   display: flex;
                   justify-content: space-around;
-                  width: 8vw;
 
                   button {
                     cursor: pointer;
                   }
 
                   div {
+                    height: 2.36vw;
+                    width: 2.36vw;
                     display: flex;
                     align-items: center;
                     justify-content: space-around;
-                    height: 2.36vw;
-                    width: 2.36vw;
                     border: 1px solid rgba(0, 0, 0, 0.1);
                     font-size: 1.11vw;
                     line-height: 1.18vw;
@@ -160,10 +160,10 @@
       }
 
       .upsellProductsContainer {
+        height: 15.56vw;
         position: relative;
         display: flex;
         align-items: flex-end;
-        height: 15.56vw;
         border-bottom: $default-border;
         background-color: $default-yellow;
 
@@ -187,27 +187,28 @@
         }
 
         .upsellProducts {
+          width: 100%;
+          height: 12.64vw;
           display: flex;
           position: relative;
-          height: 12.64vw;
           top: 0px;
           justify-content: flex-end;
-          width: 100%;
+          
 
           .productCard {
             display: flex;
             flex-direction: column;
 
             .upsellPhotoWrapper {
-              position: relative;
               width: 7.78vw;
               height: 9.69vw;
-
+              position: relative;
+  
               a {
                 img {
-                  object-fit: cover;
                   width: 100%;
                   height: 100%;
+                  object-fit: cover;
                 }
               }
             }
@@ -223,11 +224,11 @@
         }
       }
       .continueToPayment {
+        height: 13.19vw;
         position: relative;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        height: 13.19vw;
         background-color: $default-yellow;
 
         .totalPrice {
@@ -248,11 +249,11 @@
           justify-content: center;
 
           button {
+            height: 4.51vw;
+            width: 100%;
             font: $button-meta-font;
             font-size: 0.9vw;
             line-height: 1.39vw;
-            height: 4.51vw;
-            width: 100%;
             background: $default-black;
             color: $default-white;
             

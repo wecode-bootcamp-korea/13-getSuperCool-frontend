@@ -10,6 +10,7 @@ $default-grey-meta: rgb(144, 144, 144);
 $default-border: 2px solid rgb(0, 0, 0);
 $button-meta-font: 500 0.83vw "Work Sans";
 $cart-body-font: 500 1.11vw "Work Sans";
+
 * {
   box-sizing: border-box;
   text-decoration: none;
@@ -22,22 +23,26 @@ $cart-body-font: 500 1.11vw "Work Sans";
   letter-spacing: -0.04em;
   text-transform: uppercase;
 }
+
 @mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 @mixin flex-spaceBetween-column {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
+
 @mixin flex-spaceBetween-center {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 @mixin flex-column {
   display: flex;
   flex-direction: column;

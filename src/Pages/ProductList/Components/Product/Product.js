@@ -5,7 +5,7 @@ import "./Product.scss";
 class Product extends React.Component {
   render() {
     
-    const { showCart, product, addCartProduct } = this.props;
+    const { showCart, product } = this.props;
     return (
       <div id={product.id} className="Product">
         <div className="productThumbnail">

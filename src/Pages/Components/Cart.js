@@ -5,27 +5,21 @@ class Cart extends Component {
     super();
     this.state = {
       count: 0,
-      newList: []
+      cartList: []
     };
   }
 
   componentDidMount = () => {
-    this.setState({ newList: this.props.cartItems });
+    this.setState({ cartList: this.props.cartItems });
   };
 
   deleteItem = id => {
-    console.log("product id", id);
-    console.log("list", this.state.newList);
-    let filteredItems = this.state.newList.filter(item => item.id !== id);
-    console.log("filter", filteredItems);
-    this.setState({ newList: filteredItems });
+    let filteredItems = this.state.cartList.filter(item => item.id !== id);
+    this.setState({ cartList: filteredItems });
   };
 
   render() {
-    const { count } = this.state;
-    const { cartItems } = this.props;
-
-    console.log("cartItems >>> ", this.state.newList);
+    const { count, cartList } = this.state;
 
     return (
       <section className="Cart visible">
@@ -38,9 +32,9 @@ class Cart extends Component {
           </section>
           <div className="cartBodyWrapper">
             <section className="cartListContainer">
-              {this.state.newList.length !== 0 && (
+              {cartList.length !== 0 && (
                 <ul className="cartList">
-                  {this.state.newList.map(product => (
+                  {cartList.map(product => (
                     <li className="itemContainer">
                       <div className="itemDetailsWrapper">
                         <div className="imageContainer">
@@ -77,7 +71,7 @@ class Cart extends Component {
                 <div className="productCard">
                   <div className="upsellPhotoWrapper">
                     <a>
-                      <img src="https://i.ibb.co/265NLSH/olia-gozha-9-A-pe-Gr-Sb-Zc-unsplash.jpg" />
+                      <img src="https://i.ibb.co/265NLSH/olia-gozha-9-A-pe-Gr-Sb-Zc-unsplash.jpg" alt="random1"/>
                     </a>
                   </div>
                   <p>product name here</p>
@@ -85,7 +79,7 @@ class Cart extends Component {
                 <div className="productCard">
                   <div className="upsellPhotoWrapper">
                     <a>
-                      <img src="https://i.ibb.co/jLLxFxf/ramez-e-nassif-Tz8s-KLv-SV08-unsplash.jpg" />
+                      <img src="https://i.ibb.co/jLLxFxf/ramez-e-nassif-Tz8s-KLv-SV08-unsplash.jpg" alt="random1"/>
                     </a>
                   </div>
                   <p>product name here</p>
@@ -93,7 +87,7 @@ class Cart extends Component {
                 <div className="productCard">
                   <div className="upsellPhotoWrapper">
                     <a>
-                      <img src="https://i.ibb.co/265NLSH/olia-gozha-9-A-pe-Gr-Sb-Zc-unsplash.jpg" />
+                      <img src="https://i.ibb.co/265NLSH/olia-gozha-9-A-pe-Gr-Sb-Zc-unsplash.jpg" alt="random1"/>
                     </a>
                   </div>
                   <p>product name here</p>

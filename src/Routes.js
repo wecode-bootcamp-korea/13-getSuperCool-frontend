@@ -7,8 +7,6 @@ import ProductDetails from "./Pages/ProductDetails/ProductDetails";
 import LoginResgister from "./Pages/LoginRegister/LoginRegister";
 import Nav from "./Pages/Components/Nav/Nav";
 
-// import './Routes.scss';
-
 class Routes extends React.Component {
   render(){
     return(

@@ -82,7 +82,6 @@ class ProductList extends React.Component {
               cartItems={cartItems}
             />
           )}
-          {/* <Footer /> */}
         </div>
       </>
     );
