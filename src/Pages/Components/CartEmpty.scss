@@ -1,0 +1,16 @@
+.cartEmpty {
+  border-top: 5px solid $default-black;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  margin: 0 50px;
+
+  p {
+    background: transparent;
+    font-size: 4rem;
+    font-weight: 1000;
+  }
+}
