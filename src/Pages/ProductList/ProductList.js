@@ -74,7 +74,7 @@ class ProductList extends React.Component {
   handleSearchBox = () => {
     const { products, searchInput } = this.state;
     this.setState({
-      filteredProducts : products.filter((product) => {
+      filterdApplies : products.filter((product) => {
         return product.name.toLowerCase().includes(searchInput.toLowerCase());
       })
     })
@@ -102,7 +102,7 @@ class ProductList extends React.Component {
   handleChange = (e) => {
     this.setState({
       searchInput : e.target.value
-    }, ()=> this.handleSearchBox())
+    }, this.handleSearchBox)
   }
 
   render() {
