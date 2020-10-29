@@ -1,12 +1,14 @@
 import React from "react";
 import logoImg from "./logoText.svg";
 import ColorOptionBox from "../ColorOptionBox/ColorOptionBox";
+import { withRouter } from "react-router-dom";
 import "./Product.scss";
 
 class Product extends React.Component {
   render() {
+    console.log(this.props)
     const {
-      key,
+      id,
       modelImg,
       name,
       productImg,
@@ -16,7 +18,9 @@ class Product extends React.Component {
     } = this.props;
 
     return (
-      <div id={key} className="Product">
+      <div onClick={() =>
+        this.props.history.push(`http://10.58.7.186:8000/shop/${id}`)
+      } id={id} className="Product">
         <ColorOptionBox />
         <div className="productThumbnail">
           <img src={modelImg} alt={modelImg} />
@@ -41,4 +45,4 @@ class Product extends React.Component {
   }
 }
 
-export default Product;
+export default withRouter(Product);

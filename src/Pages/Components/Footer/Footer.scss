@@ -2,10 +2,10 @@
 
 .Footer {
   width: 100%;
-  height: 120vh;
+  height: 100vh;
 
   .footerTop {
-    height: 43vh;
+    height: 37vh;
     border: 1px solid black;
     display: flex;
 
@@ -13,7 +13,7 @@
       width: 50%;
       border: 1px solid black;
       font-weight: 800;
-      font-size: 1.5rem;
+      font-size: 2.5vw;
       @include flex-center;
 
       &:hover {
@@ -46,12 +46,15 @@
           padding: 0 20px;
 
           p {
-            margin-bottom: 0.5rem;
-            font-size: 0.9rem;
+            margin-bottom: 0.7rem;
+            font-size: 1.1rem;
             font-weight: 500;
-            
+            .link {
+              color: $default-black;
+            }
+
             &:first-child {
-              font-weight: 600;
+              font-weight: 700;
             }
           }
         }
@@ -66,7 +69,7 @@
         input {
           width: 20vw;
           border-bottom: 1px solid black;
-          
+
           &::placeholder {
             color: black;
           }
@@ -83,35 +86,66 @@
       }
     }
 
+    // .marquee {
+    //   height: 2.8vh;
+    //   width: 220px;
+    //   margin: 20px 40px 0 40px;
+    //   position: relative;
+    //   overflow: hidden;
+    // }
+
     .marquee {
-      height: 2.8vh;
-      width: 220px;
-      margin: 20px 40px 0 40px;
+      margin-left: 4%;
+      height: 25px;
+      width: 22%;
       position: relative;
+      margin: 20px 40px 0 5s0px;
+      background-color: $default-yellow;
       overflow: hidden;
+      div {
+        width: 450%;
+        padding: 0;
+        height: 13px;
+        background-color: transparent;
+        position: absolute;
+        bottom: 5px;
+        display: flex;
+        animation: marquee 4s linear infinite;
+        span {
+          font-size: 15px;
+          font-weight: 500;
+          color: $default-black;
+          background-color: transparent;
+          display: block;
+          padding: 0;
+          float: left;
+          margin-right: 0;
+          padding-right: 0;
+        }
+      }
     }
+    // .marquee {
+    //   div {
+    //     width: 200%;
+    //     height: 4.8vh;
+    //     display: block;
+    //     position: absolute;
+    //     overflow: hidden;
+    //     animation: marquee 3s linear infinite;
 
-    .marquee div {
-      width: 200%;
-      height: 4.8vh;
-      display: block;
-      position: absolute;
-      overflow: hidden;
-      animation: marquee 2s linear infinite;
-    }
-
-    .marquee span {
-      width: 50%;
-      float: left;
-      background: $default-yellow;
-    }
-
+    //     span {
+    //       width: 50%;
+    //       float: left;
+    //       background: $default-yellow;
+    //     }
+    //   }
+    // }
     @keyframes marquee {
       0% {
         left: 0;
       }
       100% {
-        left: -100%;
+        left: -300%;
       }
     }
   }
@@ -121,11 +155,12 @@
     font-size: 10rem;
     font-weight: 800;
   }
-  
+
   span {
     position: absolute;
     background-color: transparent;
     right: 2%;
-    bottom: -15%;
+    bottom: -318%;
+    margin-left: 15%;
   }
 }

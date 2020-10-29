@@ -1,6 +1,6 @@
 svg {
   width: 11vw;
-  height: 5vh;
+  margin-top: 0;
   background-color: transparent;
 
   &:hover {
@@ -10,4 +10,9 @@ svg {
   g {
     fill: $default-yellow;
   }
+}
+
+svg.bigLogo {
+  width: 90vw;
+  margin-top: 10%;
 }

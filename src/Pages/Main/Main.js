@@ -2,15 +2,17 @@ import React, { Component } from "react";
 import Product from "../ProductList/Components/Product/Product";
 import Slider from "react-slick";
 import "./Main.scss";
+import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Footer from "../Components/Footer/Footer"
 import Nav from "../Components/Nav/Nav";
 
 class Main extends Component {
   constructor() {
     super();
     this.state = {
-      products: []
+      product_list: []
     };
   }
 
@@ -23,11 +25,11 @@ class Main extends Component {
   };
 
   componentDidMount() {
-    fetch("http://localhost:3000/data/data.json")
+    fetch("http://10.58.7.186:8000/shop")
       .then(res => res.json())
       .then(res => {
         this.setState({
-          products: res.products
+          product_list: res.product_list
         });
       });
   }
@@ -55,17 +57,17 @@ class Main extends Component {
         <Slider {...settings}>
           <img
             id="firstImg"
-            src="https://images.ctfassets.net/vnxry7jc7f2k/3SBQaVgfnCvM6ALvpyYt2h/6dba0f1d03de947b436b8aa57c7ead30/slider-01.jpg?w=1800&h=1013&q=80&fm=webp"
+            src="https://i.ibb.co/yX1K3mP/slick-3.jpg"
             alt="first"
           />
           <img
             id="secondImg"
-            src="https://images.ctfassets.net/vnxry7jc7f2k/1rJNXGIpDwniKyhAlBnRVM/9cfc8df2da07ebf13cb3229842820ab8/slider_applicazione.jpg?w=1920&h=1080&q=80&fm=webp"
+            src="https://i.ibb.co/MPpGLC0/slick-1.jpg"
             alt="second"
           />
           <img
             id="thirdImg"
-            src="https://images.ctfassets.net/vnxry7jc7f2k/5RpJJJgujK6rFOlN0ljzi7/06352b48f4acafa52500299cb6475299/leggera_SLIDER_MOOD.jpg?w=1920&h=1080&q=80&fm=webp"
+            src="https://i.ibb.co/2y62XJx/slick-2.jpg"
             alt="third"
           />
         </Slider>
@@ -90,14 +92,14 @@ class Main extends Component {
           <p>BASICS!</p>
           <div className="items">
             <Slider ref={c => (this.slider = c)} {...itemSlick}>
-              {this.state.products && this.state.products.map(
-                ({ id, modelImg, iconImg, name, productImg, price }) => (
+              {this.state.product_list && this.state.product_list.map(
+                ({ product_id, model_image, name, product_image, price }) => (
                   <Product
-                    key={id}
-                    modelImg={modelImg}
-                    iconImg={iconImg}
+                    id={product_id}
+                    modelImg={model_image}
+                    iconImg="https://i.ibb.co/wS6dvTj/icontrans.png"
                     name={name}
-                    productImg={productImg}
+                    productImg={product_image}
                     price={price}
                   />
                 )
@@ -118,9 +120,10 @@ class Main extends Component {
               />
             </div>
           </div>
+          <div className="shopNow"><Link className="link" to={"/ProductList"}>shop now</Link></div>
         </div>
         <div className="NewsletterSection">
-          <img src="https://images.ctfassets.net/vnxry7jc7f2k/3F6iB8kJUfwHHUeiFVMmVW/a7bdf792f2342d55ae093f4d033b66dc/per_sito-02.jpg?w=1600&h=1600&q=80&fm=webp" alt="" />
+          <img src="https://i.ibb.co/myqMxG7/annie-spratt-j-Crft-LHe3ec-unsplash.jpg" alt="콜라주 사진" />
           <div>
             <p>SUBSCRIBE</p>
             <p>TO THE</p>
@@ -131,6 +134,7 @@ class Main extends Component {
             </form>
           </div>
         </div>
+        <Footer />
       </div>
     );
   }

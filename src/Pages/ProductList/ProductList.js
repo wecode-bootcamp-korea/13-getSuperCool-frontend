@@ -127,7 +127,7 @@ class ProductList extends React.Component {
   };
 
   componentDidMount() {
-    fetch("/data/data.json", {
+    fetch("http://10.58.7.186:8000/shop", {
       method: "GET"
     })
       .then(res => res.json())
@@ -179,7 +179,7 @@ class ProductList extends React.Component {
                 <Product
                   category={category}
                   apply_on={apply_on}
-                  key={product_id}
+                  id={product_id}
                   modelImg={model_image}
                   name={name}
                   productImg={product_image}
