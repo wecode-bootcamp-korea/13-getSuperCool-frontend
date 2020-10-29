@@ -1,3 +1,45 @@
 [{
-    
-},]
+    id: "LIZETH",
+    date: "2020-10-14",
+    review: "I love the way it’s very intense yet it’s easy to blend and make it look soft, amazing product",
+    skin: "Oily",
+    age range: "<18",
+},{
+    id: "ALICE",
+    date: "2020-08-24",
+    review: "Hi, I discover this makeup line by chance on instagram and I tried some products....I really like the COMBO-goals coral, it fits perfect with my skin color and I"m super happy because it last a lot! I will try different colors in the future...and i like a lot the idea to have one product for cheeks and lips. I also like a lot the mascara, wow! Have a nice day Alice",
+    skin: "Normal",
+    age range: "25-34",
+},{id: "FEDERICA",
+    date: "2020-08-03",
+    review: "I din"t use to wear blush, I never felt confident with them, then I discovered Superfluid and took COMBO GOALS in the coral shade. Now I have to share it with my mum! No matter if my skin is medium and her is porcelain, if I"m dark and she"s blonde, if I"ve got black eyes and she"s got green, this blush pops making every look eye-catching. Try it before shooting for an Instagram post and see how many likes it gets! I"m 100% in love I"m ordering other ones right now... one for me, one for mum.",
+    skin: "Dry",
+    age range: "25-34",
+    },{
+        id: "NICOLE M.
+        ",
+    date: "2020-07-16
+    ",
+    review: "great products!",
+    skin: "Sensitive",
+    age range: "18-24",
+    },{
+        id: "KELLY",
+    date: "2020-07-10",
+    review: "Love the smell, texture and color of the Combo Goals in Mauve. Perfect for a lovely soft color on the lips and cheeks",
+    skin: "Normal",
+    age range: "18-24",
+    },{
+        id: "JOANNA B.
+        ",
+    date: "2020-09-07",
+    review: "This is a really good colour but was hoping it was more like a brown mauve than pink, but once blended it looks natural. The smell is quite minty and pleasant. Not so thrilled about the packaging which is entirely plastic and doesn"t seem reusable.",
+    skin: "Sensitive",
+    age range: "25-34",
+    },{
+        id: "CLAUDIA",
+    date: "2020-08-14",
+    review: "Very pretty and comfortable! Since it"s matte it stays a while, it is a bit drying but just a bit. Love the smell!",
+    skin: "Sensitive",
+    age range: "25-34",
+    }]

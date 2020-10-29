@@ -1,7 +1,6 @@
 // import { render } from "node-sass";
 import React from "react";
-import reviewMock from "./reviewMock."
-
+import review from "./reviewMock.json";
 class ReviewList extends React.Component {
   render(){
     return(
@@ -11,16 +10,18 @@ class ReviewList extends React.Component {
         </div>
         <div className='Reviews'>
           <ul>
-            {/* {monsters.map(monster => {
+            {review.map(idx => {
               return (
-                <Card
-                  key={monster.id}
-                  id={monster.id}
-                  name={monster.name}
-                  email={monster.email}
-                />
+                <>
+                  <div className="review">
+                    <p>{idx.id}  {idx.date}</p>
+                    <p>{idx.review}</p>
+                    <p>Skin Type: {idx.skin}</p>
+                    <p>Age Range: {idx["age range"]}</p>
+                  </div>
+                </>
               );
-            })} */}
+            })}
 
             {/* {arr.map((str, idx) => {
               return (
