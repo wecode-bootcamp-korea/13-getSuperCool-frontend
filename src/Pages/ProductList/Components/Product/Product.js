@@ -23,7 +23,7 @@ class Product extends React.Component {
           <div>{name}</div>
           <div>{price}.00<span>€</span></div>
         </span>
-        <button>ADD TO CART</button>
+        <buttons>ADD TO CART</buttons>
       </div>
     )
   }
