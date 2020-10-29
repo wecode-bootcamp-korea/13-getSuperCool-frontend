@@ -1,7 +1,6 @@
 import React from "react";
 import SearchBox from "../SearchBox/SearchBox";
 import "./Menubar.scss";
-
 class Menubar extends React.Component {
   constructor() {
     super();
@@ -47,7 +46,6 @@ class Menubar extends React.Component {
       [category]: !this.state[category]
     })
   }
-
   render () {
     const { category1, category2 } = this.state;
 
@@ -80,10 +78,8 @@ class Menubar extends React.Component {
           </div>
         </div> 
       </div> 
-      
 
     )
   }
 }
-
 export default Menubar;

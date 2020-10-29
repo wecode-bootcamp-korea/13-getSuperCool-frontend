@@ -1,10 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter } from "react-router-dom";
 import Routes from "./Routes";
-import ProductList from "./Pages/ProductList/ProductList";
 import "./index.css";
-import "../src/Styles/common.scss";
-import "../src/Styles/reset.scss";
+import "./Styles/reset.scss";
+import "./Styles/common.scss";
 
-ReactDOM.render(<ProductList />, document.getElementById("root"));
+ReactDOM.render(<Routes />, document.getElementById("root"));
+

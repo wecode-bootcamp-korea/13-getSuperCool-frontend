@@ -16,6 +16,10 @@
   input {
     margin-left: 5px;
     width: 80%;
+    text-transform: lowercase;
+    &::placeholder {
+      text-transform: uppercase;
+    }
   }
   button {
     margin-left: 10px;
