@@ -3,11 +3,9 @@ import Menubar from "./Components/Menubar/Menubar";
 import Product from "./Components/Product/Product"
 import Nav from "../Components/Nav/Nav"
 import "./ProductList.scss";
-
 class ProductList extends React.Component {
   constructor() {
     super();
-
     this.state = {
       searchInput : "",
       filteredProducts: [],
@@ -80,12 +78,22 @@ class ProductList extends React.Component {
     })
   }
 
+
+  handleSearchBox = () => {
+    const { products, searchInput } = this.state;
+    this.setState({
+      filteredProducts : products.filter((product) => {
+        return product.name.toLowerCase().includes(searchInput.toLowerCase());
+      })
+    })
+  }
+  
   handleDefaultSearch = () => {
     this.setState({
       searchInput : "",
     })
   }
-  // http://10.58.7.149:8000/shop
+
   componentDidMount() {
     fetch("/data/data.json", {
       method: "GET"
@@ -108,6 +116,17 @@ class ProductList extends React.Component {
   render() {
     const { filterdApplies, searchInput } = this.state;
     
+      })
+      });
+  }
+  handleChange = (e) => {
+    this.setState({
+      searchInput : e.target.value
+    }, ()=> this.handleSearchBox())
+  }
+  render() {
+    const { filteredProducts , searchInput } = this.state;
+
     return (
       <div className="ProductList">
         <Nav />
@@ -125,6 +144,7 @@ class ProductList extends React.Component {
             handleSearchBox = {this.handleSearchBox}
           />
           <div className="ProductsContainer">
+
             {filterdApplies.map(
               ({
                 category,
@@ -154,5 +174,4 @@ class ProductList extends React.Component {
     )
   }
 }
-
 export default ProductList;
