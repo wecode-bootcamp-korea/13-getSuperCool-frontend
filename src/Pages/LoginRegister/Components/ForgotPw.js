@@ -1,7 +1,7 @@
 import React from "react";
 import "./ForgotPw.scss";
 
-const API = "http://10.58.4.225:8000/account/login";
+const API = "http://10.58.4.225:8000/account/forgot-password";
 
 export default class ForgotPw extends React.Component {
   constructor() {
@@ -46,9 +46,10 @@ export default class ForgotPw extends React.Component {
         console.log("================================");
         console.log("백앤드에서 오는 응답 메세지: ", response);
 
-        if (response.Authorization) {
-          alert("로그인 성공");
-          localStorage.setItem("token", response.Authorization);
+        if (response.new_pw) {
+          alert("성공", response.new_pw);
+        } else {
+          alert("아 슬프다");
         }
       });
   };
