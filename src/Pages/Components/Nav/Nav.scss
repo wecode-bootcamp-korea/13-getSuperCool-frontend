@@ -3,6 +3,7 @@
 
 .Nav {
   @include flex-spaceBetween-center;
+  background-color: transparent;
   width: 100%;
   height: 6.94vw;
   position: fixed;
@@ -14,23 +15,23 @@
     display: flex;
     font-size: 1.2vw;
     line-height: 2.01vw;
-  
+
     span {
       display: inline-block;
       padding: 0 9px;
       position: relative;
       font-weight: bold;
       z-index: 1;
-  
+
       &:hover {
         color: $default-yellow;
         cursor: pointer;
-  
+
         &::after {
           width: 100%;
         }
       }
-      
+
       &::after {
         background-color: $default-black;
         display: block;
@@ -54,34 +55,34 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  
+
     select {
       font-size: 0.9vw;
       -webkit-appearance: none;
       font-weight: bold;
-      
+
       &:hover {
         cursor: pointer;
       }
     }
-  
+
     svg {
       width: 0.8vw;
       height: 0.8vw;
     }
-  
+
     p {
       padding: 0 0.5vw;
       cursor: pointer;
     }
-  
+
     div {
       position: relative;
-  
+
       &:hover {
         cursor: pointer;
       }
-  
+
       .circle {
         width: 2.3vw;
         height: 2.3vw;
@@ -89,7 +90,7 @@
         background: $default-black;
         margin: 0 3px;
       }
-  
+
       svg {
         width: 0.8vw;
         height: 0.8vw;
@@ -101,5 +102,4 @@
       }
     }
   }
-  
 }
