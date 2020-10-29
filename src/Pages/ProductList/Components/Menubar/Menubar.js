@@ -14,6 +14,7 @@ class Menubar extends React.Component {
       FACE : false,
     }
   }
+
   handleClickCategory = (name) => {
     this.props.getCategories(name);
     this.props.handleDefaultSearch();
@@ -21,6 +22,7 @@ class Menubar extends React.Component {
       [name] : !this.state[name],
     })
   }
+
   handleClickApplies = (name) => {
     this.props.getApplies(name)
     this.props.handleDefaultSearch();
@@ -28,6 +30,7 @@ class Menubar extends React.Component {
       [name] : !this.state[name],
     })
   }
+
   handleDefaultCategory = () => {
     this.setState({
       COLOR : false,
@@ -37,6 +40,7 @@ class Menubar extends React.Component {
       FACE : false,
     })
   }
+
   handleAccordionMenu = (category) => {
     this.setState({
       [category]: !this.state[category]
@@ -44,6 +48,7 @@ class Menubar extends React.Component {
   }
   render () {
     const { category1, category2 } = this.state;
+
     return (
       <div className="Menubar">
         <SearchBox handleChange={this.props.handleChange} handleDefaultCategory={this.handleDefaultCategory} searchInput={this.props.searchInput} />
@@ -52,6 +57,7 @@ class Menubar extends React.Component {
           <li onClick={() => this.handleClickCategory("COLOR")} className={this.state.COLOR ? "clicked" : ""}>COLOR</li>
           <li onClick={() => this.handleClickCategory("CARE")} className={this.state.CARE ? "clicked" : ""}>CARE</li>
         </ul>
+
         <span className={category2 ? "visible" : "invisible"} onClick={() => this.handleAccordionMenu("category2")}>APPLY ON</span>
         <ul  className={category2 ? "visible" : "invisible"}>
           <li onClick={() => this.handleClickApplies("LIPS")} className={this.state.LIPS ? "clicked" : ""}>LIPS</li>
@@ -72,6 +78,7 @@ class Menubar extends React.Component {
           </div>
         </div> 
       </div> 
+
     )
   }
 }

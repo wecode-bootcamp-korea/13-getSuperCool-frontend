@@ -8,38 +8,57 @@ class ProductList extends React.Component {
     super();
     this.state = {
       searchInput : "",
+      filteredProducts: [],
+      filterdApplies : [],
       products: [],
-      filteredProducts : [],
       categoryOption: [],
       applyOnOption: [],
     }
+  } 
+
+  handleFiltered = () => {
+    const { categoryOption, applyOnOption, products } = this.state;
+
+    if(categoryOption.length > 0 && !applyOnOption.length) {
+      const filterdApplies = products.filter((product) => 
+        categoryOption.includes(product.category)
+      )
+      this.setState({
+        filterdApplies,
+      })
+      
+    } else if(!categoryOption.length && applyOnOption.length > 0) {
+      const filterdApplies = products.filter((product) => {
+        const check = (el) => applyOnOption.includes(el);
+        return product.apply_on.some(check)
+      })
+      this.setState({
+        filterdApplies,
+      })
+    } else if(!categoryOption.length && !applyOnOption.length) {
+      this.setState({
+        filterdApplies : products,
+      })
+    } else {
+      const filterdApplies = products.filter((product) => 
+        categoryOption.includes(product.category)
+      ).filter((product) => {
+        const check = (el) => applyOnOption.includes(el);
+        return product.apply_on.some(check)
+      })
+      this.setState({
+        filterdApplies,
+      })
+    }
+
   }
-
-
-
-
-
-
-
-
-
-
-  filtered = (item, nowApplies, nowCategory) => {
-    const isNowApply = !nowApplies.length ? true : nowApplies.some((part) => item.apply_on.includes(part))
-    const isNowCategory = item.category === nowCategory
-    return isNowApply && isNowCategory
-  }
-
-  // product_list.filter((item) => filtered(item, apply, category))
-
-
 
     getCategories = (name) => {
       const { categoryOption } = this.state
       const isIncluded = categoryOption.includes(name) 
       this.setState({
         categoryOption: isIncluded ? categoryOption.filter((selected) => selected !== name) : [...categoryOption, name],
-      });
+      }, this.handleFiltered);
     }
 
     getApplies = (name) => {
@@ -47,14 +66,17 @@ class ProductList extends React.Component {
       const isIncluded = applyOnOption.includes(name)
       this.setState({
         applyOnOption : isIncluded ? applyOnOption.filter((selected) => selected !== name) : [...applyOnOption, name]
-      });
+      }, this.handleFiltered);
     }
 
-
-
-
-
-
+  handleSearchBox = () => {
+    const { products, searchInput } = this.state;
+    this.setState({
+      filterdApplies : products.filter((product) => {
+        return product.name.toLowerCase().includes(searchInput.toLowerCase());
+      })
+    })
+  }
 
 
   handleSearchBox = () => {
@@ -65,12 +87,13 @@ class ProductList extends React.Component {
       })
     })
   }
+  
   handleDefaultSearch = () => {
     this.setState({
       searchInput : "",
     })
   }
-  // http://10.58.7.149:8000/shop
+
   componentDidMount() {
     fetch("/data/data.json", {
       method: "GET"
@@ -79,6 +102,20 @@ class ProductList extends React.Component {
       .then(res => {this.setState({
         products : res.product_list,
         filteredProducts : res.product_list,
+        filterdApplies : res.product_list
+      })
+      });
+  }
+
+  handleChange = (e) => {
+    this.setState({
+      searchInput : e.target.value
+    }, this.handleSearchBox)
+  }
+
+  render() {
+    const { filterdApplies, searchInput } = this.state;
+    
       })
       });
   }
@@ -89,6 +126,7 @@ class ProductList extends React.Component {
   }
   render() {
     const { filteredProducts , searchInput } = this.state;
+
     return (
       <div className="ProductList">
         <Nav />
@@ -106,7 +144,8 @@ class ProductList extends React.Component {
             handleSearchBox = {this.handleSearchBox}
           />
           <div className="ProductsContainer">
-            {filteredProducts.map(
+
+            {filterdApplies.map(
               ({
                 category,
                 apply_on,
