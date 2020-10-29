@@ -100,6 +100,17 @@ class Register extends React.Component {
       isChecked
     } = this.state;
 
+    let validBtn =
+      nameFirstValue.length > 2 &&
+      nameLastValue.length > 2 &&
+      dateValue.length > 1 &&
+      pwValue.length > 4 &&
+      pwConfirmValue.length > 4 &&
+      emailValue.length > 3 &&
+      emailValue.includes("@") &&
+      pwValue.value === pwConfirmValue.value &&
+      isChecked;
+
     return (
       <div className="Register-BH">
         <input
@@ -149,19 +160,7 @@ class Register extends React.Component {
         />
         <button
           onClick={this.handleRegisterButton}
-          className={
-            nameFirstValue.length > 2 &&
-            nameLastValue.length > 2 &&
-            dateValue.length > 1 &&
-            pwValue.length > 4 &&
-            pwConfirmValue.length > 4 &&
-            emailValue.length > 3 &&
-            emailValue.includes("@") &&
-            pwValue.value === pwConfirmValue.value &&
-            isChecked
-              ? "registerButton active"
-              : "registerButton"
-          }
+          className={validBtn ? "registerButton active" : "registerButton"}
         >
           OK
         </button>
