@@ -9,7 +9,7 @@
   background: transparent;
   z-index: 1;
   transition: all 0.4s ease-out;
-  
+
   &.visible {
     display: block;
     position: absolute;
@@ -21,7 +21,6 @@
   .cartContainer {
     width: 50%;
     height: 100%;
-    border: 1px solid red;
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -36,7 +35,7 @@
       padding-bottom: 2vw;
       border-bottom: $default-border;
       border-bottom-width: 3.5px;
-      
+
       p {
         padding: 0.6vw 0px;
         background: transparent;
@@ -193,7 +192,6 @@
           position: relative;
           top: 0px;
           justify-content: flex-end;
-          
 
           .productCard {
             display: flex;
@@ -203,7 +201,7 @@
               width: 7.78vw;
               height: 9.69vw;
               position: relative;
-  
+
               a {
                 img {
                   width: 100%;
@@ -256,7 +254,7 @@
             line-height: 1.39vw;
             background: $default-black;
             color: $default-white;
-            
+
             &:hover {
               cursor: pointer;
             }

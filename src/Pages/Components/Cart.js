@@ -38,7 +38,7 @@ class Cart extends Component {
                     <li className="itemContainer">
                       <div className="itemDetailsWrapper">
                         <div className="imageContainer">
-                          <img src={product.productImg} alt={product.name} />
+                          <img src={product.product_image} alt={product.name} />
                         </div>
                         <div className="itemDetails">
                           <span>{product.name}</span>

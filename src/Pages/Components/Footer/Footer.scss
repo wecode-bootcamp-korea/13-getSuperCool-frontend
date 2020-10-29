@@ -1,0 +1,131 @@
+@import "../../../Styles/common.scss";
+
+.Footer {
+  width: 100%;
+  height: 120vh;
+
+  .footerTop {
+    height: 43vh;
+    border: 1px solid black;
+    display: flex;
+
+    div {
+      width: 50%;
+      border: 1px solid black;
+      font-weight: 800;
+      font-size: 1.5rem;
+      @include flex-center;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .footerNewletter {
+    .detail {
+      height: 60%;
+      padding: 5px;
+      margin: 50px 40px 0 40px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.6rem;
+
+      .subscribe {
+        padding-top: 25px;
+        font-size: 1.6rem;
+        font-weight: 700;
+      }
+
+      .help {
+        padding: 10px;
+        display: flex;
+        text-align: right;
+
+        div {
+          padding: 0 20px;
+
+          p {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            
+            &:first-child {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+
+    .email {
+      form {
+        margin-left: 40px;
+        color: black;
+
+        input {
+          width: 20vw;
+          border-bottom: 1px solid black;
+          
+          &::placeholder {
+            color: black;
+          }
+        }
+
+        button {
+          border-bottom: 1px solid black;
+        }
+
+        input,
+        button {
+          font-weight: 650;
+        }
+      }
+    }
+
+    .marquee {
+      height: 2.8vh;
+      width: 220px;
+      margin: 20px 40px 0 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .marquee div {
+      width: 200%;
+      height: 4.8vh;
+      display: block;
+      position: absolute;
+      overflow: hidden;
+      animation: marquee 2s linear infinite;
+    }
+
+    .marquee span {
+      width: 50%;
+      float: left;
+      background: $default-yellow;
+    }
+
+    @keyframes marquee {
+      0% {
+        left: 0;
+      }
+      100% {
+        left: -100%;
+      }
+    }
+  }
+
+  .footerLogo {
+    @include flex-center;
+    font-size: 10rem;
+    font-weight: 800;
+  }
+  
+  span {
+    position: absolute;
+    background-color: transparent;
+    right: 2%;
+    bottom: -15%;
+  }
+}

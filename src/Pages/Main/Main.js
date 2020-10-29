@@ -88,7 +88,7 @@ class Main extends Component {
           <p>BASICS!</p>
           <div className="items">
             <Slider ref={c => (this.slider = c)} {...itemSlick}>
-              {this.state.products.map(
+              {this.state.products && this.state.products.map(
                 ({ id, modelImg, iconImg, name, productImg, price }) => (
                   <Product
                     key={id}
