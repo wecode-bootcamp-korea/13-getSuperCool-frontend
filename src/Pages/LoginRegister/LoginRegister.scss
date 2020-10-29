@@ -1,0 +1,62 @@
+@import "../../Styles/common.scss";
+
+.LoginRegister-BH {
+  .loginContainer {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .loginFormWrapper {
+      @include flex-column;
+      position: fixed;
+      width: 29.17vw;
+      left: 8.33vw;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 8.33vw;
+      border: $default-border;
+
+      .loginHeading {
+        padding: 2vw 4.2vw;
+
+        .loginFormTitle {
+          font-weight: 400;
+          text-decoration: underline;
+          text-transform: capitalize;
+          font-size: 1.81vw;
+          line-height: 2vw;
+        }
+        .loginOptionTabs {
+          padding-top: 1.8vw;
+
+          .loginTab {
+            font: $button-meta-font;
+          }
+
+          .registerTab {
+            margin-left: 12px;
+            color: $default-grey-meta;
+            font: $button-meta-font;
+            font-weight: 400;
+          }
+          .inactiveTab {
+            color: $default-grey-meta;
+            font: $button-meta-font;
+            font-weight: 400;
+          }
+
+          .activeTab {
+            font: $button-meta-font;
+            margin-left: 12px;
+          }
+        }
+      }
+    }
+  }
+}
