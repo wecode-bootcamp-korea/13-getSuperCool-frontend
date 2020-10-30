@@ -26,9 +26,9 @@ export default class LoginRegister extends Component {
 
   render() {
     return (
-      <div className="LoginRegister-BH">
+      <div className="LoginRegister">
         <Nav />
-        <main className="loginContainer">
+        <div className="loginContainerMain">
           <img
             className="loginBackdropImage"
             src="Images/LoginBackdrop.jpg"
@@ -59,7 +59,7 @@ export default class LoginRegister extends Component {
             </div>
             {MappingObj[this.state.activeTab]}
           </div>
-        </main>
+        </div>
         <Footer />
       </div>
     );

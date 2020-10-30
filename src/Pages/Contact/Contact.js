@@ -95,7 +95,7 @@ export default class Contact extends Component {
     console.log(emailValue, nameValue.length, messageValue.length);
     return (
       <div className="Contact">
-        <main>
+        <div className="main">
           <p className="contactTitle">CONTACT</p>
           <div className="contactContainer">
             <aside className="moreInfoWrapper">
@@ -213,7 +213,7 @@ export default class Contact extends Component {
               </form>
             </div>
           </div>
-        </main>
+        </div>
       </div>
     );
   }

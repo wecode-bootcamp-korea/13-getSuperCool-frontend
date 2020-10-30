@@ -1,8 +1,8 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import Logo from "./Logo";
 import Cart from "../Cart";
 import "./Nav.scss";
-import { Link } from "react-router-dom";
 
 class Nav extends Component {
   constructor()  {

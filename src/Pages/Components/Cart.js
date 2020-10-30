@@ -19,6 +19,7 @@ class Cart extends Component {
   };
 
   render() {
+    console.log(this.props.hideCart)
     const { count, cartList } = this.state;
 
     return (
@@ -32,7 +33,7 @@ class Cart extends Component {
           </section>
           <div className="cartBodyWrapper">
             <section className="cartListContainer">
-              {cartList.length !== 0 && (
+              {cartList && (
                 <ul className="cartList">
                   {cartList.map(product => (
                     <li className="itemContainer">

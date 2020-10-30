@@ -26,6 +26,9 @@
       &:last-child {
         border-left: 2px solid black;
       }
+      .link {
+        color: $default-black;
+      }
 
       &:hover {
         cursor: pointer;

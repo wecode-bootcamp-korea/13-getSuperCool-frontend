@@ -1,14 +1,15 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import FooterLogo from "./FooterLogo"
 import "../Footer/FooterLogo.scss";
-import { Link } from "react-router-dom";
+
 
 class Footer extends Component {
   render() {
     return (
       <div className="Footer">
         <div className="footerTop">
-          <div>SHOP</div>
+          <div><Link className="link" to={"/"}>SHOP</Link></div>
           <div>ABOUT</div>
         </div>
         <div className="footerNewletter">

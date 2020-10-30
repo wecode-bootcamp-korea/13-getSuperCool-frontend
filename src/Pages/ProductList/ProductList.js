@@ -12,7 +12,7 @@ class ProductList extends React.Component {
     this.state = {
       searchInput: "",
       filteredProducts: [],
-      filterdApplies: [],
+      filteredApplies: [],
       products: [],
       cartItems: [],
       visible: false,
@@ -46,33 +46,33 @@ class ProductList extends React.Component {
     const { categoryOption, applyOnOption, products } = this.state;
 
     if (categoryOption.length > 0 && !applyOnOption.length) {
-      const filterdApplies = products.filter(product =>
+      const filteredApplies = products.filter(product =>
         categoryOption.includes(product.category)
       );
       this.setState({
-        filterdApplies
+        filteredApplies
       });
     } else if (!categoryOption.length && applyOnOption.length > 0) {
-      const filterdApplies = products.filter(product => {
+      const filteredApplies = products.filter(product => {
         const check = el => applyOnOption.includes(el);
         return product.apply_on.some(check);
       });
       this.setState({
-        filterdApplies
+        filteredApplies
       });
     } else if (!categoryOption.length && !applyOnOption.length) {
       this.setState({
-        filterdApplies: products
+        filteredApplies: products
       });
     } else {
-      const filterdApplies = products
+      const filteredApplies = products
         .filter(product => categoryOption.includes(product.category))
         .filter(product => {
           const check = el => applyOnOption.includes(el);
           return product.apply_on.some(check);
         });
       this.setState({
-        filterdApplies
+        filteredApplies
       });
     }
   };
@@ -106,7 +106,7 @@ class ProductList extends React.Component {
   handleSearchBox = () => {
     const { products, searchInput } = this.state;
     this.setState({
-      filterdApplies: products.filter(product => {
+      filteredApplies: products.filter(product => {
         return product.name.toLowerCase().includes(searchInput.toLowerCase());
       })
     });
@@ -136,7 +136,7 @@ class ProductList extends React.Component {
         this.setState({
           products: res.product_list,
           filteredProducts: res.product_list,
-          filterdApplies: res.product_list
+          filteredApplies: res.product_list
         });
       });
   }
@@ -145,7 +145,7 @@ class ProductList extends React.Component {
     const {
       visible,
       cartItems,
-      filterdApplies,
+      filteredApplies,
       searchInput,
     } = this.state;
 
@@ -156,7 +156,7 @@ class ProductList extends React.Component {
           <h1>SHOP</h1>
           <p>(18 PRODUCT)</p>
         </section>
-        <main>
+        <div className="main">
           <Menubar
             getCategories={this.getCategories}
             getApplies={this.getApplies}
@@ -166,7 +166,7 @@ class ProductList extends React.Component {
             handleSearchBox={this.handleSearchBox}
           />
           <div className="ProductsContainer">
-            {filterdApplies.map(
+            {filteredApplies.map(
               ({
                 category,
                 apply_on,
@@ -192,7 +192,7 @@ class ProductList extends React.Component {
               )
             )}
           </div>
-        </main>
+        </div>
         {visible && (
           <Cart
             product={this.state.product}
@@ -203,7 +203,7 @@ class ProductList extends React.Component {
           />
         )}
         <div className="photoBox">
-          <img src="https://i.ibb.co/MPpGLC0/slick-1.jpg"/>
+          <img src="https://i.ibb.co/MPpGLC0/slick-1.jpg" alt="photobox_img"/>
         </div>
         <Footer />
       </div>
