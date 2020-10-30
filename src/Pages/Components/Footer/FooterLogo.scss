@@ -1,14 +1,16 @@
 @import "../../../Styles/common.scss";
 
-svg {
-  width: 90vw;
-  height: 100%;
-  
-  &:hover {
-    cursor: pointer;
-  }
+.footerLogo {
+  svg {
+    width: 90vw;
+    height: 100%;
 
-  g {
-    fill: $default-black;
+    &:hover {
+      cursor: pointer;
+    }
+
+    g {
+      fill: $default-black;
+    }
   }
 }

@@ -1,12 +1,26 @@
-svg {
-  width: 11vw;
-  height: 5vh;
-
+@keyframes logo {
+  0% {
+    width: 90vw;
+  }
+  100% {
+    width: 11vw;
+  }
+}
+svg.bigLogo {
+  background-color: transparent;
+  width: 90vw;
+  margin-top: 10%;
+  animation: logo 3s;
+  animation-fill-mode: both;
   &:hover {
     cursor: pointer;
   }
 
   g {
-    fill: $default-black;
+    fill: $default-yellow;
   }
+}
+
+svg.bigLogo:hover {
+  width: 11vw;
 }
