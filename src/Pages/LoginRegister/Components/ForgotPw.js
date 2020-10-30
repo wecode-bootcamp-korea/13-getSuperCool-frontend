@@ -1,7 +1,9 @@
 import React from "react";
 import "./ForgotPw.scss";
+import Footer from "../../Components/Footer/Footer"
+import Nav from "../../Components/Nav/Nav"
 
-const API = "http://10.58.4.225:8000/account/forgot-password";
+const API = "http://10.58.7.186:8000/account/forgot-password";
 
 export default class ForgotPw extends React.Component {
   constructor() {
@@ -47,7 +49,7 @@ export default class ForgotPw extends React.Component {
         console.log("백앤드에서 오는 응답 메세지: ", response);
 
         if (response.new_pw) {
-          alert("성공", response.new_pw);
+          alert(`성공! 임시 비번: ${response.new_pw}`);
         } else {
           alert("아 슬프다");
         }
@@ -57,6 +59,7 @@ export default class ForgotPw extends React.Component {
   render() {
     return (
       <div className="ForgotPw-BH">
+        <Nav />
         <main className="loginContainer">
           <img
             className="loginBackdropImage"
@@ -95,6 +98,7 @@ export default class ForgotPw extends React.Component {
             </div>
           </div>
         </main>
+        <Footer/>
       </div>
     );
   }

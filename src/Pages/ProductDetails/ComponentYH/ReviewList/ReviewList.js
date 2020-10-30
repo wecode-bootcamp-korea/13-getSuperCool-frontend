@@ -4,9 +4,10 @@ import review from "./reviewMock.json";
 class ReviewList extends React.Component {
   render(){
     return(
-      <div className='ReviewList'>
+      <div className='List'>
         <div className='HowMany'>
-          REVIEWS
+          {review.length}
+          <p>REVIEWS</p>
         </div>
         <div className='Reviews'>
           <ul>

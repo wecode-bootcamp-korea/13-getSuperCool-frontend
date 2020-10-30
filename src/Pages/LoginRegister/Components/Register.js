@@ -1,7 +1,9 @@
 import React from "react";
 import "./Register.scss";
+import { Link, withRouter } from "react-router-dom";
 
-const API = "http://10.58.4.225:8000/account/register";
+
+const API = "http://10.58.7.186:8000/account/register";
 
 class Register extends React.Component {
   constructor() {
@@ -191,4 +193,4 @@ class Register extends React.Component {
   }
 }
 
-export default Register;
+export default withRouter(Register);

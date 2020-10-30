@@ -1,12 +1,13 @@
 div.RightSlider {
-    padding: 8.33vw 12.5vw 0px;
+    padding: 8vw 12vw 0px;
     width: 50vw;
-    height: 80vw;
+    height: 50vw;
     
     div.ProductName {
         margin-bottom: 1vw;
+        word-break: keep-all;
 
-        h1{
+        p::first-line {
             text-transform: uppercase;
             font-size: 3.13vw;
             font-weight: bold;
@@ -14,7 +15,7 @@ div.RightSlider {
            text-align: left;
         }
 
-        span {
+        p {
             text-transform: uppercase;
             font-weight: bold;
             font-size: 1.74vw;
@@ -33,15 +34,9 @@ div.RightSlider {
             text-transform: uppercase;
             display: flex;
             flex-direction: row;
-            align-content: space-around;
-            width: 100%;
-            padding: 1.04vw 0px 0px;
-            margin: 150px auto 0; 
-                    padding: 0; 
+            align-content: space-between;
                     list-style: none; 
-                    display: table;
-                    width: 600px;
-                    text-align: center;
+                    text-align: left;
 
             li.tabTitle {
                 margin-right: 0.6vw;
@@ -50,51 +45,26 @@ div.RightSlider {
                 letter-spacing: -0.05em;
                 line-height: 0.69vw;
                 cursor: pointer;
+                display: inline-block;
+                position: relative;
 
-                
-                //   li { 
-                //     display: table-cell; 
-                //     position: relative; 
-                //     padding: 15px 0;
-                //   }
-                //   a {
-                //     color: #fff;
-                //     text-transform: uppercase;
-                //     text-decoration: none;
-                //     letter-spacing: 0.15em;
-                    
-                //     display: inline-block;
-                //     padding: 15px 20px;
-                //     position: relative;
-                //   }
-                //   a:after {    
-                //     background: none repeat scroll 0 0 transparent;
-                //     bottom: 0;
-                //     content: "";
-                //     display: block;
-                //     height: 2px;
-                //     left: 0%;
-                //     position: absolute;
-                //     background: yellow;
-                //     transition: width 0.3s ease 0s, left 0.3s ease 0s;
-                //     width: 0;
-                //   }
-                //   a:hover:after { 
-                //     width: 100%; 
-                //     left: 0; 
-                //   }
-                  
-                // }
-
-                // &::after {
-                //     border-bottom: 1px solid black;
-                //     content: "";
-                //     width: 0;
-                //     top: 0;
-                //     left: 0;
-                //     z-index: -1;
-                //     transition: 1s ease;
-                //   }
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        transform: scaleX(0);
+                        height: 1px;
+                        bottom: -2px;
+                        left: 0;
+                        background-color: black;
+                        transform-origin: bottom right;
+                        transition: transform 0.25s ease-out;
+                      }
+                 
+                    &:hover:after {
+                        transform: scaleX(1);
+                        transform-origin: bottom left;
+                      }
             }
         }
 
@@ -108,9 +78,7 @@ div.RightSlider {
                     padding: 0.5vw 0px;
                     font-size: 0.2vw;
                 line-height: 1.5vw;
-
                 }
-    
             }
     
             div.ingredients{
@@ -132,8 +100,6 @@ div.RightSlider {
                         font-weight: bold;
                     }
                 }
-
-    
             }
     
             div.shippinReturns {
@@ -149,12 +115,6 @@ div.RightSlider {
                         font-size: 0.2vw;
                         padding-bottom: 0.5vw;
                         list-style-type: disc;
-                        // &::before {
-                        //     content:"· ";
-                        //     font-weight: bold;
-                        //     font-size: 0.8vw;
-                        //     vertical-align:middle;
-                        // }
                         
                         span{
                             font-weight: bold;
@@ -182,31 +142,87 @@ div.RightSlider {
             margin: 0px 0px 1.11vw;
             padding: 0 4vw;
 
-            button {
-                width: 16px;
-                height: 16px;
-                border-radius: 50%;
-                cursor: pointer;
-                font-size: 0%;
-            }
+            div.button {
+                display: flex;
+                align-items: center;
+                margin: 0 0.8vw;
+                z-index: 40;
+                &:focus span{
+                        display: inline;
+                    }
+
+                button {
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    font-size: 0%;
+                    border: 0.5px solid lightgrey;
+                    &:focus {     
+                        border: 1px solid black;
+                    }
+                }
+                
+                .RED {
+                    background-color: rgb(255, 38, 0);
+                }
+    
+                .PINK {
+                    background-color: rgb(239, 87, 94);}
+    
+                .HOTPINK {
+                    background-color: rgb(228, 65, 92);
+                }
+                .MAUVE{
+                    background-color: rgb(183, 101, 109);
+                }
+
+                .CORAL{
+                    background-color: rgb(242, 104, 63);
+                }
+
+                .AZURE {
+                    background-color: rgb(68, 91, 245);
+                }
+
+                .YELLOW {
+                    background-color: rgb(255, 232, 0);
+                }
+
+                .WHITE{
+                    background-color: white;
+                }
+
+                .POPPEACH {
+                    background-color: rgb(232, 193, 162);
+                }
+
+                .ICYSHOT {
+                    background-color: rgb(249, 255, 245);
+                }
+
+                .OVERSIZED{
+                    background-color: rgb(153, 38, 43);
+                }
+
+                .MISMATCH {
+                    background-color: rgb(183, 101, 109);
+                }
+                .MISLEAD {
+                    background-color: rgb(242, 96, 41);
+                }
+
+                .OVERACHIEVER{
+                    background-color: rgb(255, 38, 0);
+                }
+    
+                span{
+                    display:none;
+                    font-weight: 500;
+                    &:focus {
+                            display: inline;}
+                }
             
-            .RED {
-                background-color: red;
-                border:1px solid black;
-            }
-
-            .coral {
-                background-color: coral;
-            }
-
-            .pink {
-                background-color: rgb(228, 65, 92);
-            }
-
-            span{
-                position: relative;
-                font-weight: 500;
-                left: -1vw;
             }
         }
 
@@ -268,15 +284,37 @@ div.RightSlider {
         }
 
         div.Subscribe {
-            margin: 0px 0px 1.5vw;
-            width: 22.2vw;
-            background-color: rgb(255, 232, 0);
-            height: 0.83vw;
-            p{
-            background-color: rgb(255, 232, 0);
-            text-transform: uppercase;
-            font-weight: bold;
-            }
+
+            .marquee {
+                height: 1.7vw;
+                width: 22.2vw;
+                position: relative;
+                margin-bottom: 2vw;
+                background-color:  rgb(255, 232, 0);
+                display: inline-block;
+                overflow: hidden;
+                div {
+                  width: 700%;
+                  padding: 0;
+                  height: 1vw;
+                  background-color: transparent;
+                  position: absolute;
+                  bottom: 0;
+                  display: flex;
+                  animation: marquee 4s linear infinite;
+                  span {
+                    background-color: transparent;
+                    font: inherit;
+                    font-weight: 500;
+                    line-height: 0.6vw;
+                    display: block;
+                    padding: 0;
+                    float: left;
+                    margin-right: 0;
+                    padding-right: 0;
+                  }
+                }
+              }
         }
 
         div.Philosophy {
@@ -347,8 +385,9 @@ div.RightSlider {
                     img {
                         position: absolute;
                         top: 15%;
-                        left: 30%;
+                        margin: 0 auto;
                         height: 70%;
+                        object-fit: cover;
                         background-color: rgb(247, 247, 247);
                     }
 
@@ -356,7 +395,8 @@ div.RightSlider {
                         position: absolute;
                         width: 6vw;
                         left: 10%;
-                        bottom: 4%;                        margin: auto;
+                        bottom: 4%;                        
+                        margin: 0 auto;
                         font-size: 0.83vw;
                         font-weight: 700;
                         color: black;

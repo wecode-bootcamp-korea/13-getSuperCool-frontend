@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import FooterLogo from "./FooterLogo"
 import "../Footer/FooterLogo.scss";
+import { Link } from "react-router-dom";
 
 class Footer extends Component {
   render() {
@@ -21,7 +22,7 @@ class Footer extends Component {
               <div>
                 <p>HELP</p>
                 <p>FAQ</p>
-                <p>Contact Us</p>
+                <p><Link className="link" to={"/Contact"}>Contact Us</Link></p>
                 <p>Track Your Order</p>
                 <p>Return Your Order</p>
               </div>
@@ -44,12 +45,12 @@ class Footer extends Component {
               <button>OK</button>
             </form>
           </div>
-          <div class="marquee">
+          <div className="marquee">
             <div>
-              <span>•FREE SHIPPING ON ORDERS OVER 34€ • 10% DISCOUNT IF YOU SUBSCRIBE TO THE NEWSLETTER</span>
-              <span>•FREE SHIPPING ON ORDERS OVER 34€ • 10% DISCOUNT IF YOU SUBSCRIBE TO THE NEWSLETTER</span>
+              <span>THE NEWSLETTER  ·  FREE SHIPPING ON ORDERS OVER 34€   ·  10% DISCOUNT IF YOU SUBSCRIBE THE NEWSLETTER  ·  FREE SHIPPING ON ORDERS OVER 34€   ·  10% DISCOUNT IF YOU SUBSCRIBE </span>
+              <span>THE NEWSLETTER  ·  FREE SHIPPING ON ORDERS OVER 34€   ·  10% DISCOUNT IF YOU SUBSCRIBE  </span>
             </div>
-          </div>
+          </div> 
         </div>
         <div className="footerLogo">
           <FooterLogo />

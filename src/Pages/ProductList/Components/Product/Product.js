@@ -1,12 +1,14 @@
 import React from "react";
 import logoImg from "./logoText.svg";
 import ColorOptionBox from "../ColorOptionBox/ColorOptionBox";
+import { withRouter , Link } from "react-router-dom";
 import "./Product.scss";
+
 
 class Product extends React.Component {
   render() {
     const {
-      key,
+      id,
       modelImg,
       name,
       productImg,
@@ -16,12 +18,16 @@ class Product extends React.Component {
     } = this.props;
 
     return (
-      <div id={key} className="Product">
+      <div onClick={() =>
+        this.props.history.push(`/shop/${id}`)
+      } id={id} className="Product">
         <ColorOptionBox />
-        <div className="productThumbnail">
-          <img src={modelImg} alt={modelImg} />
-          <img className="logoText" src={logoImg} alt="logoImg" />
-        </div>
+        <Link className="link" to ={`/shop/${id}`}>
+          <div className="productThumbnail">
+            <img src={modelImg} alt={modelImg} />
+            <img className="logoText" src={logoImg} alt="logoImg" />
+          </div>
+        </Link>
         <img
           className="logoIcon"
           src="https://i.ibb.co/wS6dvTj/icontrans.png"
@@ -41,4 +47,4 @@ class Product extends React.Component {
   }
 }
 
-export default Product;
+export default withRouter(Product);

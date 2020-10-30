@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import Logo from "./Logo";
 import Cart from "../Cart";
 import "./Nav.scss";
+import { Link } from "react-router-dom";
 
 class Nav extends Component {
-  constructor() {
+  constructor()  {
     super();
     this.state = {
       visible: false
@@ -22,9 +23,9 @@ class Nav extends Component {
     
     return (
       <div className="Nav">
-        <Logo />
+        <Link className="link" to={"/"}><Logo /></Link>
         <div className="NavCenter">
-          <span>SHOP</span>
+          <Link className="link" to ={"/shop"}><span>SHOP</span></Link>
           <span>ABOUT</span>
         </div>
         <div className="NavRight">
@@ -54,14 +55,14 @@ class Nav extends Component {
             </svg>
           </div>
           <div>
-            <div className="circle"></div>
-            <svg
+            <Link to={"/LoginRegister"}><div className="circle"></div></Link>
+            <Link to={"/LoginRegister"}><svg
               id="userIcon"
               viewBox="0 0 13 13"
               class="Icon__StyledSvg-sc-10qpb8y-0 kopxmH"
             >
               <path d="M9.24857 6.19357C9.84286 5.53429 10.2143 4.67071 10.2143 3.71429C10.2143 1.66214 8.55214 0 6.5 0C4.44786 0 2.78571 1.66214 2.78571 3.71429C2.78571 4.67071 3.15714 5.53429 3.75143 6.19357C1.54143 7.22429 0 9.47143 0 12.0714V13H13V12.0714C13 9.47143 11.4586 7.22429 9.24857 6.19357ZM4.64286 3.71429C4.64286 2.69286 5.47857 1.85714 6.5 1.85714C7.52143 1.85714 8.35714 2.69286 8.35714 3.71429C8.35714 4.73571 7.52143 5.57143 6.5 5.57143C5.47857 5.57143 4.64286 4.73571 4.64286 3.71429ZM1.95 11.1429C2.37714 9.02571 4.26214 7.42857 6.5 7.42857C8.73786 7.42857 10.6136 9.02571 11.05 11.1429H1.95Z"></path>
-            </svg>
+            </svg></Link>
           </div>
         </div>
         {visible && <Cart handleCart={this.handleCart} />}

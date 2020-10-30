@@ -1,0 +1,118 @@
+{
+    "color_list": [
+        {
+            "color_id": 1,
+            "color_name": "RED",
+            "detail1_image": "https://i.ibb.co/NjB0Bh2/Getty-Images-1055662010.jpg",
+            "detail2_image": "https://i.ibb.co/Lxqsq6H/Getty-Images-1055662038.jpg",
+            "model_image": "https://i.ibb.co/BjzbZXF/2020-10-26-9-56-50.png",
+            "product_image": "https://i.ibb.co/XyM0DfF/Output-2.png"
+        },
+        {
+            "color_id": 2,
+            "color_name": "PINK",
+            "detail1_image": "https://i.ibb.co/MMTfmcX/2020-10-27-9-41-27.png",
+            "detail2_image": "https://i.ibb.co/L8XYdLq/2020-10-27-9-41-14.png",
+            "model_image": "https://i.ibb.co/8PN9V18/photo-1577999499479-00daf8b85ac9.jpg",
+            "product_image": "https://i.ibb.co/34z1gGZ/Output-1.png"
+        },
+        {
+            "color_id": 3,
+            "color_name": "HOTPINK",
+            "detail1_image": "https://i.pinimg.com/originals/fb/97/d0/fb97d0f0c0e71feffb12093d47698425.jpg",
+            "detail2_image": "https://i.pinimg.com/originals/a3/8b/dc/a38bdc2f1ea7b38444de8e853698f92a.jpg",
+            "model_image": "https://i.ibb.co/vPMSDXC/2020-10-26-9-39-44.png",
+            "product_image": "https://i.ibb.co/0mcwYjV/Output.png"
+        }
+    ],
+    "pair_with": [
+        {
+            "name": "OUTLI(N)ER LINER MARKER",
+            "price": 14,
+            "product_id": 2,
+            "product_image": "https://i.ibb.co/XZdnYpc/eye-liner-removebg-preview.png"
+        },
+        {
+            "name": "UNLASH ME MASCARA NERO",
+            "price": 19,
+            "product_id": 3,
+            "product_image": "https://i.ibb.co/ZLBZftF/mascara-removebg-preview.png"
+        }
+    ],
+    "product_info": [
+        {
+            "contains": "POLYBUTENE, PENTAERYTHRITYL TETRAISOSTEARATE, SILICA DIMETHYL SILYLATE, OCTYLDODECANOL, ISOSTEARYL ISOSTEARATE, MICROCRYSTALLINE WAX(CERA MICROCRISTALLINA), MICA, DICALCIUM PHOSPHATE, ETHYL VANILLIN, PENTAERYTHRITYL TETRA-DI-T-BUTYL HYDROXYHYDROCINNAMATE, TIN OXIDE MAY CONTAIN/ (+/-):CI 77891(TITANIUM DIOXIDE), CI 77491(IRON OXIDES),CI77492(IRON OXIDES), CI 15850(RED 6), CI 15850(RED 7 LAKE), CI 45410(RED 28 LAKE), CI 42090(BLUE 1 LAKE), CI 19140(YELLOW 5 LAKE), CI 15985(YELLOW 6 LAKE)",
+            "description": "Sugar, spice and everything nice!\n\nBuildable, highly pigmented color for a non-sticky shine that will have your lips feeling like a star and smelling like vanilla ice-cream.\n\nThe creamy formula glides on smoothly without feeling goopy and the doe-foot applicator ensures an epic shine in just one stroke.",
+            "good_to_know": "Vegan, cruelty free, talc free, parabens free, no D4/D5/D6, mineral and palm oils free, RSPO, hypoallergenic",
+            "name": "(S)LIP LIP FLUID",
+            "price": 18,
+            "size": "6 ml / 0.2 oz",
+            "super_tip": ""
+        }
+    ],
+    "you_may_also_like": [
+        {
+            "model_image": "https://i.ibb.co/F4JkQ9P/2020-10-26-10-04-08.png",
+            "name": "OUTLI(N)ER LINER MARKER",
+            "price": 14,
+            "product_id": 2,
+            "product_image": "https://i.ibb.co/XZdnYpc/eye-liner-removebg-preview.png"
+        },
+        {
+            "model_image": "https://i.ibb.co/2j95XZL/2020-10-26-9-55-47.png",
+            "name": "UNLASH ME MASCARA NERO",
+            "price": 19,
+            "product_id": 3,
+            "product_image": "https://i.ibb.co/ZLBZftF/mascara-removebg-preview.png"
+        },
+        {
+            "model_image": "https://i.ibb.co/0D0xdxH/2020-10-26-9-42-47.png",
+            "name": "B.L.U.R. PRIMER BLUR MOISTURIZER",
+            "price": 26,
+            "product_id": 4,
+            "product_image": "https://i.ibb.co/2PmkX6j/perfume.png"
+        },
+        {
+            "model_image": "https://i.ibb.co/h7rFXWh/photo-1555894755-b3d9b12236dd.jpg",
+            "name": "SOCOOLPINK PURFUME MIST",
+            "price": 24,
+            "product_id": 5,
+            "product_image": "https://i.ibb.co/jJ5TBVr/Output-1.png"
+        },
+        {
+            "model_image": "https://i.ibb.co/k6ktznw/2020-10-27-6-04-24.png",
+            "name": "MOISTURE EYE OIL",
+            "price": 16,
+            "product_id": 6,
+            "product_image": "https://i.ibb.co/G5Xw4KJ/2020-10-27-1-51-00-removebg-preview.png"
+        },
+        {
+            "model_image": "https://i.ibb.co/hDfcg14/photo-1519699047748-de8e457a634e.jpg",
+            "name": "REAL FRESH LIP SCRUB",
+            "price": 14,
+            "product_id": 7,
+            "product_image": "https://i.ibb.co/m93CCKv/body-oil.png"
+        },
+        {
+            "model_image": "https://i.ibb.co/vPMSDXC/2020-10-26-9-39-44.png",
+            "name": "COOLER EYE GEL",
+            "price": 16,
+            "product_id": 8,
+            "product_image": "https://i.ibb.co/5WvC4k2/2020-10-26-6-21-28-removebg-preview.png"
+        },
+        {
+            "model_image": "https://i.ibb.co/ZG6FQg7/jimmy-fermin-bqe0-J0b26-RQ-unsplash.jpg",
+            "name": "SUPERBALM LIP BALM",
+            "price": 14,
+            "product_id": 9,
+            "product_image": "https://i.ibb.co/t3dCQWV/Output-4.png"
+        },
+        {
+            "model_image": "https://i.ibb.co/8mjhcr3/2020-10-27-5-55-47.png",
+            "name": "COMBO GOALS LIP’N’CHEEK",
+            "price": 19,
+            "product_id": 10,
+            "product_image": "https://i.ibb.co/C0BkFCt/Lip-removebg-preview.png"
+        }
+    ]
+}
