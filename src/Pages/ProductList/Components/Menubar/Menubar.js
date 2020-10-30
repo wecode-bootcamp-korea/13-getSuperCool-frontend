@@ -24,7 +24,7 @@ class Menubar extends React.Component {
   }
 
   handleClickApplies = (name) => {
-    this.props.getApplies(name)
+    this.props.getApplies(name);
     this.props.handleDefaultSearch();
     this.setState({
       [name] : !this.state[name],

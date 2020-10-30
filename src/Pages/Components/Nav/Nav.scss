@@ -3,6 +3,7 @@
 
 .Nav {
   @include flex-spaceBetween-center;
+  background-color: transparent;
   width: 100%;
   height: 6.94vw;
   position: fixed;
@@ -10,27 +11,36 @@
   z-index: 2;
   padding: 0 5vw;
 
+  .link {
+    background-color: transparent;
+    color: $default-black;
+  }
+
   .NavCenter {
     display: flex;
     font-size: 1.2vw;
     line-height: 2.01vw;
-  
+    background-color: $default-yellow;
+    position: absolute;
+    left: 45%;
+
     span {
       display: inline-block;
       padding: 0 9px;
       position: relative;
       font-weight: bold;
+      background-color: transparent;
       z-index: 1;
-  
+
       &:hover {
         color: $default-yellow;
         cursor: pointer;
-  
+
         &::after {
           width: 100%;
         }
       }
-      
+
       &::after {
         background-color: $default-black;
         display: block;
@@ -54,42 +64,47 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  
+    background-color: transparent;
+
     select {
       font-size: 0.9vw;
       -webkit-appearance: none;
       font-weight: bold;
-      
+      background-color: transparent;
+
       &:hover {
         cursor: pointer;
       }
     }
-  
+
     svg {
       width: 0.8vw;
       height: 0.8vw;
+      background-color: transparent;
     }
-  
+
     p {
       padding: 0 0.5vw;
       cursor: pointer;
+      background-color: transparent;
     }
-  
+
     div {
       position: relative;
-  
+      background-color: transparent;
+
       &:hover {
         cursor: pointer;
       }
-  
+
       .circle {
         width: 2.3vw;
         height: 2.3vw;
         border-radius: 50%;
-        background: $default-black;
+        background: $default-yellow;
         margin: 0 3px;
       }
-  
+
       svg {
         width: 0.8vw;
         height: 0.8vw;
@@ -97,9 +112,8 @@
         top: 30%;
         left: 35%;
         background-color: transparent;
-        fill: white;
+        fill: $default-black;
       }
     }
   }
-  
 }
