@@ -133,6 +133,7 @@ class ProductList extends React.Component {
     })
       .then(res => res.json())
       .then(res => {
+        console.log(res, res[0])
         this.setState({
           products: res.product_list,
           filteredProducts: res.product_list,
@@ -166,11 +167,10 @@ class ProductList extends React.Component {
             handleSearchBox={this.handleSearchBox}
           />
           <div className="ProductsContainer">
-            {filterdApplies.map(
+            {filterdApplies&&filterdApplies.map(
               ({
                 category,
                 apply_on,
-                color_options,
                 product_id,
                 name,
                 model_image,
