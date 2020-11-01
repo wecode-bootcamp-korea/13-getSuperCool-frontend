@@ -1,393 +1,432 @@
 div.RightSlider {
-    padding: 8.33vw 12.5vw 0px;
-    width: 50vw;
-    height: 80vw;
-    
-    div.ProductName {
-        margin-bottom: 1vw;
+  padding: 8vw 12vw 0px;
+  width: 50vw;
+  height: 50vw;
 
-        h1{
-            text-transform: uppercase;
-            font-size: 3.13vw;
+  div.ProductName {
+    margin-bottom: 1vw;
+    word-break: keep-all;
+
+    p::first-line {
+      text-transform: uppercase;
+      font-size: 3.13vw;
+      font-weight: bold;
+      line-height: 3.19vw;
+      text-align: left;
+    }
+
+    p {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 1.74vw;
+      line-height: 1.39vw;
+      display: block;
+      text-align: left;
+      letter-spacing: -0.04em;
+    }
+  }
+
+  div.Details {
+    width: 22.22vw;
+    padding: 1.04vw 0px 0px;
+
+    ul.tabContainer {
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: row;
+      align-content: space-between;
+      list-style: none;
+      text-align: left;
+
+      li.tabTitle {
+        margin-right: 0.6vw;
+        margin-left: 0.2vw;
+        font-size: 0.3vw;
+        letter-spacing: -0.05em;
+        line-height: 0.69vw;
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+
+        &:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          transform: scaleX(0);
+          height: 1px;
+          bottom: -2px;
+          left: 0;
+          background-color: black;
+          transform-origin: bottom right;
+          transition: transform 0.25s ease-out;
+        }
+
+        &:hover:after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+      }
+    }
+
+    div.contents {
+      padding-bottom: 0;
+      padding: 1.39vw 0px;
+      margin-left: 0.4vw;
+
+      div.description {
+        div {
+          padding: 0.5vw 0px;
+          font-size: 0.2vw;
+          line-height: 1.5vw;
+        }
+      }
+
+      div.ingredients {
+        div {
+          padding: 0.5vw 0px;
+          font-size: 0.2vw;
+          line-height: 1.5vw;
+        }
+        div.size {
+          font-weight: bold;
+        }
+        div.goodToKnow {
+          span {
             font-weight: bold;
-            line-height: 3.19vw;
-           text-align: left;
+          }
+        }
+        div.contains {
+          span {
+            font-weight: bold;
+          }
+        }
+      }
+
+      div.shippinReturns {
+        padding-bottom: 2.08vw;
+        padding: 1.39vw 0px;
+        line-height: 1.5vw;
+
+        ul {
+          padding-left: 1.3vw;
+          line-height: 110%;
+
+          li {
+            font-size: 0.2vw;
+            padding-bottom: 0.5vw;
+            list-style-type: disc;
+
+            span {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  div.AddToCart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    div.ColorSelection {
+      border: 1.5px solid black;
+      width: 22.2vw;
+      height: 4.24vw;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      margin: 0px 0px 1.11vw;
+      padding: 0 4vw;
+
+      div.button {
+        display: flex;
+        align-items: center;
+        margin: 0 0.8vw;
+        z-index: 40;
+        &:focus span {
+          display: inline;
+        }
+
+        button {
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          cursor: pointer;
+          font-size: 0%;
+          border: 0.5px solid lightgrey;
+          &:focus {
+            border: 1px solid black;
+          }
+        }
+
+        .RED {
+          background-color: rgb(255, 38, 0);
+        }
+
+        .PINK {
+          background-color: rgb(239, 87, 94);
+        }
+
+        .HOTPINK {
+          background-color: rgb(228, 65, 92);
+        }
+        .MAUVE {
+          background-color: rgb(183, 101, 109);
+        }
+
+        .CORAL {
+          background-color: rgb(242, 104, 63);
+        }
+
+        .AZURE {
+          background-color: rgb(68, 91, 245);
+        }
+
+        .YELLOW {
+          background-color: rgb(255, 232, 0);
+        }
+
+        .WHITE {
+          background-color: white;
+        }
+
+        .POPPEACH {
+          background-color: rgb(232, 193, 162);
+        }
+
+        .ICYSHOT {
+          background-color: rgb(249, 255, 245);
+        }
+
+        .OVERSIZED {
+          background-color: rgb(153, 38, 43);
+        }
+
+        .MISMATCH {
+          background-color: rgb(183, 101, 109);
+        }
+        .MISLEAD {
+          background-color: rgb(242, 96, 41);
+        }
+
+        .OVERACHIEVER {
+          background-color: rgb(255, 38, 0);
         }
 
         span {
-            text-transform: uppercase;
-            font-weight: bold;
-            font-size: 1.74vw;
-            line-height: 1.39vw;
+          display: none;
+          font-weight: 500;
+          &:focus {
+            display: inline;
+          }
+        }
+      }
+    }
+
+    div.None {
+      display: none;
+    }
+
+    div.Wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      margin: 0px 0px 1.5vw;
+
+      div.Adding {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 4.24vw;
+        width: 4.5vw;
+        border: 1.5px solid black;
+        font-size: 0.83vw;
+        margin-right: 1vw;
+
+        button {
+          cursor: pointer;
+        }
+      }
+
+      button.AddToCart {
+        width: 12.5vw;
+        height: 4.24vw;
+        background-color: rgb(255, 232, 0);
+        font-weight: bold;
+        margin-right: 1vw;
+        font-size: 0.83vw;
+        cursor: pointer;
+
+        span {
+          background-color: inherit;
+          font-size: 0.83vw;
+        }
+      }
+
+      div.Likes {
+        background-color: rgb(255, 232, 0);
+        border-radius: 50%;
+        height: 3.5vw;
+        width: 3.5vw;
+        padding-top: 1.3vw;
+        text-align: center;
+        font-size: large;
+        cursor: pointer;
+        &:hover {
+          background-color: black;
+          color: rgb(255, 232, 0);
+        }
+      }
+    }
+
+    div.Subscribe {
+      .marquee {
+        height: 1.7vw;
+        width: 22.2vw;
+        position: relative;
+        margin-bottom: 2vw;
+        background-color: rgb(255, 232, 0);
+        display: inline-block;
+        overflow: hidden;
+        div {
+          width: 700%;
+          padding: 0;
+          height: 1vw;
+          background-color: transparent;
+          position: absolute;
+          bottom: 0;
+          display: flex;
+          animation: marquee 6s linear infinite;
+          span {
+            background-color: transparent;
+            font: inherit;
+            font-weight: 500;
+            line-height: 0.6vw;
             display: block;
-            text-align: left;
-            letter-spacing: -0.04em;
+            padding: 0;
+            float: left;
+            margin-right: 0;
+            padding-right: 0;
+          }
         }
+      }
     }
 
-    div.Details {
-        width: 22.22vw;
-        padding: 1.04vw 0px 0px;
+    div.Philosophy {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 22.2vw;
 
-        ul.tabContainer {
-            text-transform: uppercase;
-            display: flex;
-            flex-direction: row;
-            align-content: space-around;
-            width: 100%;
-            padding: 1.04vw 0px 0px;
-            margin: 150px auto 0; 
-                    padding: 0; 
-                    list-style: none; 
-                    display: table;
-                    width: 600px;
-                    text-align: center;
-
-            li.tabTitle {
-                margin-right: 0.6vw;
-                margin-left: 0.2vw;
-                font-size: 0.3vw;
-                letter-spacing: -0.05em;
-                line-height: 0.69vw;
-                cursor: pointer;
-
-                
-                //   li { 
-                //     display: table-cell; 
-                //     position: relative; 
-                //     padding: 15px 0;
-                //   }
-                //   a {
-                //     color: #fff;
-                //     text-transform: uppercase;
-                //     text-decoration: none;
-                //     letter-spacing: 0.15em;
-                    
-                //     display: inline-block;
-                //     padding: 15px 20px;
-                //     position: relative;
-                //   }
-                //   a:after {    
-                //     background: none repeat scroll 0 0 transparent;
-                //     bottom: 0;
-                //     content: "";
-                //     display: block;
-                //     height: 2px;
-                //     left: 0%;
-                //     position: absolute;
-                //     background: yellow;
-                //     transition: width 0.3s ease 0s, left 0.3s ease 0s;
-                //     width: 0;
-                //   }
-                //   a:hover:after { 
-                //     width: 100%; 
-                //     left: 0; 
-                //   }
-                  
-                // }
-
-                // &::after {
-                //     border-bottom: 1px solid black;
-                //     content: "";
-                //     width: 0;
-                //     top: 0;
-                //     left: 0;
-                //     z-index: -1;
-                //     transition: 1s ease;
-                //   }
-            }
-        }
-
-        div.contents{
-            padding-bottom: 0;
-            padding: 1.39vw 0px;
-            margin-left: 0.4vw;
-
-            div.description {
-                div {
-                    padding: 0.5vw 0px;
-                    font-size: 0.2vw;
-                line-height: 1.5vw;
-
-                }
-    
-            }
-    
-            div.ingredients{
-                div {
-                    padding: 0.5vw 0px;
-                    font-size: 0.2vw;
-                line-height: 1.5vw;
-                }
-                div.size{
-                    font-weight: bold;
-                }
-                div.goodToKnow{
-                    span{
-                        font-weight: bold;
-                    }
-                }
-                div.contains {
-                    span{
-                        font-weight: bold;
-                    }
-                }
-
-    
-            }
-    
-            div.shippinReturns {
-                padding-bottom: 2.08vw;
-                padding: 1.39vw 0px;
-                line-height: 1.5vw;
-                
-                ul {
-                    padding-left: 1.3vw;
-                    line-height: 110%;
-                    
-                    li{
-                        font-size: 0.2vw;
-                        padding-bottom: 0.5vw;
-                        list-style-type: disc;
-                        // &::before {
-                        //     content:"· ";
-                        //     font-weight: bold;
-                        //     font-size: 0.8vw;
-                        //     vertical-align:middle;
-                        // }
-                        
-                        span{
-                            font-weight: bold;
-                        }
-                    }
-                }
-            }
-        }
-
-    }
-
-    div.AddToCart {
+      div {
+        margin: 0 1.39vw;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        
-        div.ColorSelection {
-            border: 1.5px solid black;
-            width: 22.2vw;
-            height: 4.24vw;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-around;
-            margin: 0px 0px 1.11vw;
-            padding: 0 4vw;
+        align-items: center;
 
-            button {
-                width: 16px;
-                height: 16px;
-                border-radius: 50%;
-                cursor: pointer;
-                font-size: 0%;
-            }
-            
-            .RED {
-                background-color: red;
-                border:1px solid black;
-            }
-
-            .coral {
-                background-color: coral;
-            }
-
-            .pink {
-                background-color: rgb(228, 65, 92);
-            }
-
-            span{
-                position: relative;
-                font-weight: 500;
-                left: -1vw;
-            }
+        img.Humane {
+          height: 1.6vw;
+          width: 1vw;
         }
 
-        div.None{
-            display: none;
+        img.Vegan {
+          height: 1.6vw;
+          width: 1.8vw;
         }
 
-        div.Wrapper {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-around;
-            margin: 0px 0px 1.5vw;
-
-            div.Adding {
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                height: 4.24vw;
-                width: 4.5vw;
-                border: 1.5px solid black;
-                font-size: 0.83vw;
-                margin-right: 1vw;
-
-                button {
-                cursor: pointer;
-                }
-            }
-
-            button.AddToCart {
-                width: 12.5vw;
-                height: 4.24vw;
-                background-color: rgb(255, 232, 0);
-                font-weight: bold;
-                margin-right: 1vw;
-                font-size: 0.83vw;
-                cursor: pointer;
-
-                span{
-                    background-color: inherit;
-                    font-size: 0.83vw;
-                }
-            }
-
-            div.Likes {
-                background-color: rgb(255, 232, 0);
-                border-radius: 50%;
-                height: 3.5vw;
-                width: 3.5vw;
-                padding-top: 1.3vw;
-                text-align: center;
-                font-size: large;
-                cursor: pointer;
-                &:hover{
-                    background-color: black;
-                    color: rgb(255, 232, 0);
-                }
-            }
+        img.Inclusive {
+          height: 1.6vw;
+          width: 1.9vw;
         }
 
-        div.Subscribe {
-            margin: 0px 0px 1.5vw;
-            width: 22.2vw;
-            background-color: rgb(255, 232, 0);
-            height: 0.83vw;
-            p{
-            background-color: rgb(255, 232, 0);
-            text-transform: uppercase;
-            font-weight: bold;
-            }
+        p {
+          text-transform: uppercase;
+          font-size: 10px;
         }
+      }
+    }
+  }
 
-        div.Philosophy {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            width: 22.2vw;
+  div.PairWith {
+    width: 22.2vw;
+    height: 21.67vw;
+    padding-top: 2.78vw;
 
-            div {
-                margin: 0 1.39vw;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-
-                img.Humane {
-                    height: 1.6vw;
-                    width: 1vw;
-                }
-
-                img.Vegan {
-                    height: 1.6vw;
-                    width: 1.8vw;
-                }
-
-                img.Inclusive {
-                    height: 1.6vw;
-                    width: 1.9vw;
-                }
-
-                p {
-                    text-transform: uppercase;
-                    font-size: 10px;
-                }
-            }
-        }
+    h3 {
+      text-transform: uppercase;
+      font-size: 1.39vw;
+      font-weight: bold;
+      margin: 0px 0px 1.3vw;
     }
 
-    div.PairWith {
-        width: 22.2vw;
-        height: 21.67vw;
-        padding-top: 2.78vw;
+    div.ProductList {
+      display: flex;
+      width: 22.2vw;
+      align-content: space-between;
 
-        h3{
+      div {
+        background-color: rgb(247, 247, 247);
+        width: 13.43vw;
+        height: 17.08vw;
+        position: relative;
+        margin-right: 1vw;
+        cursor: pointer;
+
+        a {
+          background-color: rgb(247, 247, 247);
+          width: 12.43vw;
+          height: 17.08vw;
+
+          img {
+            position: absolute;
+            top: 15%;
+            margin: 0 auto;
+            height: 70%;
+            object-fit: cover;
+            background-color: rgb(247, 247, 247);
+          }
+
+          p {
+            position: absolute;
+            width: 6vw;
+            left: 10%;
+            bottom: 4%;
+            margin: 0 auto;
+            font-size: 0.83vw;
+            font-weight: 700;
+            color: black;
             text-transform: uppercase;
-            font-size: 1.39vw;
-            font-weight: bold;
-            margin: 0px 0px 1.3vw;
-        }
+            overflow-wrap: break-word;
+            background-color: rgb(247, 247, 247);
+          }
 
-        div.ProductList {
-            display: flex;
-            width: 22.2vw;
-            align-content: space-between;
-
-            div {
-                background-color: rgb(247, 247, 247);
-                width : 13.43vw;
-                height: 17.08vw;
-                position: relative;
-                margin-right: 1vw;
-                cursor: pointer;
-
-                a {
-                    background-color: rgb(247, 247, 247);
-                    width : 12.43vw;
-                    height: 17.08vw;
-
-                    img {
-                        position: absolute;
-                        top: 15%;
-                        left: 30%;
-                        height: 70%;
-                        background-color: rgb(247, 247, 247);
-                    }
-
-                    p {
-                        position: absolute;
-                        width: 6vw;
-                        left: 10%;
-                        bottom: 4%;                        margin: auto;
-                        font-size: 0.83vw;
-                        font-weight: 700;
-                        color: black;
-                        text-transform: uppercase;
-                        overflow-wrap: break-word;
-                        background-color: rgb(247, 247, 247);
-                    }
-
-                    div {
-                        width: 3.5vw;
-                        height: 1.5vw;
-                        position: absolute;
-                        bottom: 3%;
-                        right: 3%;
-                        padding-top: 1.5%;
-                        padding-left: 1.5%;
-                        background-color:  black;
-                        transform: rotate(-3.17deg);
-                        font-weight: 600;
-                        color: white;
-                        span {
-                            position: absolute;
-                            right: 4%;
-                            top: 1%;
-                            font-size: 0.2vw;;
-                            background-color: transparent;
-                        color: white;
-                        }
-                    }
-                }
+          div {
+            width: 3.5vw;
+            height: 1.5vw;
+            position: absolute;
+            bottom: 3%;
+            right: 3%;
+            padding-top: 1.5%;
+            padding-left: 1.5%;
+            background-color: black;
+            transform: rotate(-3.17deg);
+            font-weight: 600;
+            color: white;
+            span {
+              position: absolute;
+              right: 4%;
+              top: 1%;
+              font-size: 0.2vw;
+              background-color: transparent;
+              color: white;
             }
+          }
         }
+      }
     }
+  }
 }

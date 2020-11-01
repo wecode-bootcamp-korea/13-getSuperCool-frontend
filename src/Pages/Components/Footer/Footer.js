@@ -56,7 +56,7 @@ class Footer extends Component {
         <div className="footerLogo">
           <FooterLogo />
         </div>
-        <span>© 2020 SuperCool - All Rights Reserved</span>
+        <span className="right">© 2020 SuperCool - All Rights Reserved</span>
       </div>
     );
   }

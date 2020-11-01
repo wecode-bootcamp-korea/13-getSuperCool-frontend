@@ -71,9 +71,14 @@ class Main extends Component {
             alt="third"
           />
         </Slider>
-
+        <div className="marquee">
+          <div>
+            <span>THE NEWSLETTER  ·  FREE SHIPPING ON ORDERS OVER 34€   ·  10% DISCOUNT IF YOU SUBSCRIBE THE NEWSLETTER  ·  FREE SHIPPING ON ORDERS OVER 34€   ·  10% DISCOUNT IF YOU SUBSCRIBE </span>
+            <span>THE NEWSLETTER  ·  FREE SHIPPING ON ORDERS OVER 34€   ·  10% DISCOUNT IF YOU SUBSCRIBE  </span>
+          </div>
+        </div> 
         <div className="shop">
-          <p><Link className="link" to={"/ProductList"}>SHOP NOW</Link></p>
+          <p><Link className="link" to={"/list"}>SHOP NOW</Link></p>
         </div>
         <div className="productSection">
           <p>YOUR NEW</p>
@@ -109,7 +114,7 @@ class Main extends Component {
               />
             </div>
           </div>
-          <div className="shopNow"><Link className="link" to={"/ProductList"}>shop now</Link></div>
+          <div className="shopNow"><Link className="link" to={"/shop"}>shop now</Link></div>
         </div>
         <div className="NewsletterSection">
           <img src="https://i.ibb.co/myqMxG7/annie-spratt-j-Crft-LHe3ec-unsplash.jpg" alt="콜라주 사진" />

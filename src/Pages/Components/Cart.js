@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Cart.scss";
+
 class Cart extends Component {
   constructor() {
     super();
@@ -19,7 +20,6 @@ class Cart extends Component {
   };
 
   render() {
-    console.log(this.props.hideCart)
     const { count, cartList } = this.state;
 
     return (
@@ -27,7 +27,7 @@ class Cart extends Component {
         <div className="cartContainer">
           <section className="cartHeader">
             <p>Your Cart ({count})</p>
-            <button onClick={this.props.hideCart}>
+            <button onClick={this.props.handleCart}>
               <img alt="close" src="https://i.ibb.co/C7Zh1zK/close.png" />
             </button>
           </section>

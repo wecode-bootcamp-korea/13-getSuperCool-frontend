@@ -1,5 +1,6 @@
 import React from "react";
 import "./ProductDetails.scss";
+import Footer from "../Components/Footer/Footer"
 import LeftSlider from "./ComponentYH/LeftSlider/LeftSlider";
 import RightSlider from "./ComponentYH/RightSlider/RightSlider";
 import ReviewList from "./ComponentYH/ReviewList/ReviewList";
@@ -167,6 +168,9 @@ class ProductDetails extends React.Component {
         </section>
         <section className='ReviewList'>
           <ReviewList />
+        </section>
+        <section className='Footer'>
+          <Footer />
         </section>
       </div>
     );

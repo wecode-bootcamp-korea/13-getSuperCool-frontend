@@ -21,6 +21,40 @@
     }
   }
 
+  .marquee {
+    height: 1.7vw;
+    width: 20vw;
+    position: absolute;
+    top: 115%;
+    right: 5%;
+    margin-bottom: 2vw;
+    background-color: rgb(255, 232, 0);
+    display: inline-block;
+    overflow: hidden;
+    div {
+      width: 700%;
+      padding: 0;
+      height: 1vw;
+      background-color: transparent;
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      animation: marquee 6s linear infinite;
+      span {
+        background-color: transparent;
+        font: inherit;
+        font-size: 18px;
+        font-weight: 800;
+        line-height: 0.6vw;
+        display: block;
+        padding: 0;
+        float: left;
+        margin-right: 0;
+        padding-right: 0;
+      }
+    }
+  }
+
   .shop {
     background: transparent;
     position: absolute;
