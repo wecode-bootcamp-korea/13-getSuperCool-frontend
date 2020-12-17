@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import "./Contact.scss";
 import { countryOptions, subjectOptions } from "./Config";
+import Nav from "../Components/Nav/Nav"
 
-const API = "http://10.58.4.225:8000/account/inquirie";
+const API = "http://10.58.7.186:8000/account/inquirie";
 
 export default class Contact extends Component {
   constructor() {
@@ -95,7 +96,8 @@ export default class Contact extends Component {
     console.log(emailValue, nameValue.length, messageValue.length);
     return (
       <div className="Contact">
-        <main>
+        <Nav />
+        <div className="main">
           <p className="contactTitle">CONTACT</p>
           <div className="contactContainer">
             <aside className="moreInfoWrapper">
@@ -213,7 +215,7 @@ export default class Contact extends Component {
               </form>
             </div>
           </div>
-        </main>
+        </div>
       </div>
     );
   }

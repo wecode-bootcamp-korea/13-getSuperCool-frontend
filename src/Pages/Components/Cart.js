@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Cart.scss";
+
 class Cart extends Component {
   constructor() {
     super();
@@ -26,13 +27,13 @@ class Cart extends Component {
         <div className="cartContainer">
           <section className="cartHeader">
             <p>Your Cart ({count})</p>
-            <button onClick={this.props.hideCart}>
+            <button onClick={this.props.handleCart}>
               <img alt="close" src="https://i.ibb.co/C7Zh1zK/close.png" />
             </button>
           </section>
           <div className="cartBodyWrapper">
             <section className="cartListContainer">
-              {cartList.length !== 0 && (
+              {cartList && (
                 <ul className="cartList">
                   {cartList.map(product => (
                     <li className="itemContainer">

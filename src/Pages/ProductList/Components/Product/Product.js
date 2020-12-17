@@ -17,9 +17,9 @@ class Product extends React.Component {
     } = this.props;
 
     return (
-      <div onClick={() =>
-        this.props.history.push(`http://10.58.7.186:8000/shop/${id}`)
-      } id={id} className="Product">
+      <div id={id} className="Product" onClick={() =>
+        this.props.history.push(`/shop/${id}`)
+      }>
         <ColorOptionBox />
         <div className="productThumbnail">
           <img src={modelImg} alt={modelImg} />

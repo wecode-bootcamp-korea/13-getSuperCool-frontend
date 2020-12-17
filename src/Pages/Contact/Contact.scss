@@ -13,7 +13,7 @@
   height: 100vh;
   width: 100vw;
 
-  main {
+  .main {
     @include flex-column;
     position: relative;
     width: 100vw;
