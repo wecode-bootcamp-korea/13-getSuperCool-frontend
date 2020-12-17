@@ -128,7 +128,7 @@ class ProductList extends React.Component {
   };
 
   componentDidMount() {
-    fetch("http://10.58.7.186:8000/shop")
+    fetch("../data/data.json")
       .then(res => res.json())
       .then(res => {
         this.setState({

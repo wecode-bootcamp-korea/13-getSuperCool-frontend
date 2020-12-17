@@ -28,7 +28,7 @@ class ProductDetails extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`http://10.58.7.186:8000/shop/${this.props.match.params.id}`, {
+    fetch(`../data/data.json/shop/${this.props.match.params.id}`, {
       method: "GET"
     })
       .then(res => res.json())
@@ -45,7 +45,8 @@ class ProductDetails extends React.Component {
 
   componentDidUpdate(preProps) {
     if(preProps.match.params["color"] !== this.props.match.params["color"]){
-      fetch(`http://10.58.7.186:8000/shop/${this.props.match.params.id}`)
+      //fetch(`../data/YH.json/${this.props.match.params.id}`)
+      fetch("../data/YH.json")
         .then(res => res.json())
         .then(res => {
           this.setState({
