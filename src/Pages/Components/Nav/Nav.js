@@ -1,8 +1,8 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import Logo from "./Logo";
 import Cart from "../Cart";
 import "./Nav.scss";
-import { Link } from "react-router-dom";
 
 class Nav extends Component {
   constructor()  {
@@ -25,7 +25,7 @@ class Nav extends Component {
       <div className="Nav">
         <Link className="link" to={"/"}><Logo /></Link>
         <div className="NavCenter">
-          <Link className="link" to ={"/ProductList"}><span>SHOP</span></Link>
+          <Link className="link" to ={"/list"}><span>SHOP</span></Link>
           <span>ABOUT</span>
         </div>
         <div className="NavRight">
