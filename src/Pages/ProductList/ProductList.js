@@ -3,7 +3,7 @@ import Nav from "../Components/Nav/Nav";
 import Menubar from "./Components/Menubar/Menubar";
 import Product from "./Components/Product/Product";
 import Cart from "../Components/Cart";
-import Footer from "../Components/Footer/Footer"
+import Footer from "../Components/Footer/Footer";
 import "./ProductList.scss";
 
 class ProductList extends React.Component {
@@ -11,7 +11,6 @@ class ProductList extends React.Component {
     super();
     this.state = {
       searchInput: "",
-      filteredProducts: [],
       filteredApplies: [],
       products: [],
       cartItems: [],
@@ -20,21 +19,6 @@ class ProductList extends React.Component {
       applyOnOption: []
     };
   }
-
-  showCart = product => {
-    this.setState(
-      {
-        visible: true
-      },
-      () => this.addCartProduct(product)
-    );
-  };
-
-  hideCart = () => {
-    this.setState({
-      visible: false
-    });
-  };
 
   addCartProduct = product => {
     this.setState({
@@ -128,24 +112,18 @@ class ProductList extends React.Component {
   };
 
   componentDidMount() {
-    fetch("http://10.58.7.186:8000/shop")
+    fetch("data/data.json")
       .then(res => res.json())
       .then(res => {
         this.setState({
           products: res.product_list,
-          filteredProducts: res.product_list,
           filteredApplies: res.product_list
         });
       });
   }
 
   render() {
-    const {
-      visible,
-      cartItems,
-      filteredApplies,
-      searchInput,
-    } = this.state;
+    const { visible, cartItems, filteredApplies, searchInput } = this.state;
 
     return (
       <div className="ProductList">
@@ -201,7 +179,7 @@ class ProductList extends React.Component {
           />
         )}
         <div className="photoBox">
-          <img src="https://i.ibb.co/MPpGLC0/slick-1.jpg" alt="photobox_img"/>
+          <img src="https://i.ibb.co/MPpGLC0/slick-1.jpg" alt="photobox_img" />
         </div>
         <Footer />
       </div>
