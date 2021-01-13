@@ -60,7 +60,7 @@ export default class ForgotPw extends React.Component {
     return (
       <div className="ForgotPw-BH">
         <Nav />
-        <main className="loginContainer">
+        <div className="loginContainer">
           <img
             className="loginBackdropImage"
             src="Images/LoginBackdrop.jpg"
@@ -97,7 +97,7 @@ export default class ForgotPw extends React.Component {
               ) : null}
             </div>
           </div>
-        </main>
+        </div>
         <Footer/>
       </div>
     );

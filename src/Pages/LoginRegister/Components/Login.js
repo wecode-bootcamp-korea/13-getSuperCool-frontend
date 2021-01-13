@@ -53,6 +53,7 @@ class Login extends React.Component {
         if (response.AUTHORIZATION) {
           this.props.history.push("/");
           localStorage.setItem("token", response.AUTHORIZATION);
+          alert("로그인 성공");
         } else alert("로그인 실패");
       });
   };
